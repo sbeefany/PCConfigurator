@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Objects;
 
-public class MotherBoard {
+public class MotherBoard extends Accessories {
 
     private Socket socket;
     private ChipSet chipSet;

@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Objects;
 
-public class Cpu {
+public class Cpu extends Accessories {
 
     private Socket socket;
     private int coresCount;

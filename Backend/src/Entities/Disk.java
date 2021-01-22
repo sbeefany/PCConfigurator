@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Objects;
 
-public class Disk {
+public class Disk extends Accessories{
     private float size;
     private int diskSizeGB;
     private DiskType diskType;

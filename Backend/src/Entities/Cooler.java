@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Objects;
 
-public class Cooler {
+public class Cooler extends Accessories{
 
 
     private Socket socket;

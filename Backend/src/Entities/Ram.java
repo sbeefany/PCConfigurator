@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Objects;
 
-public class Ram {
+public class Ram extends Accessories{
     private TypeRam typeRam;
     private int valueRam;
     private int frequency;
