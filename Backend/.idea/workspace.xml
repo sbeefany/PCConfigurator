@@ -5,35 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Backend_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Backend_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/DiskType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/FormFactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/TypeRam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Backend_war2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Backend_war_exploded2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Accessories.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/ChipSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/ChipSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Cooler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/DiskType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/FormFactor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Gpu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Material.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/Socket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/TypeRam.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/VideoMemotyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/VideoMemotyType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SearchFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Cases/Search/SearchFacade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
