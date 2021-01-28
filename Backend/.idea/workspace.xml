@@ -1,147 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entities/Accessories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Cooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Gpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/MotherBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Ram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Backend_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Backend_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/DiskType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/FormFactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/Material.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/TypeRam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Accessories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/ChipSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/ChipSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Cooler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/DiskType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/FormFactor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Gpu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Material.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/Socket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/TypeRam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/VideoMemotyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Entities/Enums/VideoMemotyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SearchFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/java/ru/pccconfigurator/MainLogic/Cases/Search/SearchFacade.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Ram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding>
-                <element signature="e#851#852#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Gpu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entities/VideoMemotyType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/DiskType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Material.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/MotherBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-              <folding>
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-                <element signature="e#664#665#0" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#1104#1105#0" expanded="true" />
-                <element signature="e#1177#1178#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Cpu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding>
-                <element signature="e#1254#1255#0" expanded="true" />
-                <element signature="e#1343#1344#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Disk.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-              <folding>
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Socket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="117" selection-start-line="3" selection-start-column="117" selection-end-line="3" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/FormFactor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -174,6 +78,7 @@
     <option name="width" value="1890" />
     <option name="height" value="960" />
   </component>
+  <component name="ProjectId" id="1nh04HU98z8iYPtedlsK8YhVGho" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -206,26 +111,51 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611047615116" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SpringTestProject" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="java.ru.pccconfigurator.MainLogic.Entities" />
       <recent name="Entities" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -236,6 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611043840350</updated>
+      <workItem from="1611826824737" duration="4190000" />
     </task>
     <servers />
   </component>
@@ -269,6 +200,25 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SearchFacade.java">

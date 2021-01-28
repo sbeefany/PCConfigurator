@@ -1,28 +1,24 @@
-package Entities;
+package java.ru.pccconfigurator.MainLogic.Entities;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.ru.pccconfigurator.MainLogic.Entities.Enums.DiskType;
 
 import java.util.Objects;
+import java.util.UUID;
 
-public class Disk extends Accessories{
-    private float size;
-    private int diskSizeGB;
-    private DiskType diskType;
 
-    public Disk(float size, int diskSizeGB, DiskType diskType) {
+public class Disk extends Accessory {
+    private final float size;
+    private final int diskSizeGB;
+    @NotNull
+    private final DiskType diskType;
+
+    public Disk(@NotNull String name, @NotNull String vendor, @NotNull UUID id, float size, int diskSizeGB, @NotNull DiskType diskType) {
+        super(name, vendor, id);
         this.size = size;
         this.diskSizeGB = diskSizeGB;
         this.diskType = diskType;
-    }
-
-    public float getSize() {
-        return size;
-    }
-
-    public int getDiskSizeGB() {
-        return diskSizeGB;
-    }
-
-    public DiskType getDiskType() {
-        return diskType;
     }
 
     @Override
