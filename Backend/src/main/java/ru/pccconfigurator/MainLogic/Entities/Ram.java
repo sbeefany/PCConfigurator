@@ -1,28 +1,24 @@
-package Entities;
+package java.ru.pccconfigurator.MainLogic.Entities;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.ru.pccconfigurator.MainLogic.Entities.Enums.TypeRam;
 import java.util.Objects;
+import java.util.UUID;
 
-public class Ram {
-    private TypeRam typeRam;
-    private int valueRam;
-    private int frequency;
 
-    public Ram(TypeRam typeRam, int valueRam, int frequency) {
+public class Ram extends Accessory {
+    @NotNull
+    private final TypeRam typeRam;
+    private final int valueRam;
+    private final int frequency;
+
+    public Ram(@NotNull String name, @NotNull String vendor, @NotNull UUID id,
+               @NotNull TypeRam typeRam, int valueRam, int frequency) {
+        super(name, vendor, id);
         this.typeRam = typeRam;
         this.valueRam = valueRam;
         this.frequency = frequency;
-    }
-
-    public TypeRam getTypeRam() {
-        return typeRam;
-    }
-
-    public int getValueRam() {
-        return valueRam;
-    }
-
-    public int getFrequency() {
-        return frequency;
     }
 
     @Override
