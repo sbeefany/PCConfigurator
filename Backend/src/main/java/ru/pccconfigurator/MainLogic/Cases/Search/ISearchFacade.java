@@ -1,6 +1,6 @@
-package java.ru.pccconfigurator.MainLogic.Cases.Search;
+package ru.pccconfigurator.MainLogic.Cases.Search;
 
-import java.ru.pccconfigurator.MainLogic.Entities.Accessory;
+import ru.pccconfigurator.MainLogic.Entities.Accessory;
 import java.util.List;
 
 public interface ISearchFacade {

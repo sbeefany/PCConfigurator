@@ -1,4 +1,4 @@
-package java.ru.pccconfigurator.MainLogic.Entities;
+package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 

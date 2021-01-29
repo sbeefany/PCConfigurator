@@ -1,4 +1,4 @@
-package java.ru.pccconfigurator.MainLogic.Entities.Enums;
+package ru.pccconfigurator.MainLogic.Entities.Enums;
 
 public enum Material {
 
