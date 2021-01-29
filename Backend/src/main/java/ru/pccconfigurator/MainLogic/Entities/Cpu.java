@@ -2,7 +2,7 @@ package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
+import ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
 import java.util.Objects;
 import java.util.UUID;
 

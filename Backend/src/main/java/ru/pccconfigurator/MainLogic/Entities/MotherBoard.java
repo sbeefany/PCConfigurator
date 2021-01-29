@@ -2,10 +2,10 @@ package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.ChipSet;
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.FormFactor;
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.TypeRam;
+import ru.pccconfigurator.MainLogic.Entities.Enums.ChipSet;
+import ru.pccconfigurator.MainLogic.Entities.Enums.FormFactor;
+import ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
+import ru.pccconfigurator.MainLogic.Entities.Enums.TypeRam;
 import java.util.Objects;
 import java.util.UUID;
 
