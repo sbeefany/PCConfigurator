@@ -14,8 +14,8 @@ public class Disk extends Accessory {
     @NotNull
     private final DiskType diskType;
 
-    public Disk(@NotNull String name, @NotNull String vendor, @NotNull UUID id, float size, int diskSizeGB, @NotNull DiskType diskType) {
-        super(name, vendor, id);
+    public Disk(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, float size, int diskSizeGB, @NotNull DiskType diskType) {
+        super(name, vendor, id, price);
         this.size = size;
         this.diskSizeGB = diskSizeGB;
         this.diskType = diskType;

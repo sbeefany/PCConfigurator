@@ -36,7 +36,7 @@ public class PcConfiguration {
     }
 
     private Boolean checkNewAccessory(Accessory accessory){
-
+        return null;
     }
 
     @Override

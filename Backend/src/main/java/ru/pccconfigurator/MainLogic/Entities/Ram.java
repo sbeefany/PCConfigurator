@@ -14,8 +14,8 @@ public class Ram extends Accessory {
     private final int frequency;
 
     public Ram(@NotNull String name, @NotNull String vendor, @NotNull UUID id,
-               @NotNull TypeRam typeRam, int valueRam, int frequency) {
-        super(name, vendor, id);
+               int price, @NotNull TypeRam typeRam, int valueRam, int frequency) {
+        super(name, vendor, id, price);
         this.typeRam = typeRam;
         this.valueRam = valueRam;
         this.frequency = frequency;

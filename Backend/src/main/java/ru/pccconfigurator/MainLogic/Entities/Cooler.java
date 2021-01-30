@@ -18,8 +18,8 @@ public class Cooler extends Accessory {
     private final int height;
     private final int noiceLvl;
 
-    public Cooler(@NotNull String name, @NotNull String vendor, @NotNull UUID id, @NotNull Socket socket, @NotNull Material material, int height, int noiceLvl) {
-        super(name, vendor, id);
+    public Cooler(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, @NotNull Socket socket, @NotNull Material material, int height, int noiceLvl) {
+        super(name, vendor, id, price);
         this.socket = socket;
         this.material = material;
         this.height = height;

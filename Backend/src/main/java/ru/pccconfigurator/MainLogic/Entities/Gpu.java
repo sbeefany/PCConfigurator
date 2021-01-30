@@ -12,26 +12,28 @@ public class Gpu extends Accessory {
     private final int memorySize;
     @NotNull
     private final VideoMemotyType videoMemotyType;
-    private final int size;
+    private final int length;
 
-    public Gpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int coreFrequency, int memorySize, @NotNull VideoMemotyType videoMemotyType, int size) {
-        super(name, vendor, id);
+    public Gpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id,
+               int price, int coreFrequency, int memorySize, @NotNull VideoMemotyType videoMemotyType, int length) {
+        super(name, vendor, id, price);
         this.coreFrequency = coreFrequency;
         this.memorySize = memorySize;
         this.videoMemotyType = videoMemotyType;
-        this.size = size;
+        this.length = length;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Gpu)) return false;
+        if (!super.equals(o)) return false;
         Gpu gpu = (Gpu) o;
-        return coreFrequency == gpu.coreFrequency && memorySize == gpu.memorySize && size == gpu.size && videoMemotyType == gpu.videoMemotyType;
+        return coreFrequency == gpu.coreFrequency && memorySize == gpu.memorySize && length == gpu.length && videoMemotyType == gpu.videoMemotyType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(coreFrequency, memorySize, videoMemotyType, size);
+        return Objects.hash(super.hashCode(), coreFrequency, memorySize, videoMemotyType, length);
     }
 }

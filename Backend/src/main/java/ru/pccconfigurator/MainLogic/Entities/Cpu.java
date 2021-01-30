@@ -15,8 +15,9 @@ public class Cpu extends Accessory {
     private final boolean hasGPU;
     private final int cashMemory;
 
-    public Cpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id, @NotNull Socket socket, int coresCount, int streamsCount, boolean hasGPU, int cashMemory) {
-        super(name, vendor, id);
+    public Cpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price,
+               @NotNull Socket socket, int coresCount, int streamsCount, boolean hasGPU, int cashMemory) {
+        super(name, vendor, id, price);
         this.socket = socket;
         this.coresCount = coresCount;
         this.streamsCount = streamsCount;

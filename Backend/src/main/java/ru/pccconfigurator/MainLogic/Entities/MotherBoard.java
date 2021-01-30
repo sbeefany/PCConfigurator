@@ -20,10 +20,9 @@ public class MotherBoard extends Accessory {
     @NotNull
     private final TypeRam typeRam;
 
-    public MotherBoard(@NotNull String name, @NotNull String vendor, @NotNull UUID id,
-                       @NotNull Socket socket, @NotNull ChipSet chipSet, @NotNull FormFactor formFactor,
-                       @NotNull TypeRam typeRam) {
-        super(name, vendor, id);
+    public MotherBoard(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, @NotNull Socket socket,
+                       @NotNull ChipSet chipSet, @NotNull FormFactor formFactor, @NotNull TypeRam typeRam) {
+        super(name, vendor, id, price);
         this.socket = socket;
         this.chipSet = chipSet;
         this.formFactor = formFactor;
