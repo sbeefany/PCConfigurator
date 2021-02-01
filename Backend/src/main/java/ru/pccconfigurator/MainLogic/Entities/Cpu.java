@@ -41,4 +41,29 @@ public class Cpu extends Accessory {
     public int hashCode() {
         return Objects.hash(socket, coresCount, streamsCount, hasGPU, cashMemory);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public int getCoresCount() {
+        return coresCount;
+    }
+
+    public int getStreamsCount() {
+        return streamsCount;
+    }
+
+    public boolean isHasGPU() {
+        return hasGPU;
+    }
+
+    public int getCashMemory() {
+        return cashMemory;
+    }
 }

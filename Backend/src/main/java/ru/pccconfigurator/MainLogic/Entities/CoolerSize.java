@@ -24,4 +24,12 @@ public class CoolerSize {
     public int hashCode() {
         return Objects.hash(height, width);
     }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
 }

@@ -35,4 +35,21 @@ public class Disk extends Accessory {
     public int hashCode() {
         return Objects.hash(size, diskSizeGB, diskType);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+    public float getSize() {
+        return size;
+    }
+
+    public int getDiskSizeGB() {
+        return diskSizeGB;
+    }
+
+    public DiskType getDiskType() {
+        return diskType;
+    }
 }

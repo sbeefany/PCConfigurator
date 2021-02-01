@@ -37,4 +37,26 @@ public class Cooler extends Accessory {
     public int hashCode() {
         return Objects.hash(super.hashCode(), socket, material, height, noiceLvl);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getNoiceLvl() {
+        return noiceLvl;
+    }
 }

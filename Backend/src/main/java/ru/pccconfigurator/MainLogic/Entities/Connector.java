@@ -28,4 +28,12 @@ public class Connector {
     public int hashCode() {
         return Objects.hash(info, connectorType);
     }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public ConnectorType getConnectorType() {
+        return connectorType;
+    }
 }

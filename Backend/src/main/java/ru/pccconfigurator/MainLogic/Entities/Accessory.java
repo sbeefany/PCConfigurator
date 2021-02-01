@@ -39,4 +39,20 @@ public abstract class Accessory {
     }
 
     public abstract Boolean compabilityCheck(Accessory accessory);
+
+    public String getName() {
+        return name;
+    }
+
+    public String getVendor() {
+        return vendor;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }

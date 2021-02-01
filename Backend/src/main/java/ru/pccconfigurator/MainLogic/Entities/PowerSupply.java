@@ -30,4 +30,17 @@ public class PowerSupply extends Accessory{
     public int hashCode() {
         return Objects.hash(super.hashCode(), formFactorPowerSupply, powerCount);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+    public FormFactorPowerSupply getFormFactorPowerSupply() {
+        return formFactorPowerSupply;
+    }
+
+    public int getPowerCount() {
+        return powerCount;
+    }
 }

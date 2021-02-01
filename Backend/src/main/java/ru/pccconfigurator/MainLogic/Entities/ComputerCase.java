@@ -60,4 +60,49 @@ public class ComputerCase extends Accessory{
         return Objects.hash(super.hashCode(), formFactor, typeSizeComputerCase, coolersCount,
                 sizes, connectors, formFactorPowerSupply, length, widht, height);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        if(accessory instanceof ComputeCaseCooler || accessory instanceof Gpu || accessory instanceof MotherBoard ||accessory instanceof PowerSupply){
+
+        }
+        return true;
+    }
+
+
+    public @NotNull List<CoolerSize> getSizes() {
+        return List.copyOf(sizes);
+    }
+
+    public @NotNull List<FormFactor> getFormFactor() {
+        return List.copyOf(formFactor);
+    }
+
+    public @NotNull TypeSizeComputerCase getTypeSizeComputerCase() {
+        return typeSizeComputerCase;
+    }
+
+    public int getCoolersCount() {
+        return coolersCount;
+    }
+
+    public @NotNull List<Connector> getConnectors() {
+        return List.copyOf(connectors);
+    }
+
+    public @NotNull FormFactorPowerSupply getFormFactorPowerSupply() {
+        return formFactorPowerSupply;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidht() {
+        return widht;
+    }
+
+    public int getHeight() {
+        return height;
+    }
 }

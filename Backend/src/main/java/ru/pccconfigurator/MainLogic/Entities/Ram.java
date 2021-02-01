@@ -35,4 +35,21 @@ public class Ram extends Accessory {
     public int hashCode() {
         return Objects.hash(typeRam, valueRam, frequency);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+    public TypeRam getTypeRam() {
+        return typeRam;
+    }
+
+    public int getValueRam() {
+        return valueRam;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
 }

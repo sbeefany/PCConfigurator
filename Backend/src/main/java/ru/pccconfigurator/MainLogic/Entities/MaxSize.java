@@ -24,4 +24,12 @@ public class MaxSize {
     public int hashCode() {
         return Objects.hash(maxCooleerHeight, maxGpuLength);
     }
+
+    public int getMaxCooleerHeight() {
+        return maxCooleerHeight;
+    }
+
+    public int getMaxGpuLength() {
+        return maxGpuLength;
+    }
 }

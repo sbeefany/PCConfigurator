@@ -44,4 +44,25 @@ public class MotherBoard extends Accessory {
     public int hashCode() {
         return Objects.hash(socket, chipSet, formFactor, typeRam);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public ChipSet getChipSet() {
+        return chipSet;
+    }
+
+    public FormFactor getFormFactor() {
+        return formFactor;
+    }
+
+    public TypeRam getTypeRam() {
+        return typeRam;
+    }
 }

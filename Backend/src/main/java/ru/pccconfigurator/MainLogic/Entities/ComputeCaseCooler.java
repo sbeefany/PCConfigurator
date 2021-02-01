@@ -32,4 +32,27 @@ public class ComputeCaseCooler extends Accessory{
     public int hashCode() {
         return Objects.hash(super.hashCode(), coolerSize, speed, noice);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        if(accessory instanceof ComputerCase){
+            return  ((ComputerCase) accessory).getSizes().stream()
+                    .filter(coolerSize1 -> coolerSize1.equals(coolerSize))
+                    .findFirst()
+                    .isEmpty();
+        }
+        return true;
+    }
+
+    public @NotNull CoolerSize getCoolerSize() {
+        return new CoolerSize(coolerSize.getHeight(),coolerSize.getWidth());
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getNoice() {
+        return noice;
+    }
 }

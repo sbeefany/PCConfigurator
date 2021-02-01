@@ -36,4 +36,25 @@ public class Gpu extends Accessory {
     public int hashCode() {
         return Objects.hash(super.hashCode(), coreFrequency, memorySize, videoMemotyType, length);
     }
+
+    @Override
+    public Boolean compabilityCheck(Accessory accessory) {
+        return null;
+    }
+
+    public int getCoreFrequency() {
+        return coreFrequency;
+    }
+
+    public int getMemorySize() {
+        return memorySize;
+    }
+
+    public VideoMemotyType getVideoMemotyType() {
+        return videoMemotyType;
+    }
+
+    public int getLength() {
+        return length;
+    }
 }
