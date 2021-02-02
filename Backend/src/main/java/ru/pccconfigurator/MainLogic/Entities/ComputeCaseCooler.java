@@ -12,7 +12,7 @@ public class ComputeCaseCooler extends Accessory{
     private final int speed;
     private final int noice;
 
-    public ComputeCaseCooler(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, CoolerSize coolerSize, int speed, int noice) {
+    public ComputeCaseCooler(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, @NotNull CoolerSize coolerSize, int speed, int noice) {
         super(name, vendor, id, price);
         this.coolerSize = coolerSize;
         this.speed = speed;
@@ -36,10 +36,8 @@ public class ComputeCaseCooler extends Accessory{
     @Override
     public Boolean compabilityCheck(Accessory accessory) {
         if(accessory instanceof ComputerCase){
-            return  ((ComputerCase) accessory).getSizes().stream()
-                    .filter(coolerSize1 -> coolerSize1.equals(coolerSize))
-                    .findFirst()
-                    .isEmpty();
+            return ((ComputerCase) accessory).getSizes().stream()
+                    .anyMatch(coolerSize1 -> coolerSize1.equals(coolerSize));
         }
         return true;
     }

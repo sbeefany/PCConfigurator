@@ -38,7 +38,7 @@ public abstract class Accessory {
         return this.id.equals(id);
     }
 
-    public abstract Boolean compabilityCheck(Accessory accessory);
+    public abstract Boolean compabilityCheck(Accessory accessory) throws RuntimeException;
 
     public String getName() {
         return name;

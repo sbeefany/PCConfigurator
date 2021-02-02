@@ -6,19 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputeCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputeCaseCooler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/CoolerSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/CoolerSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MaxSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MaxSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PowerSupply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +21,8 @@
       <list>
         <option value="Interface" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -139,8 +130,19 @@
       <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="TestClassPcConfiguration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestClassComputerCase">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassComputerCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -149,15 +151,82 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassPcConfiguration" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCase" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassComputerCaseCooler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassComputerCaseCooler.compabilityCheckCorrectThings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
+      <option name="METHOD_NAME" value="compabilityCheckCorrectThings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassComputerCaseCooler.compabilityCheckIncorrectThings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
+      <option name="METHOD_NAME" value="compabilityCheckIncorrectThings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassComputerCaseCooler.compabilityCheckNullThing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
+      <option name="METHOD_NAME" value="compabilityCheckNullThing" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestClassPcConfiguration" />
+        <item itemvalue="JUnit.TestClassComputerCase" />
+        <item itemvalue="JUnit.TestClassComputerCaseCooler" />
+        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckNullThing" />
+        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckIncorrectThings" />
+        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckCorrectThings" />
       </list>
     </recent_temporary>
   </component>
@@ -178,6 +247,7 @@
       <workItem from="1611917336610" duration="163000" />
       <workItem from="1611993072064" duration="3520000" />
       <workItem from="1612177299953" duration="1852000" />
+      <workItem from="1612247143790" duration="5148000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>

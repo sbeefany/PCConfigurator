@@ -26,11 +26,13 @@ public class ComputerCase extends Accessory{
     private final int widht;
     private final int height;
 
+    @NotNull
+    private final MaxSize maxSize;
+
     public ComputerCase(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price,
                         @NotNull List<FormFactor> formFactor, @NotNull TypeSizeComputerCase typeSizeComputerCase,
-                        int coolersCount, @NotNull List<CoolerSize> sizes,
-                        @NotNull List<Connector> connectors,
-                        @NotNull FormFactorPowerSupply formFactorPowerSupply, int length, int widht, int height) {
+                        int coolersCount, @NotNull List<CoolerSize> sizes, @NotNull List<Connector> connectors,
+                        @NotNull FormFactorPowerSupply formFactorPowerSupply, int length, int widht, int height, @NotNull MaxSize maxSize) {
         super(name, vendor, id, price);
         this.formFactor = formFactor;
         this.typeSizeComputerCase = typeSizeComputerCase;
@@ -41,6 +43,7 @@ public class ComputerCase extends Accessory{
         this.length = length;
         this.widht = widht;
         this.height = height;
+        this.maxSize = maxSize;
     }
 
     @Override
@@ -49,36 +52,24 @@ public class ComputerCase extends Accessory{
         if (!(o instanceof ComputerCase)) return false;
         if (!super.equals(o)) return false;
         ComputerCase that = (ComputerCase) o;
-        return coolersCount == that.coolersCount && length == that.length && widht == that.widht
-                && height == that.height && formFactor.equals(that.formFactor)
-                && typeSizeComputerCase == that.typeSizeComputerCase && sizes.equals(that.sizes)
-                && connectors.equals(that.connectors) && formFactorPowerSupply == that.formFactorPowerSupply;
+        return coolersCount == that.coolersCount && length == that.length && widht == that.widht && height == that.height && formFactor.equals(that.formFactor) && typeSizeComputerCase == that.typeSizeComputerCase && sizes.equals(that.sizes) && connectors.equals(that.connectors) && formFactorPowerSupply == that.formFactorPowerSupply && maxSize.equals(that.maxSize);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), formFactor, typeSizeComputerCase, coolersCount,
-                sizes, connectors, formFactorPowerSupply, length, widht, height);
+        return Objects.hash(super.hashCode(), formFactor, typeSizeComputerCase, coolersCount, sizes, connectors, formFactorPowerSupply, length, widht, height, maxSize);
     }
 
     @Override
     public Boolean compabilityCheck(Accessory accessory) {
-        if(accessory instanceof ComputeCaseCooler || accessory instanceof Gpu || accessory instanceof MotherBoard ||accessory instanceof PowerSupply){
-
-        }
-        return true;
+        return null;
     }
 
-
-    public @NotNull List<CoolerSize> getSizes() {
-        return List.copyOf(sizes);
+    public List<FormFactor> getFormFactor() {
+        return formFactor;
     }
 
-    public @NotNull List<FormFactor> getFormFactor() {
-        return List.copyOf(formFactor);
-    }
-
-    public @NotNull TypeSizeComputerCase getTypeSizeComputerCase() {
+    public TypeSizeComputerCase getTypeSizeComputerCase() {
         return typeSizeComputerCase;
     }
 
@@ -86,11 +77,15 @@ public class ComputerCase extends Accessory{
         return coolersCount;
     }
 
-    public @NotNull List<Connector> getConnectors() {
-        return List.copyOf(connectors);
+    public List<CoolerSize> getSizes() {
+        return sizes;
     }
 
-    public @NotNull FormFactorPowerSupply getFormFactorPowerSupply() {
+    public List<Connector> getConnectors() {
+        return connectors;
+    }
+
+    public FormFactorPowerSupply getFormFactorPowerSupply() {
         return formFactorPowerSupply;
     }
 
@@ -104,5 +99,9 @@ public class ComputerCase extends Accessory{
 
     public int getHeight() {
         return height;
+    }
+
+    public MaxSize getMaxSize() {
+        return maxSize;
     }
 }
