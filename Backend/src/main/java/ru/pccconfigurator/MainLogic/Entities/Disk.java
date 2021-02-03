@@ -9,14 +9,12 @@ import java.util.UUID;
 
 
 public class Disk extends Accessory {
-    private final float size;
     private final int diskSizeGB;
     @NotNull
     private final DiskType diskType;
 
-    public Disk(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, float size, int diskSizeGB, @NotNull DiskType diskType) {
+    public Disk(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, int diskSizeGB, @NotNull DiskType diskType) {
         super(name, vendor, id, price);
-        this.size = size;
         this.diskSizeGB = diskSizeGB;
         this.diskType = diskType;
     }
@@ -25,24 +23,19 @@ public class Disk extends Accessory {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Disk)) return false;
+        if (!super.equals(o)) return false;
         Disk disk = (Disk) o;
-        return Float.compare(disk.size, size) == 0 &&
-                diskSizeGB == disk.diskSizeGB &&
-                diskType == disk.diskType;
+        return diskSizeGB == disk.diskSizeGB && diskType == disk.diskType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(size, diskSizeGB, diskType);
+        return Objects.hash(super.hashCode(), diskSizeGB, diskType);
     }
 
     @Override
     public Boolean compabilityCheck(Accessory accessory) {
         return null;
-    }
-
-    public float getSize() {
-        return size;
     }
 
     public int getDiskSizeGB() {

@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputeCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputeCaseCooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputeCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,13 +134,15 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestClassComputerCase">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,9 +228,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestClassComputerCase" />
+        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckIncorrectThings" />
         <item itemvalue="JUnit.TestClassComputerCaseCooler" />
         <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckNullThing" />
-        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckIncorrectThings" />
         <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckCorrectThings" />
       </list>
     </recent_temporary>
@@ -248,6 +253,7 @@
       <workItem from="1611993072064" duration="3520000" />
       <workItem from="1612177299953" duration="1852000" />
       <workItem from="1612247143790" duration="5148000" />
+      <workItem from="1612338711995" duration="5140000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>

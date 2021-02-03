@@ -1,57 +1,46 @@
 package Tests;
 
-import org.junit.jupiter.api.Assertions;
+import SpringConfiguration.SpringConfigurationFakeClasses;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.pccconfigurator.MainLogic.Entities.*;
-import ru.pccconfigurator.MainLogic.Entities.Enums.*;
-
-import java.util.List;
-import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestClassComputerCaseCooler {
-    ComputeCaseCooler cooler;
-    ComputerCase computerCaseCorrect;
-    ComputerCase computerCaseIncorrect;
+    ComputerCaseCooler cooler120;
+    ComputerCaseCooler cooler75;
+    ComputerCase computerCase;
     Accessory otherAccessory;
 
     @BeforeAll
    void init(){
-        cooler = new ComputeCaseCooler("Name","Aercool", UUID.randomUUID(),350,new CoolerSize(120,120),1100,25);
-        computerCaseCorrect = new ComputerCase("computerCase","Arecool",UUID.randomUUID(),
-                1900, List.of(FormFactor.ATX),
-                TypeSizeComputerCase.MidTower,5,
-                List.of(new CoolerSize(120,120)),
-                List.of(new Connector("InfoAboutConnector", ConnectorType.Usb3)),
-                FormFactorPowerSupply.ATX,500,50,150,
-                new MaxSize(300,60));
-        computerCaseIncorrect = new ComputerCase("computerCase","Arecool",UUID.randomUUID(),
-                1900, List.of(FormFactor.ATX),
-                TypeSizeComputerCase.MidTower,5,
-                List.of(new CoolerSize(90,90)),
-                List.of(new Connector("InfoAboutConnector", ConnectorType.Usb3)),
-                FormFactorPowerSupply.ATX,500,50,150,
-                new MaxSize(300,60));
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigurationFakeClasses.class);
 
-        otherAccessory = new Gpu("Gpu1","NVIDIA",UUID.randomUUID(),50000,50,16,VideoMemotyType.GDDR4,170);
+        cooler120 = context.getBean("getComputerCaseCooler120",ComputerCaseCooler.class);
+        cooler75 = context.getBean("getComputerCaseCooler75",ComputerCaseCooler.class);
+        computerCase = context.getBean("getComputerCase",ComputerCase.class);
+        otherAccessory = context.getBean("getGpu170",Gpu.class);
+
     }
 
     @Test
     void compabilityCheckCorrectThings(){
-        assertTrue(cooler.compabilityCheck(computerCaseCorrect));
+        assertTrue(cooler120.compabilityCheck(computerCase));
     }
 
     @Test
     void compabilityCheckIncorrectThings(){
-        assertFalse(cooler.compabilityCheck(computerCaseIncorrect));
+        assertFalse(cooler75.compabilityCheck(computerCase));
     }
+
+
     @Test
     void compabilityCheckBetweenCorrectThingsButItAlwaysCompability(){
-        assertTrue(cooler.compabilityCheck(otherAccessory));
+        assertTrue(cooler120.compabilityCheck(otherAccessory));
     }
 
     @Test

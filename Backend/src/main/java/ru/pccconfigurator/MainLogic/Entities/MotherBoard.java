@@ -19,25 +19,25 @@ public class MotherBoard extends Accessory {
     private final FormFactor formFactor;
     @NotNull
     private final TypeRam typeRam;
+    private final boolean hasSlotForM2;
 
-    public MotherBoard(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, @NotNull Socket socket,
-                       @NotNull ChipSet chipSet, @NotNull FormFactor formFactor, @NotNull TypeRam typeRam) {
+    public MotherBoard(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price,
+                       @NotNull Socket socket, @NotNull ChipSet chipSet, @NotNull FormFactor formFactor, @NotNull TypeRam typeRam, boolean hasSlotForM2) {
         super(name, vendor, id, price);
         this.socket = socket;
         this.chipSet = chipSet;
         this.formFactor = formFactor;
         this.typeRam = typeRam;
+        this.hasSlotForM2 = hasSlotForM2;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof MotherBoard)) return false;
+        if (!super.equals(o)) return false;
         MotherBoard that = (MotherBoard) o;
-        return socket == that.socket &&
-                chipSet == that.chipSet &&
-                formFactor == that.formFactor &&
-                typeRam == that.typeRam;
+        return hasSlotForM2 == that.hasSlotForM2 && socket == that.socket && chipSet == that.chipSet && formFactor == that.formFactor && typeRam == that.typeRam;
     }
 
     @Override
@@ -64,5 +64,9 @@ public class MotherBoard extends Accessory {
 
     public TypeRam getTypeRam() {
         return typeRam;
+    }
+
+    public boolean isHasSlotForM2() {
+        return hasSlotForM2;
     }
 }
