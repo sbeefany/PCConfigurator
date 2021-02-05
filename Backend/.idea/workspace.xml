@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputeCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,36 +137,19 @@
       <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestClassComputerCase">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestClassCpu">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClassComputerCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCase" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassComputerCaseCooler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassCooler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -171,13 +158,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassCooler" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassComputerCaseCooler.compabilityCheckCorrectThings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassCpu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -186,14 +173,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
-      <option name="METHOD_NAME" value="compabilityCheckCorrectThings" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassCpu" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassComputerCaseCooler.compabilityCheckIncorrectThings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassDisk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -202,14 +188,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
-      <option name="METHOD_NAME" value="compabilityCheckIncorrectThings" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassDisk" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassComputerCaseCooler.compabilityCheckNullThing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassGpu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -218,8 +203,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCaseCooler" />
-      <option name="METHOD_NAME" value="compabilityCheckNullThing" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassGpu" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassGpu.checkCompabilityGpuLengthWithComputerCaseIncorrectVariants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClassGpu" />
+      <option name="METHOD_NAME" value="checkCompabilityGpuLengthWithComputerCaseIncorrectVariants" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -227,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestClassComputerCase" />
-        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckIncorrectThings" />
-        <item itemvalue="JUnit.TestClassComputerCaseCooler" />
-        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckNullThing" />
-        <item itemvalue="JUnit.TestClassComputerCaseCooler.compabilityCheckCorrectThings" />
+        <item itemvalue="JUnit.TestClassCpu" />
+        <item itemvalue="JUnit.TestClassGpu.checkCompabilityGpuLengthWithComputerCaseIncorrectVariants" />
+        <item itemvalue="JUnit.TestClassGpu" />
+        <item itemvalue="JUnit.TestClassDisk" />
+        <item itemvalue="JUnit.TestClassCooler" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +254,7 @@
       <workItem from="1612177299953" duration="1852000" />
       <workItem from="1612247143790" duration="5148000" />
       <workItem from="1612338711995" duration="5140000" />
+      <workItem from="1612512832958" duration="4260000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -334,6 +335,27 @@
     <MESSAGE value="AddedALotOfTasks" />
     <MESSAGE value="Fixed small bugs" />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed small bugs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassCooler.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassDisk.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

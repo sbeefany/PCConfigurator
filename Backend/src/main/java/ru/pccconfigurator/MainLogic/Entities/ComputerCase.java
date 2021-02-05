@@ -61,8 +61,24 @@ public class ComputerCase extends Accessory{
     }
 
     @Override
-    public Boolean compabilityCheck(Accessory accessory) {
-        return null;
+    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof ComputerCaseCooler){
+            return this.sizes.stream().anyMatch(size->size.equals(((ComputerCaseCooler) accessory).getCoolerSize()));
+        }
+        if(accessory instanceof Cooler){
+            return this.maxSize.getMaxCooleerHeight()>=((Cooler) accessory).getHeight();
+        }
+        if(accessory instanceof Gpu){
+            return this.maxSize.getMaxGpuLength()>=((Gpu) accessory).getLength();
+        }
+        if(accessory instanceof MotherBoard){
+            return this.formFactor.stream().anyMatch(formFactor1 -> formFactor1.equals(((MotherBoard) accessory).getFormFactor()));
+        }
+        if(accessory instanceof PowerSupply){
+            return this.formFactorPowerSupply.equals(((PowerSupply) accessory).getFormFactorPowerSupply());
+        }
+        return true;
+
     }
 
     public List<FormFactor> getFormFactor() {

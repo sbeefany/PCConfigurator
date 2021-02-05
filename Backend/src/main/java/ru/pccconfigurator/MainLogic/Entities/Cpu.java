@@ -43,8 +43,11 @@ public class Cpu extends Accessory {
     }
 
     @Override
-    public Boolean compabilityCheck(Accessory accessory) {
-        return null;
+    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof MotherBoard){
+            return this.socket.equals(((MotherBoard) accessory).getSocket());
+        }
+        return true;
     }
 
     public Socket getSocket() {

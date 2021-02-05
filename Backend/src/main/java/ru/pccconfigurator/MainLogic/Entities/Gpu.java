@@ -13,14 +13,16 @@ public class Gpu extends Accessory {
     @NotNull
     private final VideoMemotyType videoMemotyType;
     private final int length;
+    private final float neededPower;
 
-    public Gpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id,
-               int price, int coreFrequency, int memorySize, @NotNull VideoMemotyType videoMemotyType, int length) {
+    public Gpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price,
+               int coreFrequency, int memorySize, @NotNull VideoMemotyType videoMemotyType, int length, float neededPower) {
         super(name, vendor, id, price);
         this.coreFrequency = coreFrequency;
         this.memorySize = memorySize;
         this.videoMemotyType = videoMemotyType;
         this.length = length;
+        this.neededPower = neededPower;
     }
 
     @Override
@@ -29,17 +31,23 @@ public class Gpu extends Accessory {
         if (!(o instanceof Gpu)) return false;
         if (!super.equals(o)) return false;
         Gpu gpu = (Gpu) o;
-        return coreFrequency == gpu.coreFrequency && memorySize == gpu.memorySize && length == gpu.length && videoMemotyType == gpu.videoMemotyType;
+        return coreFrequency == gpu.coreFrequency && memorySize == gpu.memorySize && length == gpu.length && Float.compare(gpu.neededPower, neededPower) == 0 && videoMemotyType == gpu.videoMemotyType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), coreFrequency, memorySize, videoMemotyType, length);
+        return Objects.hash(super.hashCode(), coreFrequency, memorySize, videoMemotyType, length, neededPower);
     }
 
     @Override
-    public Boolean compabilityCheck(Accessory accessory) {
-        return null;
+    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof PowerSupply){
+            return neededPower<= ((PowerSupply) accessory).getPowerCount();
+        }
+        if(accessory instanceof ComputerCase){
+            return length<=((ComputerCase) accessory).getMaxSize().getMaxGpuLength();
+        }
+        return true;
     }
 
     public int getCoreFrequency() {

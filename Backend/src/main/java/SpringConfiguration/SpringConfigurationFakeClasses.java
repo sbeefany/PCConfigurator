@@ -65,13 +65,13 @@ public class SpringConfigurationFakeClasses {
     }
 
     @Bean
-    Accessory getCoolerLGA1150H111(){
-        return new Cooler("Name","Aercool", UUID.randomUUID(),1100, Socket.LGA1150,Material.COPPER,111,20);
+    Accessory getCoolerLGA1150H150(){
+        return new Cooler("Name","Aercool", UUID.randomUUID(),1100, Socket.LGA1150,Material.COPPER,150,20);
     }
 
     @Bean
-    Accessory getCoolerLGA1700H111(){
-        return new Cooler("Name","Aercool", UUID.randomUUID(),1100, Socket.LGA1700,Material.COPPER,111,20);
+    Accessory getCoolerLGA1700H150(){
+        return new Cooler("Name","Aercool", UUID.randomUUID(),1100, Socket.LGA1700,Material.COPPER,150,20);
     }
 
 
@@ -116,21 +116,21 @@ public class SpringConfigurationFakeClasses {
     @Bean
     Accessory getGpu170(){
         return new Gpu("GeForce3060ti","NVIDIA",UUID.randomUUID(),40000,
-                2000,6,VideoMemotyType.GDDR4,170);
+                2000,6,VideoMemotyType.GDDR4,170,750);
     }
     @Bean
     Accessory getGpu100(){
         return new Gpu("GeForce3060ti","NVIDIA",UUID.randomUUID(),40000,
-                2000,6,VideoMemotyType.GDDR4,100);
+                2000,6,VideoMemotyType.GDDR4,100,550);
     }
     @Bean
     MaxSize getMaxSize(){
-        return new MaxSize(100,280);
+        return new MaxSize(150,280);
     }
 
     @Bean
     MaxSize getMaxSizeSmall(){
-        return new MaxSize(200,120);
+        return new MaxSize(90,150);
     }
 
     @Bean
@@ -146,7 +146,7 @@ public class SpringConfigurationFakeClasses {
     @Bean
     Accessory getMotherBoard3(){
         return new MotherBoard("AsusRoqH110","Asus",UUID.randomUUID(),
-                7000,Socket.LGA1700,ChipSet.H110,FormFactor.MiniATX,TypeRam.DDR4,true);
+                7000,Socket.LGA1700,ChipSet.H110,FormFactor.MiniATX,TypeRam.DDR4,false);
     }
     @Bean
     Accessory getMotherBoard4(){

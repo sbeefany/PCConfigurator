@@ -66,7 +66,7 @@ public class MotherBoard extends Accessory {
         return typeRam;
     }
 
-    public boolean isHasSlotForM2() {
+    public boolean hasSlotForM2() {
         return hasSlotForM2;
     }
 }

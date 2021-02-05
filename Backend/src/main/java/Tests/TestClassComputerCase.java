@@ -15,13 +15,15 @@ public class TestClassComputerCase {
     ComputerCaseCooler cooler120;
     ComputerCaseCooler cooler75;
     Cooler coolerLGA1700H70;
-    Cooler coolerLGA1700H111;
+    Cooler coolerLGA1700H150;
     ComputerCase computerCaseSmall;
     Gpu gpu170;
     Gpu gpu100;
     MotherBoard motherBoard;
     MotherBoard motherBoard2;
     PowerSupply powerSupply;
+
+    Accessory otherAccessory;
 
     @BeforeAll
     void init() {
@@ -33,15 +35,17 @@ public class TestClassComputerCase {
         cooler75 = context.getBean("getComputerCaseCooler75", ComputerCaseCooler.class);
 
         coolerLGA1700H70 = context.getBean("getCoolerLGA1700H70", Cooler.class);
-        coolerLGA1700H111 = context.getBean("getCoolerLGA1700H111", Cooler.class);
+        coolerLGA1700H150 = context.getBean("getCoolerLGA1700H150", Cooler.class);
 
         gpu170 = context.getBean("getGpu170", Gpu.class);
         gpu100 = context.getBean("getGpu100", Gpu.class);
 
-        motherBoard = context.getBean("getMotherBoard", MotherBoard.class);
+        motherBoard = context.getBean("getMotherBoard3", MotherBoard.class);
         motherBoard2 = context.getBean("getMotherBoard2", MotherBoard.class);
 
         powerSupply = context.getBean("getPowerSupply850", PowerSupply.class);
+
+        otherAccessory = context.getBean("getRamDDR4",Ram.class);
     }
 
     @Test
@@ -71,7 +75,7 @@ public class TestClassComputerCase {
 
     @Test
     void compabilityCheckIncorrectThingsWithCpuColler() {
-        Assertions.assertFalse(computerCaseSmall.compabilityCheck(coolerLGA1700H111));
+        Assertions.assertFalse(computerCaseSmall.compabilityCheck(coolerLGA1700H150));
     }
 
     @Test
@@ -83,10 +87,14 @@ public class TestClassComputerCase {
     void compabilityCheckCorrectThingsWithMotherBoard() {
         Assertions.assertTrue(computerCaseSmall.compabilityCheck(motherBoard));
     }
+    @Test
+    void compabilityCheckIncorrectThingsWithMotherBoard() {
+        Assertions.assertFalse(computerCaseSmall.compabilityCheck(motherBoard2));
+    }
 
     @Test
     void compabilityCheckBetweenIndependentThings() {
-
+        Assertions.assertTrue(computerCaseSmall.compabilityCheck(otherAccessory));
     }
 
 }

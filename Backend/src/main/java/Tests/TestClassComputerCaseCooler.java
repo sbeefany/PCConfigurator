@@ -43,11 +43,6 @@ public class TestClassComputerCaseCooler {
         assertTrue(cooler120.compabilityCheck(otherAccessory));
     }
 
-    @Test
-    void compabilityCheckNullThing(){
-
-    }
-
 
 
 }
