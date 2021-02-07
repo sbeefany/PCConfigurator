@@ -28,19 +28,19 @@ public class TestClassComputerCaseCooler {
     }
 
     @Test
-    void compabilityCheckCorrectThings(){
-        assertTrue(cooler120.compabilityCheck(computerCase));
+    void checkCompatibilityCorrectThings(){
+        assertTrue(cooler120.compatibilityCheck(computerCase));
     }
 
     @Test
-    void compabilityCheckIncorrectThings(){
-        assertFalse(cooler75.compabilityCheck(computerCase));
+    void checkCompatibilityIncorrectThings(){
+        assertFalse(cooler75.compatibilityCheck(computerCase));
     }
 
 
     @Test
-    void compabilityCheckBetweenCorrectThingsButItAlwaysCompability(){
-        assertTrue(cooler120.compabilityCheck(otherAccessory));
+    void checkCompatibilityBetweenCorrectThingsButItAlwaysCompability(){
+        assertTrue(cooler120.compatibilityCheck(otherAccessory));
     }
 
 

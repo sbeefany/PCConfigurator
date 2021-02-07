@@ -39,27 +39,27 @@ public class TestClassCooler {
     }
 
     @Test
-    void checkCompabilityCoolerWithMotherBoardWithCorrectVariants() {
-        Assertions.assertTrue(cooler.compabilityCheck(motherBoard));
+    void checkCompatibilityCoolerWithMotherBoardWithCorrectVariants() {
+        Assertions.assertTrue(cooler.compatibilityCheck(motherBoard));
     }
 
     @Test
-    void checkCompabilityCoolerWithMotherBoardWithIncorrectVariants() {
-        Assertions.assertFalse(cooler.compabilityCheck(inccorecMotherBoard));
+    void checkCompatibilityCoolerWithMotherBoardWithIncorrectVariants() {
+        Assertions.assertFalse(cooler.compatibilityCheck(inccorecMotherBoard));
     }
 
     @Test
-    void checkCompabilityCoolerWithcomputerCaseWithCorrectVariants() {
-        Assertions.assertTrue(cooler.compabilityCheck(computerCase));
+    void checkCompatibilityCoolerWithcomputerCaseWithCorrectVariants() {
+        Assertions.assertTrue(cooler.compatibilityCheck(computerCase));
     }
 
     @Test
-    void checkCompabilityCoolerWithComputerCaseWithIncorrectVariants() {
-        Assertions.assertFalse(cooler.compabilityCheck(incorrectComputerCase));
+    void checkCompatibilityCoolerWithComputerCaseWithIncorrectVariants() {
+        Assertions.assertFalse(cooler.compatibilityCheck(incorrectComputerCase));
     }
 
     @Test
-    void checkCompabilityCoolerWithOtherAccessory() {
-        Assertions.assertTrue(cooler.compabilityCheck(accessory));
+    void checkCompatibilityCoolerWithOtherAccessory() {
+        Assertions.assertTrue(cooler.compatibilityCheck(accessory));
     }
 }

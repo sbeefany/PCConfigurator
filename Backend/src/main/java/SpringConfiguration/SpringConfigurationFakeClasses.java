@@ -45,7 +45,7 @@ public class SpringConfigurationFakeClasses {
                 TypeSizeComputerCase.MiniTower,3,
                 List.of(getCoolerSize90(),getCoolerSize75()),
                 List.of(getConnector()),
-                FormFactorPowerSupply.ATX,250,50,100,
+                FormFactorPowerSupply.FlexATX,250,50,100,
                 getMaxSizeSmall());
     }
 
@@ -162,6 +162,10 @@ public class SpringConfigurationFakeClasses {
     @Bean
     Accessory getPowerSupply550(){
         return new PowerSupply("Aercool","TestPowerSupply",UUID.randomUUID(),2000,FormFactorPowerSupply.ATX,550);
+    }
+    @Bean
+    Accessory getPowerSupply550FlexATX(){
+        return new PowerSupply("Aercool","TestPowerSupply",UUID.randomUUID(),2000,FormFactorPowerSupply.FlexATX,550);
     }
     @Bean
     Accessory getRamDDR4(){

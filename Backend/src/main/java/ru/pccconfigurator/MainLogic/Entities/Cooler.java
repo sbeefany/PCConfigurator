@@ -40,7 +40,7 @@ public class Cooler extends Accessory {
     }
 
     @Override
-    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
         if (accessory instanceof ComputerCase) {
             return this.height <= ((ComputerCase) accessory).getMaxSize().getMaxCooleerHeight();
         }

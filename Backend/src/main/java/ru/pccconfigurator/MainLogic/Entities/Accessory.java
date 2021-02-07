@@ -38,7 +38,7 @@ public abstract class Accessory {
         return this.id.equals(id);
     }
 
-    public abstract Boolean compabilityCheck(@NotNull Accessory accessory) throws RuntimeException;
+    public abstract Boolean compatibilityCheck(@NotNull Accessory accessory) throws RuntimeException;
 
     public String getName() {
         return name;

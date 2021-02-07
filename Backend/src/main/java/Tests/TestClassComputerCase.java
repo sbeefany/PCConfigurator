@@ -22,6 +22,7 @@ public class TestClassComputerCase {
     MotherBoard motherBoard;
     MotherBoard motherBoard2;
     PowerSupply powerSupply;
+    PowerSupply incorrectPowerSupply;
 
     Accessory otherAccessory;
 
@@ -43,58 +44,63 @@ public class TestClassComputerCase {
         motherBoard = context.getBean("getMotherBoard3", MotherBoard.class);
         motherBoard2 = context.getBean("getMotherBoard2", MotherBoard.class);
 
-        powerSupply = context.getBean("getPowerSupply850", PowerSupply.class);
+        powerSupply = context.getBean("getPowerSupply550FlexATX", PowerSupply.class);
+        incorrectPowerSupply = context.getBean("getPowerSupply850", PowerSupply.class);
 
         otherAccessory = context.getBean("getRamDDR4",Ram.class);
     }
 
     @Test
-    void compabilityCheckCorrectThingsWithGpu() {
-        Assertions.assertTrue(computerCaseSmall.compabilityCheck(gpu100));
+    void checkCompatibilityCorrectThingsWithGpu() {
+        Assertions.assertTrue(computerCaseSmall.compatibilityCheck(gpu100));
     }
 
     @Test
-    void compabilityCheckIncorrectThingsWithGpu() {
-        Assertions.assertFalse(computerCaseSmall.compabilityCheck(gpu170));
+    void checkCompatibilityIncorrectThingsWithGpu() {
+        Assertions.assertFalse(computerCaseSmall.compatibilityCheck(gpu170));
     }
 
     @Test
-    void compabilityCheckCorrectThingsWithCooler() {
-        Assertions.assertTrue(computerCaseSmall.compabilityCheck(cooler75));
+    void checkCompatibilityCorrectThingsWithCooler() {
+        Assertions.assertTrue(computerCaseSmall.compatibilityCheck(cooler75));
     }
 
     @Test
-    void compabilityCheckIncorrectThingsWithCooler() {
-        Assertions.assertFalse(computerCaseSmall.compabilityCheck(cooler120));
+    void checkCompatibilityIncorrectThingsWithCooler() {
+        Assertions.assertFalse(computerCaseSmall.compatibilityCheck(cooler120));
     }
 
     @Test
-    void compabilityCheckCorrectThingsWithCpuCooler() {
-        Assertions.assertTrue(computerCaseSmall.compabilityCheck(coolerLGA1700H70));
+    void checkCompatibilityCorrectThingsWithCpuCooler() {
+        Assertions.assertTrue(computerCaseSmall.compatibilityCheck(coolerLGA1700H70));
     }
 
     @Test
-    void compabilityCheckIncorrectThingsWithCpuColler() {
-        Assertions.assertFalse(computerCaseSmall.compabilityCheck(coolerLGA1700H150));
+    void checkCompatibilityIncorrectThingsWithCpuCooler() {
+        Assertions.assertFalse(computerCaseSmall.compatibilityCheck(coolerLGA1700H150));
     }
 
     @Test
-    void compabilityCheckCorrectThingsWithPowerSupply() {
-        Assertions.assertTrue(computerCaseSmall.compabilityCheck(powerSupply));
+    void checkCompatibilityCorrectThingsWithPowerSupplyCorrectThings() {
+        Assertions.assertTrue(computerCaseSmall.compatibilityCheck(powerSupply));
+    }
+    @Test
+    void checkCompatibilityCorrectThingsWithPowerSupplyIncorrectThings() {
+        Assertions.assertFalse(computerCaseSmall.compatibilityCheck(incorrectPowerSupply));
     }
 
     @Test
-    void compabilityCheckCorrectThingsWithMotherBoard() {
-        Assertions.assertTrue(computerCaseSmall.compabilityCheck(motherBoard));
+    void checkCompatibilityCorrectThingsWithMotherBoard() {
+        Assertions.assertTrue(computerCaseSmall.compatibilityCheck(motherBoard));
     }
     @Test
-    void compabilityCheckIncorrectThingsWithMotherBoard() {
-        Assertions.assertFalse(computerCaseSmall.compabilityCheck(motherBoard2));
+    void checkCompatibilityIncorrectThingsWithMotherBoard() {
+        Assertions.assertFalse(computerCaseSmall.compatibilityCheck(motherBoard2));
     }
 
     @Test
-    void compabilityCheckBetweenIndependentThings() {
-        Assertions.assertTrue(computerCaseSmall.compabilityCheck(otherAccessory));
+    void checkCompatibilityBetweenIndependentThings() {
+        Assertions.assertTrue(computerCaseSmall.compatibilityCheck(otherAccessory));
     }
 
 }

@@ -7,13 +7,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.pccconfigurator.MainLogic.Entities.Accessory;
-import ru.pccconfigurator.MainLogic.Entities.Cpu;
 import ru.pccconfigurator.MainLogic.Entities.Gpu;
 import ru.pccconfigurator.MainLogic.Entities.MotherBoard;
+import ru.pccconfigurator.MainLogic.Entities.Ram;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class TestClassCpu {
-    Cpu cpu;
+public class TestClassRam {
+
+    Ram ram;
 
     MotherBoard motherBoard;
     MotherBoard incorrectMotherBoard;
@@ -24,26 +25,24 @@ public class TestClassCpu {
     void init(){
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigurationFakeClasses.class);
 
-        cpu = context.getBean("getCpuLGA1150",Cpu.class);
+        ram = context.getBean("getRamDDR4",Ram.class);
 
-        motherBoard = context.getBean("getMotherBoard2",MotherBoard.class);
-        incorrectMotherBoard= context.getBean("getMotherBoard",MotherBoard.class);
+        motherBoard = context.getBean("getMotherBoard",MotherBoard.class);
+        incorrectMotherBoard = context.getBean("getMotherBoard4",MotherBoard.class);
 
         otherAccessory = context.getBean("getGpu170", Gpu.class);
     }
 
     @Test
-    void checkCompatibilityCpuWithMotherBoardCorrectVariants(){
-        Assertions.assertTrue(cpu.compatibilityCheck(motherBoard));
+    void checkCompatibilityRamWithMotherBoardCorrectThings(){
+        Assertions.assertTrue(ram.compatibilityCheck(motherBoard));
     }
-
     @Test
-    void checkCompatibilityCpuWithMotherBoardIncorrectVariants(){
-        Assertions.assertFalse(cpu.compatibilityCheck(incorrectMotherBoard));
+    void checkCompatibilityRamWithMotherBoardIncorrectThings(){
+        Assertions.assertFalse(ram.compatibilityCheck(incorrectMotherBoard));
     }
-
     @Test
-    void checkCompatibilityCpuWithOtherAccessory(){
-        Assertions.assertTrue(cpu.compatibilityCheck(otherAccessory));
+    void checkCompatibilityRamWithOtherAccessory(){
+        Assertions.assertTrue(ram.compatibilityCheck(otherAccessory));
     }
 }

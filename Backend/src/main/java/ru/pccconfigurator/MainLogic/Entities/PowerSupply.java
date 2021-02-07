@@ -32,8 +32,14 @@ public class PowerSupply extends Accessory{
     }
 
     @Override
-    public Boolean compabilityCheck(Accessory accessory) {
-        return null;
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof ComputerCase){
+            return ((ComputerCase) accessory).getFormFactorPowerSupply().equals(this.formFactorPowerSupply);
+        }
+        if(accessory instanceof Gpu) {
+            return this.powerCount>=((Gpu) accessory).getNeededPower();
+        }
+        return true;
     }
 
     public FormFactorPowerSupply getFormFactorPowerSupply() {

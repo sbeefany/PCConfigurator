@@ -2,10 +2,8 @@ package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
-import ru.pccconfigurator.MainLogic.Entities.Enums.ChipSet;
-import ru.pccconfigurator.MainLogic.Entities.Enums.FormFactor;
-import ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
-import ru.pccconfigurator.MainLogic.Entities.Enums.TypeRam;
+import ru.pccconfigurator.MainLogic.Entities.Enums.*;
+
 import java.util.Objects;
 import java.util.UUID;
 
@@ -46,8 +44,24 @@ public class MotherBoard extends Accessory {
     }
 
     @Override
-    public Boolean compabilityCheck(Accessory accessory) {
-        return null;
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof Cpu){
+            return this.socket.equals(((Cpu) accessory).getSocket());
+        }
+        if(accessory instanceof Cooler){
+            return this.socket.equals(((Cooler) accessory).getSocket());
+        }
+        if(accessory instanceof ComputerCase){
+            return ((ComputerCase) accessory).getFormFactor().stream().anyMatch(this.formFactor::equals);
+        }
+        if(accessory instanceof Ram){
+            return this.typeRam.equals(((Ram) accessory).getTypeRam());
+        }
+        if(accessory instanceof Disk){
+            if(((Disk) accessory).getDiskType().equals(DiskType.M2))
+                return hasSlotForM2;
+        }
+        return true;
     }
 
     public Socket getSocket() {

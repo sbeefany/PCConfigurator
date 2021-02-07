@@ -61,7 +61,7 @@ public class ComputerCase extends Accessory{
     }
 
     @Override
-    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
         if(accessory instanceof ComputerCaseCooler){
             return this.sizes.stream().anyMatch(size->size.equals(((ComputerCaseCooler) accessory).getCoolerSize()));
         }

@@ -37,8 +37,11 @@ public class Ram extends Accessory {
     }
 
     @Override
-    public Boolean compabilityCheck(Accessory accessory) {
-        return null;
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof MotherBoard){
+            return this.typeRam.equals(((MotherBoard) accessory).getTypeRam());
+        }
+        return true;
     }
 
     public TypeRam getTypeRam() {

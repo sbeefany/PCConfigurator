@@ -34,7 +34,7 @@ public class Disk extends Accessory {
     }
 
     @Override
-    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
         if(this.diskType.equals(DiskType.M2) && accessory instanceof MotherBoard){
             return ((MotherBoard) accessory).hasSlotForM2();
         }

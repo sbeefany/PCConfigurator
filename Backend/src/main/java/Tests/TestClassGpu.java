@@ -38,28 +38,28 @@ public class TestClassGpu {
     }
 
     @Test
-    void checkCompabilityGpuLengthWithComputerCaseCorrectVariants(){
-        Assertions.assertTrue(gpu.compabilityCheck(computerCase));
+    void checkCompatibilityGpuLengthWithComputerCaseCorrectVariants(){
+        Assertions.assertTrue(gpu.compatibilityCheck(computerCase));
     }
 
     @Test
-    void checkCompabilityGpuLengthWithComputerCaseIncorrectVariants(){
-        Assertions.assertFalse(gpu.compabilityCheck(incorrectComputerCase));
+    void checkCompatibilityGpuLengthWithComputerCaseIncorrectVariants(){
+        Assertions.assertFalse(gpu.compatibilityCheck(incorrectComputerCase));
     }
 
     @Test
-    void checkCompabilityGpuPowerWithPowerSupply850CorrectVariants(){
-        Assertions.assertTrue(gpu.compabilityCheck(powerSupply850));
+    void checkCompatibilityGpuPowerWithPowerSupply850CorrectVariants(){
+        Assertions.assertTrue(gpu.compatibilityCheck(powerSupply850));
     }
 
     @Test
-    void checkCompabilityGpuPowerWithPowerSupply550IncorrectVariants(){
-        Assertions.assertFalse(gpu.compabilityCheck(powerSupply550));
+    void checkCompatibilityGpuPowerWithPowerSupply550IncorrectVariants(){
+        Assertions.assertFalse(gpu.compatibilityCheck(powerSupply550));
     }
 
     @Test
-    void checkCompabilityGpuWithOtherAccessory(){
-        Assertions.assertTrue(gpu.compabilityCheck(accessory));
+    void checkCompatibilityGpuWithOtherAccessory(){
+        Assertions.assertTrue(gpu.compatibilityCheck(accessory));
     }
 
 }

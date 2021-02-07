@@ -40,7 +40,7 @@ public class Gpu extends Accessory {
     }
 
     @Override
-    public Boolean compabilityCheck(@NotNull Accessory accessory) {
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
         if(accessory instanceof PowerSupply){
             return neededPower<= ((PowerSupply) accessory).getPowerCount();
         }
@@ -64,5 +64,9 @@ public class Gpu extends Accessory {
 
     public int getLength() {
         return length;
+    }
+
+    public float getNeededPower() {
+        return neededPower;
     }
 }

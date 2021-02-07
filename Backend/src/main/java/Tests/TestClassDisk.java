@@ -32,18 +32,18 @@ public class TestClassDisk {
     }
 
     @Test
-    void checkCompabilityDiskM2WithMotherBoardCorrectVariants(){
-        Assertions.assertTrue(disk.compabilityCheck(motherBoard));
+    void checkCompatibilityDiskM2WithMotherBoardCorrectVariants(){
+        Assertions.assertTrue(disk.compatibilityCheck(motherBoard));
     }
 
     @Test
-    void checkCompabilityDiskM2WithMotherBoardIncorrectVariants(){
-        Assertions.assertFalse(disk.compabilityCheck(incorrectMotherBoard));
+    void checkCompatibilityDiskM2WithMotherBoardIncorrectVariants(){
+        Assertions.assertFalse(disk.compatibilityCheck(incorrectMotherBoard));
     }
 
     @Test
-    void checkCompabilityDiskM2WithOtherAccessory(){
-        Assertions.assertTrue(disk.compabilityCheck(otherAccessory));
+    void checkCompatibilityDiskM2WithOtherAccessory(){
+        Assertions.assertTrue(disk.compatibilityCheck(otherAccessory));
     }
 
 
