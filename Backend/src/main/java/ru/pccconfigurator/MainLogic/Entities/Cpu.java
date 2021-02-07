@@ -2,7 +2,7 @@ package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
+import ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -15,8 +15,9 @@ public class Cpu extends Accessory {
     private final boolean hasGPU;
     private final int cashMemory;
 
-    public Cpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id, @NotNull Socket socket, int coresCount, int streamsCount, boolean hasGPU, int cashMemory) {
-        super(name, vendor, id);
+    public Cpu(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price,
+               @NotNull Socket socket, int coresCount, int streamsCount, boolean hasGPU, int cashMemory) {
+        super(name, vendor, id, price);
         this.socket = socket;
         this.coresCount = coresCount;
         this.streamsCount = streamsCount;
@@ -39,5 +40,33 @@ public class Cpu extends Accessory {
     @Override
     public int hashCode() {
         return Objects.hash(socket, coresCount, streamsCount, hasGPU, cashMemory);
+    }
+
+    @Override
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof MotherBoard){
+            return this.socket.equals(((MotherBoard) accessory).getSocket());
+        }
+        return true;
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public int getCoresCount() {
+        return coresCount;
+    }
+
+    public int getStreamsCount() {
+        return streamsCount;
+    }
+
+    public boolean isHasGPU() {
+        return hasGPU;
+    }
+
+    public int getCashMemory() {
+        return cashMemory;
     }
 }

@@ -2,8 +2,9 @@ package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.Material;
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
+import ru.pccconfigurator.MainLogic.Entities.Enums.Material;
+import ru.pccconfigurator.MainLogic.Entities.Enums.Socket;
+
 import java.util.Objects;
 import java.util.UUID;
 
@@ -18,8 +19,8 @@ public class Cooler extends Accessory {
     private final int height;
     private final int noiceLvl;
 
-    public Cooler(@NotNull String name, @NotNull String vendor, @NotNull UUID id, @NotNull Socket socket, @NotNull Material material, int height, int noiceLvl) {
-        super(name, vendor, id);
+    public Cooler(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, @NotNull Socket socket, @NotNull Material material, int height, int noiceLvl) {
+        super(name, vendor, id, price);
         this.socket = socket;
         this.material = material;
         this.height = height;
@@ -36,5 +37,33 @@ public class Cooler extends Accessory {
 
     public int hashCode() {
         return Objects.hash(super.hashCode(), socket, material, height, noiceLvl);
+    }
+
+    @Override
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
+        if (accessory instanceof ComputerCase) {
+            return this.height <= ((ComputerCase) accessory).getMaxSize().getMaxCooleerHeight();
+        }
+        if (accessory instanceof MotherBoard) {
+            return this.socket.equals(((MotherBoard) accessory).getSocket());
+        }
+        return true;
+    }
+
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getNoiceLvl() {
+        return noiceLvl;
     }
 }

@@ -2,7 +2,7 @@ package ru.pccconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.ru.pccconfigurator.MainLogic.Entities.Enums.TypeRam;
+import ru.pccconfigurator.MainLogic.Entities.Enums.TypeRam;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -14,8 +14,8 @@ public class Ram extends Accessory {
     private final int frequency;
 
     public Ram(@NotNull String name, @NotNull String vendor, @NotNull UUID id,
-               @NotNull TypeRam typeRam, int valueRam, int frequency) {
-        super(name, vendor, id);
+               int price, @NotNull TypeRam typeRam, int valueRam, int frequency) {
+        super(name, vendor, id, price);
         this.typeRam = typeRam;
         this.valueRam = valueRam;
         this.frequency = frequency;
@@ -34,5 +34,25 @@ public class Ram extends Accessory {
     @Override
     public int hashCode() {
         return Objects.hash(typeRam, valueRam, frequency);
+    }
+
+    @Override
+    public Boolean compatibilityCheck(@NotNull Accessory accessory) {
+        if(accessory instanceof MotherBoard){
+            return this.typeRam.equals(((MotherBoard) accessory).getTypeRam());
+        }
+        return true;
+    }
+
+    public TypeRam getTypeRam() {
+        return typeRam;
+    }
+
+    public int getValueRam() {
+        return valueRam;
+    }
+
+    public int getFrequency() {
+        return frequency;
     }
 }
