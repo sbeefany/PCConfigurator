@@ -17,15 +17,19 @@ public class MotherBoard extends Accessory {
     private final FormFactor formFactor;
     @NotNull
     private final TypeRam typeRam;
+
+    private final int ramCount;
     private final boolean hasSlotForM2;
 
-    public MotherBoard(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price,
-                       @NotNull Socket socket, @NotNull ChipSet chipSet, @NotNull FormFactor formFactor, @NotNull TypeRam typeRam, boolean hasSlotForM2) {
+    public MotherBoard(@NotNull String name, @NotNull String vendor, @NotNull UUID id, int price, @NotNull Socket socket,
+                       @NotNull ChipSet chipSet, @NotNull FormFactor formFactor, @NotNull TypeRam typeRam,
+                       int ramCount, boolean hasSlotForM2) {
         super(name, vendor, id, price);
         this.socket = socket;
         this.chipSet = chipSet;
         this.formFactor = formFactor;
         this.typeRam = typeRam;
+        this.ramCount = ramCount;
         this.hasSlotForM2 = hasSlotForM2;
     }
 
@@ -35,12 +39,12 @@ public class MotherBoard extends Accessory {
         if (!(o instanceof MotherBoard)) return false;
         if (!super.equals(o)) return false;
         MotherBoard that = (MotherBoard) o;
-        return hasSlotForM2 == that.hasSlotForM2 && socket == that.socket && chipSet == that.chipSet && formFactor == that.formFactor && typeRam == that.typeRam;
+        return ramCount == that.ramCount && hasSlotForM2 == that.hasSlotForM2 && socket == that.socket && chipSet == that.chipSet && formFactor == that.formFactor && typeRam == that.typeRam;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(socket, chipSet, formFactor, typeRam);
+        return Objects.hash(super.hashCode(), socket, chipSet, formFactor, typeRam, ramCount, hasSlotForM2);
     }
 
     @Override
@@ -64,20 +68,24 @@ public class MotherBoard extends Accessory {
         return true;
     }
 
-    public Socket getSocket() {
+    public @NotNull Socket getSocket() {
         return socket;
     }
 
-    public ChipSet getChipSet() {
+    public @NotNull ChipSet getChipSet() {
         return chipSet;
     }
 
-    public FormFactor getFormFactor() {
+    public @NotNull FormFactor getFormFactor() {
         return formFactor;
     }
 
-    public TypeRam getTypeRam() {
+    public @NotNull TypeRam getTypeRam() {
         return typeRam;
+    }
+
+    public int getRamCount() {
+        return ramCount;
     }
 
     public boolean hasSlotForM2() {

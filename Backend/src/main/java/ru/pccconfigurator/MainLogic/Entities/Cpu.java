@@ -50,7 +50,7 @@ public class Cpu extends Accessory {
         return true;
     }
 
-    public Socket getSocket() {
+    public @NotNull Socket getSocket() {
         return socket;
     }
 

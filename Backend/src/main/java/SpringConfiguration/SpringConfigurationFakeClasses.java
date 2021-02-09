@@ -5,11 +5,31 @@ import org.springframework.context.annotation.Configuration;
 import ru.pccconfigurator.MainLogic.Entities.*;
 import ru.pccconfigurator.MainLogic.Entities.Enums.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Configuration
 public class SpringConfigurationFakeClasses {
+
+    @Bean
+    PcConfiguration getEmptyConfiguration(){
+        return new PcConfiguration(new ArrayList<>());
+    }
+
+    @Bean
+    PcConfiguration getConfigurationWithSomeAccessories(){
+        return new PcConfiguration(List.of(getComputerCaseSmall(),getCpuLGA1700()));
+    }
+
+    @Bean
+    PcConfiguration getFullConfiguration(){
+        return new PcConfiguration(List.of(
+                getComputerCaseSmall(),getCpuLGA1700(),getMotherBoard3(),getRamDDR4(),getRamDDR4(),
+                getComputerCaseCooler90(),getComputerCaseCooler75(),getCoolerLGA1700H70(),getDiskSSD(),getGpu100(),getPowerSupply550FlexATX()
+        ));
+    }
+
 
     @Bean
     Accessory getComputerCaseCooler120(){
@@ -136,22 +156,22 @@ public class SpringConfigurationFakeClasses {
     @Bean
     Accessory getMotherBoard(){
         return new MotherBoard("AsusRoqH110","Asus",UUID.randomUUID(),
-                7000,Socket.LGA1700,ChipSet.H110,FormFactor.ATX,TypeRam.DDR4,true);
+                7000,Socket.LGA1700,ChipSet.H110,FormFactor.ATX,TypeRam.DDR4,4,true);
     }
     @Bean
     Accessory getMotherBoard2(){
         return new MotherBoard("AsusRoqH110","Asus",UUID.randomUUID(),
-                7000,Socket.LGA1150,ChipSet.H110,FormFactor.ATX,TypeRam.DDR4,true);
+                7000,Socket.LGA1150,ChipSet.H110,FormFactor.ATX,TypeRam.DDR4,4,true);
     }
     @Bean
     Accessory getMotherBoard3(){
         return new MotherBoard("AsusRoqH110","Asus",UUID.randomUUID(),
-                7000,Socket.LGA1700,ChipSet.H110,FormFactor.MiniATX,TypeRam.DDR4,false);
+                7000,Socket.LGA1700,ChipSet.H110,FormFactor.MiniATX,TypeRam.DDR4,2,false);
     }
     @Bean
     Accessory getMotherBoard4(){
         return new MotherBoard("AsusRoqH110","Asus",UUID.randomUUID(),
-                7000,Socket.LGA1700,ChipSet.H110,FormFactor.ATX,TypeRam.DDR3,true);
+                7000,Socket.LGA1700,ChipSet.H110,FormFactor.ATX,TypeRam.DDR3,4,true);
     }
 
     @Bean

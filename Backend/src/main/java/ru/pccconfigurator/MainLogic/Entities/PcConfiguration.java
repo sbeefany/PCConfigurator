@@ -16,10 +16,10 @@ public class PcConfiguration {
         if (checkNewAccessory(accessory))
             return accessories.add(accessory);
         else
-            throw  new IllegalArgumentException();
+            return false;
     }
 
-    public Boolean deleteAccesory(Accessory accessory){
+    public Boolean deleteAccessory(Accessory accessory){
         return accessories.remove(accessory);
     }
 
@@ -35,8 +35,40 @@ public class PcConfiguration {
         return null;
     }
 
-    private Boolean checkNewAccessory(Accessory accessory){
-        return null;
+    private Boolean checkNewAccessory(Accessory accessory) {
+        boolean checkAccessory;
+        boolean checkCount;
+        if(accessory instanceof ComputerCaseCooler || accessory instanceof Ram){
+            if(accessory instanceof ComputerCaseCooler){
+               ComputerCase computerCase = (ComputerCase) accessories.stream().filter(accessory1 -> accessory1.getClass().equals(ComputerCase.class)).findFirst().orElse(null);
+               if(computerCase!=null){
+                   checkAccessory = accessories.stream().allMatch(accessory1 -> accessory1.compatibilityCheck(accessory));
+                   checkCount = accessories.stream().filter(accessory1 -> accessory1.getClass().equals(accessory.getClass())).count()<
+                           computerCase.getSizes().stream().filter(coolerSize -> coolerSize.equals(((ComputerCaseCooler) accessory).getCoolerSize())).count();
+               }else{
+                   return false;
+               }
+            }else{
+                MotherBoard motherBoard = (MotherBoard) accessories.stream().filter(accessory1 -> accessory1.getClass().equals(MotherBoard.class)).findFirst().orElse(null);
+                if(motherBoard!=null){
+                    checkAccessory = accessories.stream().allMatch(accessory1 -> accessory1.compatibilityCheck(accessory));
+                    checkCount = accessories.stream().filter(accessory1 -> accessory1.getClass().equals(accessory.getClass())).count()<motherBoard.getRamCount();
+
+                }else{
+                    return false;
+                }
+
+            }
+
+        }else{
+            checkAccessory = accessories.stream().allMatch(accessory1 -> accessory1.compatibilityCheck(accessory));
+            checkCount = accessories.stream().noneMatch(accessory1 -> accessory1.getClass().equals(accessory.getClass()));
+        }
+
+        return checkCount&&checkAccessory;
+
+
+
     }
 
     @Override

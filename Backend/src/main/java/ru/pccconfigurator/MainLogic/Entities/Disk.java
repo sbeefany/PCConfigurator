@@ -45,7 +45,7 @@ public class Disk extends Accessory {
         return diskSizeGB;
     }
 
-    public DiskType getDiskType() {
+    public @NotNull DiskType getDiskType() {
         return diskType;
     }
 }
