@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.pccconfigurator.MainLogic.Entities.*;
+import ru.pcconfigurator.MainLogic.Entities.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestClassCooler {

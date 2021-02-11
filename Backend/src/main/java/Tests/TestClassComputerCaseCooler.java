@@ -5,7 +5,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.pccconfigurator.MainLogic.Entities.*;
+import ru.pcconfigurator.MainLogic.Entities.Accessory;
+import ru.pcconfigurator.MainLogic.Entities.ComputerCase;
+import ru.pcconfigurator.MainLogic.Entities.ComputerCaseCooler;
+import ru.pcconfigurator.MainLogic.Entities.Gpu;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,7 +26,7 @@ public class TestClassComputerCaseCooler {
         cooler120 = context.getBean("getComputerCaseCooler120",ComputerCaseCooler.class);
         cooler75 = context.getBean("getComputerCaseCooler75",ComputerCaseCooler.class);
         computerCase = context.getBean("getComputerCase",ComputerCase.class);
-        otherAccessory = context.getBean("getGpu170",Gpu.class);
+        otherAccessory = context.getBean("getGpu170", Gpu.class);
 
     }
 

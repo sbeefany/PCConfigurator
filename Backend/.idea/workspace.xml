@@ -5,14 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/Facades/IConfigurationFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/Facades/PcConfigurationsFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassCpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassCpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassDisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassDisk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassMotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassMotherBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Search/ISearchFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Search/SearchFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/AccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/AccessoriesIRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/RepositoryAccessories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassPowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassPowerSupply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassRam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassRam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Facades/AccessoriesFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Facades/IAccessoriesFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/Facades/IAccessoriesFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Facades/IConfigurationFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/AccessoriesIRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/CoolerSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/CoolerSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/ChipSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/ChipSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/ConnectorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/ConnectorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/DiskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/DiskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/FormFactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/FormFactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/FormFactorPowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/FormFactorPowerSupply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/Socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/Socket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/TypeRam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/TypeRam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/TypeSizeComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/TypeSizeComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Enums/VideoMemotyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Enums/VideoMemotyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MaxSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/MaxSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PowerSupply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +61,8 @@
       <list>
         <option value="package-info" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -143,13 +180,15 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestClassPcConfiguration">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -269,6 +308,7 @@
       <workItem from="1612931470771" duration="2487000" />
       <workItem from="1612935463006" duration="1045000" />
       <workItem from="1612936612936" duration="507000" />
+      <workItem from="1613023841844" duration="4959000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>

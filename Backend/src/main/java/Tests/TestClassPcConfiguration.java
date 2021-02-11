@@ -4,11 +4,7 @@ import SpringConfiguration.SpringConfigurationFakeClasses;
 import org.junit.Ignore;
 import org.junit.jupiter.api.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.pccconfigurator.MainLogic.Entities.*;
-import ru.pccconfigurator.MainLogic.Entities.Enums.*;
-
-import java.util.List;
-import java.util.UUID;
+import ru.pcconfigurator.MainLogic.Entities.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

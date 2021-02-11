@@ -6,10 +6,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.pccconfigurator.MainLogic.Entities.Accessory;
-import ru.pccconfigurator.MainLogic.Entities.Gpu;
-import ru.pccconfigurator.MainLogic.Entities.MotherBoard;
-import ru.pccconfigurator.MainLogic.Entities.Ram;
+import ru.pcconfigurator.MainLogic.Entities.Accessory;
+import ru.pcconfigurator.MainLogic.Entities.Gpu;
+import ru.pcconfigurator.MainLogic.Entities.MotherBoard;
+import ru.pcconfigurator.MainLogic.Entities.Ram;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestClassRam {

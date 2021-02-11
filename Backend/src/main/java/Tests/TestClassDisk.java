@@ -6,9 +6,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.pccconfigurator.MainLogic.Entities.Accessory;
-import ru.pccconfigurator.MainLogic.Entities.Disk;
-import ru.pccconfigurator.MainLogic.Entities.MotherBoard;
+import ru.pcconfigurator.MainLogic.Entities.Accessory;
+import ru.pcconfigurator.MainLogic.Entities.Disk;
+import ru.pcconfigurator.MainLogic.Entities.MotherBoard;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestClassDisk {
