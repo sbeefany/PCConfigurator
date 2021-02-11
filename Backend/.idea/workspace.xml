@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Search/ISearchFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/Search/SearchFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/AccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/AccessoriesIRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/RepositoryAccessories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="package-info" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -146,15 +143,13 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestClassPcConfiguration">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,7 +169,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassPcConfiguration.addAccessoryFirstAccessoryWhichIndependent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -184,13 +179,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.TestClassPcConfiguration" />
-      <option name="METHOD_NAME" value="addAccessoryFirstAccessoryWhichIndependent" />
+      <option name="METHOD_NAME" value="addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassPcConfiguration.addComputerCaseCoolerButComputerCaseHasNotChosenYet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.checkIsFullConfiguration_ExpectFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -200,13 +195,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.TestClassPcConfiguration" />
-      <option name="METHOD_NAME" value="addComputerCaseCoolerButComputerCaseHasNotChosenYet" />
+      <option name="METHOD_NAME" value="checkIsFullConfiguration_ExpectFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassPcConfiguration.addComputerToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.checkIsFullConfiguration_ExpectTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -216,13 +211,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.TestClassPcConfiguration" />
-      <option name="METHOD_NAME" value="addComputerToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+      <option name="METHOD_NAME" value="checkIsFullConfiguration_ExpectTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -232,7 +227,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.TestClassPcConfiguration" />
-      <option name="METHOD_NAME" value="addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+      <option name="METHOD_NAME" value="deleteAccessoryToConfigurationWithRightData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -241,10 +236,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestClassPcConfiguration" />
-        <item itemvalue="JUnit.TestClassPcConfiguration.addComputerToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
-        <item itemvalue="JUnit.TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
-        <item itemvalue="JUnit.TestClassPcConfiguration.addAccessoryFirstAccessoryWhichIndependent" />
-        <item itemvalue="JUnit.TestClassPcConfiguration.addComputerCaseCoolerButComputerCaseHasNotChosenYet" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.checkIsFullConfiguration_ExpectTrue" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.checkIsFullConfiguration_ExpectFalse" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +266,9 @@
       <workItem from="1612679927138" duration="708000" />
       <workItem from="1612680666260" duration="4028000" />
       <workItem from="1612849339501" duration="6825000" />
+      <workItem from="1612931470771" duration="2487000" />
+      <workItem from="1612935463006" duration="1045000" />
+      <workItem from="1612936612936" duration="507000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -369,14 +367,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java</url>
           <line>46</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassPcConfiguration.java</url>
-          <line>89</line>
-          <properties class="Tests.TestClassPcConfiguration" method="addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

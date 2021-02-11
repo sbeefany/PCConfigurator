@@ -1,5 +1,8 @@
 package ru.pccconfigurator.MainLogic.Entities;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,7 +23,7 @@ public class PcConfiguration {
     }
 
     public Boolean deleteAccessory(Accessory accessory){
-        return accessories.remove(accessory);
+        return new LinkedList<Accessory>(accessories).remove(accessory);
     }
 
     public PcConfiguration generateComputer() {
@@ -32,8 +35,18 @@ public class PcConfiguration {
     }
 
     public Boolean isFullPack() {
-        return null;
+        return accessories.stream().anyMatch(accessory -> accessory.getClass().equals(MotherBoard.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(Cpu.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(Ram.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(Cooler.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(ComputerCase.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(PowerSupply.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(Gpu.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(ComputerCaseCooler.class))&&
+                accessories.stream().anyMatch(accessory -> accessory.getClass().equals(Disk.class));
     }
+
+
 
     private Boolean checkNewAccessory(Accessory accessory) {
         boolean checkAccessory;

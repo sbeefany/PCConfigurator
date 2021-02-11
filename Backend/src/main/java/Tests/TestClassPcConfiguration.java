@@ -18,6 +18,7 @@ public class TestClassPcConfiguration {
     PcConfiguration fullPcConfiguration;
 
     ComputerCaseCooler computerCaseCooler;
+    ComputerCaseCooler computerCaseCooler2;
 
     MotherBoard motherBoard;
 
@@ -33,23 +34,31 @@ public class TestClassPcConfiguration {
 
     Gpu gpu;
 
+    AnnotationConfigApplicationContext context;
+
     @BeforeAll
-    void init(){
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigurationFakeClasses.class);
+    void init() {
 
-        pcConfiguration = context.getBean("getEmptyConfiguration",PcConfiguration.class);
-        fullPcConfiguration = context.getBean("getFullConfiguration",PcConfiguration.class);
+        context = new AnnotationConfigApplicationContext(SpringConfigurationFakeClasses.class);
 
-        computerCaseCooler = context.getBean("getComputerCaseCooler90",ComputerCaseCooler.class);
-        motherBoard = context.getBean("getMotherBoard3",MotherBoard.class);
-        cooler = context.getBean("getCoolerLGA1700H70",Cooler.class);
-        ram = context.getBean("getRamDDR4",Ram.class);
-        powerSupply = context.getBean("getPowerSupply550FlexATX",PowerSupply.class);
-        cpu = context.getBean("getCpuLGA1700",Cpu.class);
-        computerCase = context.getBean("getComputerCaseSmall",ComputerCase.class);
-        gpu = context.getBean("getGpu100",Gpu.class);
+
+        computerCaseCooler = context.getBean("getComputerCaseCooler90", ComputerCaseCooler.class);
+        computerCaseCooler2 = context.getBean("getComputerCaseCooler75", ComputerCaseCooler.class);
+        motherBoard = context.getBean("getMotherBoard3", MotherBoard.class);
+        cooler = context.getBean("getCoolerLGA1700H70", Cooler.class);
+        ram = context.getBean("getRamDDR4", Ram.class);
+        powerSupply = context.getBean("getPowerSupply550FlexATX", PowerSupply.class);
+        cpu = context.getBean("getCpuLGA1700", Cpu.class);
+        computerCase = context.getBean("getComputerCaseSmall", ComputerCase.class);
+        gpu = context.getBean("getGpu100", Gpu.class);
     }
 
+    @BeforeEach
+    void beforeEach() {
+        context = new AnnotationConfigApplicationContext(SpringConfigurationFakeClasses.class);
+        pcConfiguration = context.getBean("getEmptyConfiguration", PcConfiguration.class);
+        fullPcConfiguration = context.getBean("getFullConfiguration", PcConfiguration.class);
+    }
 
     @Test
     void addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory() {
@@ -67,10 +76,10 @@ public class TestClassPcConfiguration {
     //Поправить тест, добавление чувствительно к размерам кулера, т.е если можно добавить только 2 90ых кулера, а всего кулеров 3, то 3 90ых кулерв неполучится добавить
     //Поправить Fake классы
     @Test
-    void addAccessoryToConfigurationWithCorrectDataSomeOfTheseAccessoriesHaveAlreadyBeenButCanBeALotOfIt() {
+    void addAccessoryToConfigurationWithCorrectDataSomeOfTheseAccessoriesHaveAlreadyBeenButCanBeMore() {
         pcConfiguration.addAccessory(computerCase);
         pcConfiguration.addAccessory(computerCaseCooler);
-        Assertions.assertTrue(pcConfiguration.addAccessory(computerCaseCooler));
+        Assertions.assertTrue(pcConfiguration.addAccessory(computerCaseCooler2));
 
     }
 
@@ -86,6 +95,7 @@ public class TestClassPcConfiguration {
         Assertions.assertFalse(pcConfiguration.addAccessory(ram));
 
     }
+
     @Test
     void addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount() {
 
@@ -106,12 +116,12 @@ public class TestClassPcConfiguration {
     }
 
     @Test
-    void checkIsFullConfiguration_ExpectTrue(){
+    void checkIsFullConfiguration_ExpectTrue() {
         Assertions.assertTrue(fullPcConfiguration.isFullPack());
     }
 
     @Test
-    void checkIsFullConfiguration_ExpectFalse(){
+    void checkIsFullConfiguration_ExpectFalse() {
         Assertions.assertFalse(pcConfiguration.isFullPack());
     }
 
@@ -120,7 +130,6 @@ public class TestClassPcConfiguration {
     void deleteAccessoryToConfigurationWithRightData() {
         Assertions.assertTrue(fullPcConfiguration.deleteAccessory(ram));
     }
-
 
 
     @Test

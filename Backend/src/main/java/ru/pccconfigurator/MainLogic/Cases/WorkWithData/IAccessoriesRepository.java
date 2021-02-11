@@ -4,8 +4,7 @@ import ru.pccconfigurator.MainLogic.Entities.Accessory;
 import java.util.List;
 import java.util.UUID;
 
-public interface RepositoryAccessories {
-    void saveAccessory(Accessory accessory);
+public interface IAccessoriesRepository {
 
     Accessory getAccessory(UUID id);
 

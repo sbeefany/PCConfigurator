@@ -53,7 +53,7 @@ public class SpringConfigurationFakeClasses {
         return new ComputerCase("computerCase","Arecool",UUID.randomUUID(),
                 1900, List.of(FormFactor.ATX),
                 TypeSizeComputerCase.MidTower,5,
-                List.of(getCoolerSize120(),getCoolerSize90()),
+                List.of(getCoolerSize120(),getCoolerSize120(),getCoolerSize120(),getCoolerSize120(),getCoolerSize90()),
                 List.of(getConnector()),
                 FormFactorPowerSupply.ATX,500,50,150,
                 getMaxSize());
@@ -63,7 +63,7 @@ public class SpringConfigurationFakeClasses {
         return new ComputerCase("computerCase","Arecool",UUID.randomUUID(),
                 1900, List.of(FormFactor.MiniATX),
                 TypeSizeComputerCase.MiniTower,3,
-                List.of(getCoolerSize90(),getCoolerSize75()),
+                List.of(getCoolerSize90(),getCoolerSize75(),getCoolerSize75()),
                 List.of(getConnector()),
                 FormFactorPowerSupply.FlexATX,250,50,100,
                 getMaxSizeSmall());

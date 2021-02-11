@@ -6,7 +6,8 @@ import ru.pccconfigurator.MainLogic.Entities.Accessory;
 import java.util.List;
 import java.util.UUID;
 
-public class AccessoriesRepository implements RepositoryAccessories {
+public class AccessoriesIRepository implements IAccessoriesRepository {
+
 
     @Override
     public void saveAccessory(Accessory accessory) {
