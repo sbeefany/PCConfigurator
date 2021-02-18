@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 @Component
 public class FakeConfigurationRepository implements IConfigurationRepository {
-    @Autowired
+
     private List<PcConfiguration> configurations;
 
     @Override

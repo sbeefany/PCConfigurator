@@ -12,7 +12,7 @@ import java.util.UUID;
 @Component
 public class FakeAccessoriesRepository implements IAccessoriesRepository {
 
-    @Autowired
+
     private List<Accessory> accessories;
 
     @Override
