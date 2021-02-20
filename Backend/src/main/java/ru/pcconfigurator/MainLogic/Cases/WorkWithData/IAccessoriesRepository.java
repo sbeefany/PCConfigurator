@@ -11,4 +11,6 @@ public interface IAccessoriesRepository {
     Accessory getAccessory(@NotNull UUID id) throws NullPointerException;
 
     List<Accessory> getAllAccessoriesByName(String name);
+
+    List<Accessory> getAllAccessories();
 }

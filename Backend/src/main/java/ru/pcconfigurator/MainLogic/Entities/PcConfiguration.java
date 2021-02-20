@@ -92,6 +92,14 @@ public class PcConfiguration {
         return this.id.equals(id);
     }
 
+    public List<Accessory> getAccessories() {
+        return accessories;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

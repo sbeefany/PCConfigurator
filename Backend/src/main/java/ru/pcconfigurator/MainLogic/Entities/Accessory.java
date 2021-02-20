@@ -34,7 +34,11 @@ public abstract class Accessory {
         return Objects.hash(name, vendor, id, price);
     }
 
-    public Boolean checkID(UUID id){
+    public Boolean checkName(String name) {
+        return name.isEmpty() || name.equals("\"\"") || this.name.contains(name);
+    }
+
+    public Boolean checkID(UUID id) {
         return this.id.equals(id);
     }
 

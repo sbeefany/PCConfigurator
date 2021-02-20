@@ -6,10 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.pcconfigurator.MainLogic.Cases.WorkWithData.IAccessoriesRepository;
 import ru.pcconfigurator.MainLogic.Cases.WorkWithData.IConfigurationRepository;
+import ru.pcconfigurator.MainLogic.Entities.Accessory;
 import ru.pcconfigurator.MainLogic.Entities.PcConfiguration;
 
 import java.util.UUID;
-@Controller
+@RestController
 @RequestMapping("/pcconfigurations")
 public class PcConfigurationsController {
 
@@ -19,34 +20,36 @@ public class PcConfigurationsController {
     private IConfigurationRepository configurationRepository;
 
 
-    @PostMapping("/:configurationId/accessories")
-    public void addAccessory(@NotNull UUID accessoryId, @NotNull UUID configurationId) {
+    @PostMapping("/{configurationId}/accessories")
+    public void addAccessory(@PathVariable("configurationId") @NotNull UUID configurationId,
+                             @NotNull @RequestBody Accessory accessory) {
         PcConfiguration configuration = findPcConfigurationById(configurationId);
-        configuration.addAccessory(accessoriesRepository.getAccessory(accessoryId));
+        configuration.addAccessory(accessory);
         configurationRepository.saveConfiguration(configuration);
     }
 
-    @DeleteMapping("/:configurationId/accessories/:accessoryId")
-    public void deleteAccessory(@NotNull UUID accessoryId, @NotNull UUID configurationId) {
+    @DeleteMapping("/{configurationId}/accessories/{accessoryId}")
+    public void deleteAccessory(@PathVariable("accessoryId") @NotNull UUID accessoryId,@PathVariable("configurationId") @NotNull UUID configurationId) {
         PcConfiguration configuration = findPcConfigurationById(configurationId);
         configuration.deleteAccessory(accessoriesRepository.getAccessory(accessoryId));
         configurationRepository.saveConfiguration(configuration);
     }
 
-    @PutMapping("/:configurationId/accessories/:accessoryId")
-    public void updateAccessory(@NotNull UUID oldAccessory, @NotNull UUID newAccessory, @NotNull UUID configurationId) {
+    @PutMapping("/{configurationId}/accessories/{accessoryId}")
+    public void updateAccessory(@PathVariable("accessoryId")@NotNull UUID oldAccessory,@PathVariable("configurationId") @NotNull UUID configurationId,
+                                @RequestBody @NotNull Accessory newAccessory) {
         PcConfiguration configuration = findPcConfigurationById(configurationId);
         configuration.deleteAccessory(accessoriesRepository.getAccessory(oldAccessory));
-        configuration.addAccessory(accessoriesRepository.getAccessory(newAccessory));
+        configuration.addAccessory(newAccessory);
         configurationRepository.saveConfiguration(configuration);
     }
-    @GetMapping("/:configurationId")
-    public PcConfiguration findPcConfigurationById(@NotNull UUID configurationId){
+    @GetMapping("/{configurationId}")
+    public PcConfiguration findPcConfigurationById(@PathVariable("configurationId") @NotNull UUID configurationId){
         return configurationRepository.getPcConfiguration(configurationId);
     }
 
-    @PostMapping("/pcconfigurations")
-    public void createPcConfiguration(@NotNull PcConfiguration pcConfiguration){
+    @PostMapping("")
+    public void createPcConfiguration(@RequestBody @NotNull PcConfiguration pcConfiguration){
         configurationRepository.saveConfiguration(pcConfiguration);
     }
 }
