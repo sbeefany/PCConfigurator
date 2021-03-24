@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Backend:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassComputerCaseCooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassCooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassCpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassCpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassDisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassDisk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/PowerSupply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pccconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/AccessoriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/AccessoriesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PowerSupply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/AccessoriesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/AccessoriesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/PcConfiguratorsControllerTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/PcConfiguratorsControllerTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/SpringConfiguration/SpringConfigurationFakeClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassPcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassPcConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -81,6 +88,13 @@
       </list>
     </option>
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
     <option name="y" value="30" />
@@ -125,6 +139,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -139,114 +157,551 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Shelf.Project.Settings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="java.ru.pccconfigurator.MainLogic.Entities" />
       <recent name="Entities" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Gits\Diploma\PCConfigurator\Backend" />
+      <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src" />
+      <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main\webapp\WEB-INF" />
       <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main\java" />
       <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.pcconfigurator.Tests.SpringConfiguration" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.Tests in Backend">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/accessories" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/accessories" />
+          <option name="urlPath" value="" />
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="id" />
+                <option name="value" value="100" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/accessories/1" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pcconfigurations/1/accessories" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pcconfigurations/:configurationId/accessories" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/hello" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="TomeeConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="TestClassPcConfiguration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassComputerCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests.*" />
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassComputerCase" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="METHOD_NAME" value="addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassMotherBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests.*" />
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassMotherBoard" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="METHOD_NAME" value="addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassPowerSupply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests.*" />
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassPowerSupply" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="METHOD_NAME" value="deleteAccessoryToConfigurationWithRightData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClassRam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tests.*" />
+          <option name="PATTERN" value="ru.pcconfigurator.MainLogic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.TestClassRam" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.pcconfigurator.MainLogic.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests in Backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="TomEE 10.0.2" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 10.0.2" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Backend:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="fe8a2dfd-ee2e-49c0-b539-91cd601d9d90" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62076" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="0f80c715-61fe-4e0d-a1a8-1cb1d4b9a431" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61205" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 10.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.2" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Backend:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="5e02cfa1-abd4-4e59-bb3d-1352343b24d3" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61831" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Backend:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="33d64ec1-58b7-4aca-a224-98e1e5c4efe2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61831" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Backend:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61210" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TestClassPcConfiguration" />
+      <item itemvalue="JUnit.TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" />
+      <item itemvalue="JUnit.TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+      <item itemvalue="JUnit.TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Tomcat Server.Tomcat 10.0.2" />
+      <item itemvalue="TomEE Server.TomEE 10.0.2" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Tests in Backend" />
-        <item itemvalue="JUnit.TestClassComputerCase" />
-        <item itemvalue="JUnit.TestClassRam" />
-        <item itemvalue="JUnit.TestClassPowerSupply" />
-        <item itemvalue="JUnit.TestClassMotherBoard" />
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.TestClassPcConfiguration" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +727,36 @@
       <workItem from="1612512832958" duration="4260000" />
       <workItem from="1612679927138" duration="708000" />
       <workItem from="1612680666260" duration="4028000" />
+      <workItem from="1612849339501" duration="6825000" />
+      <workItem from="1612931470771" duration="2487000" />
+      <workItem from="1612935463006" duration="1045000" />
+      <workItem from="1612936612936" duration="507000" />
+      <workItem from="1613023841844" duration="4959000" />
+      <workItem from="1613028908248" duration="120000" />
+      <workItem from="1613040499395" duration="1271000" />
+      <workItem from="1613047977327" duration="1180000" />
+      <workItem from="1613049172027" duration="127000" />
+      <workItem from="1613049309022" duration="3350000" />
+      <workItem from="1613052673452" duration="776000" />
+      <workItem from="1613197130593" duration="3063000" />
+      <workItem from="1613200229046" duration="5201000" />
+      <workItem from="1613459302164" duration="6830000" />
+      <workItem from="1613638378736" duration="3372000" />
+      <workItem from="1613725911494" duration="4452000" />
+      <workItem from="1613809295624" duration="5655000" />
+      <workItem from="1613815081487" duration="12000" />
+      <workItem from="1613981334332" duration="12935000" />
+      <workItem from="1614006475679" duration="1640000" />
+      <workItem from="1614008928067" duration="1415000" />
+      <workItem from="1614083276381" duration="5261000" />
+      <workItem from="1614150789219" duration="8832000" />
+      <workItem from="1614334358687" duration="123000" />
+      <workItem from="1614409022534" duration="400000" />
+      <workItem from="1614410531209" duration="3486000" />
+      <workItem from="1614506816847" duration="1526000" />
+      <workItem from="1615449171257" duration="3890000" />
+      <workItem from="1615719083735" duration="3378000" />
+      <workItem from="1615798878553" duration="1855000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -357,22 +842,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassCooler.java</url>
-          <line>42</line>
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassCooler.java</url>
+          <line>43</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassDisk.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClassGpu.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassGpu.java</url>
           <line>46</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((TestClassPcConfiguration)this).computerCase" custom="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+        <watch expression="((Ram)((TestClassPcConfiguration)this).ram).id" custom="ru.pcconfigurator.Tests.TestClassPcConfiguration,ru.pcconfigurator.MainLogic.Entities.Ram" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
