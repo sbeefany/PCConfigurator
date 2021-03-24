@@ -1,6 +1,8 @@
 package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -44,6 +46,13 @@ public class ComputerCaseCooler extends Accessory{
 
     public @NotNull CoolerSize getCoolerSize() {
         return new CoolerSize(coolerSize.getHeight(),coolerSize.getWidth());
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.ComputerCaseCooler);
+        return accessoryDao;
     }
 
     public int getSpeed() {

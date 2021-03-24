@@ -2,6 +2,8 @@ package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 import ru.pcconfigurator.MainLogic.Entities.Enums.TypeRam;
 import java.util.Objects;
 import java.util.UUID;
@@ -42,6 +44,13 @@ public class Ram extends Accessory {
             return this.typeRam.equals(((MotherBoard) accessory).getTypeRam());
         }
         return true;
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.Ram);
+        return accessoryDao;
     }
 
     public TypeRam getTypeRam() {

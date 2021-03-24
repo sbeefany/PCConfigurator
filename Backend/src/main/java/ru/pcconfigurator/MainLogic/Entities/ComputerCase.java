@@ -1,6 +1,8 @@
 package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 import ru.pcconfigurator.MainLogic.Entities.Enums.FormFactor;
 import ru.pcconfigurator.MainLogic.Entities.Enums.FormFactorPowerSupply;
 import ru.pcconfigurator.MainLogic.Entities.Enums.TypeSizeComputerCase;
@@ -23,7 +25,7 @@ public class ComputerCase extends Accessory{
     @NotNull
     private final FormFactorPowerSupply formFactorPowerSupply;
     private final int length;
-    private final int widht;
+    private final int width;
     private final int height;
 
     @NotNull
@@ -41,7 +43,7 @@ public class ComputerCase extends Accessory{
         this.connectors = connectors;
         this.formFactorPowerSupply = formFactorPowerSupply;
         this.length = length;
-        this.widht = widht;
+        this.width = widht;
         this.height = height;
         this.maxSize = maxSize;
     }
@@ -52,12 +54,19 @@ public class ComputerCase extends Accessory{
         if (!(o instanceof ComputerCase)) return false;
         if (!super.equals(o)) return false;
         ComputerCase that = (ComputerCase) o;
-        return coolersCount == that.coolersCount && length == that.length && widht == that.widht && height == that.height && formFactor.equals(that.formFactor) && typeSizeComputerCase == that.typeSizeComputerCase && sizes.equals(that.sizes) && connectors.equals(that.connectors) && formFactorPowerSupply == that.formFactorPowerSupply && maxSize.equals(that.maxSize);
+        return coolersCount == that.coolersCount && length == that.length && width == that.width && height == that.height && formFactor.equals(that.formFactor) && typeSizeComputerCase == that.typeSizeComputerCase && sizes.equals(that.sizes) && connectors.equals(that.connectors) && formFactorPowerSupply == that.formFactorPowerSupply && maxSize.equals(that.maxSize);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), formFactor, typeSizeComputerCase, coolersCount, sizes, connectors, formFactorPowerSupply, length, widht, height, maxSize);
+        return Objects.hash(super.hashCode(), formFactor, typeSizeComputerCase, coolersCount, sizes, connectors, formFactorPowerSupply, length, width, height, maxSize);
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.ComputerCase);
+        return accessoryDao;
     }
 
     @Override
@@ -109,8 +118,8 @@ public class ComputerCase extends Accessory{
         return length;
     }
 
-    public int getWidht() {
-        return widht;
+    public int getWidth() {
+        return width;
     }
 
     public int getHeight() {

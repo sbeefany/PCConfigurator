@@ -1,6 +1,8 @@
 package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 import ru.pcconfigurator.MainLogic.Entities.Enums.FormFactorPowerSupply;
 
 import java.util.Objects;
@@ -40,6 +42,13 @@ public class PowerSupply extends Accessory{
             return this.powerCount>=((Gpu) accessory).getNeededPower();
         }
         return true;
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.PowerSupply);
+        return accessoryDao;
     }
 
     public FormFactorPowerSupply getFormFactorPowerSupply() {

@@ -25,7 +25,7 @@ public class SpringConfigurationFakeClasses {
     @Bean
     PcConfiguration getFullConfiguration() {
         return new PcConfiguration(List.of(
-                getComputerCaseSmall(), getCpuLGA1700(), getMotherBoard3(), getRamDDR4(), getRamDDR4(),
+                getComputerCaseSmall(), getCpuLGA1700(), getMotherBoard3(), getRamDDR4(),getRamDDR4(),
                 getComputerCaseCooler90(), getComputerCaseCooler75(), getCoolerLGA1700H70(), getDiskSSD(), getGpu100(), getPowerSupply550FlexATX()
         ));
     }
@@ -197,7 +197,7 @@ public class SpringConfigurationFakeClasses {
 
     @Bean
     Accessory getRamDDR4() {
-        return new Ram("Kingston", "Kingston", UUID.randomUUID(), 5000, TypeRam.DDR4, 8, 2666);
+        return new Ram("Kingston", "Kingston", UUID.fromString("9f16dbd4-9252-409c-817f-e40ef7fec200"), 5000, TypeRam.DDR4, 8, 2666);
     }
 
     @Bean

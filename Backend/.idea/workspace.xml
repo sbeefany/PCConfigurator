@@ -10,19 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IAccessoriesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/AccessoriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/AccessoriesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Accessory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCaseCooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComputerCaseCooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cooler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cooler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Gpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Gpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/MotherBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/SpringConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PowerSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PowerSupply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/Ram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/AccessoriesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/AccessoriesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/PcConfiguratorsControllerTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/PcConfiguratorsControllerTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/SpringConfiguration/SpringConfigurationFakeClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/SpringConfiguration/SpringConfigurationFakeClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassPcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassPcConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -148,10 +157,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="settings.editor.selected.configurable" value="Shelf.Project.Settings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -236,56 +245,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PcConfiguratorsControllerTestClass.checkEndPointAddPcConfigurator">
-    <configuration name="AccessoriesControllerTest.checkEndPointAccessoriesWithEmptyParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.pcconfigurator.Tests.Controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests.Controllers" />
-      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.Controllers.AccessoriesControllerTest" />
-      <option name="METHOD_NAME" value="checkEndPointAccessoriesWithEmptyParams" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccessoriesControllerTest.checkEndPointAccessoriesWithParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.pcconfigurator.Tests.Controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests.Controllers" />
-      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.Controllers.AccessoriesControllerTest" />
-      <option name="METHOD_NAME" value="checkEndPointAccessoriesWithParams" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PcConfiguratorsControllerTestClass.checkEndPointAddPcConfigurator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.pcconfigurator.Tests.Controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests.Controllers" />
-      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.Controllers.PcConfiguratorsControllerTestClass" />
-      <option name="METHOD_NAME" value="checkEndPointAddPcConfigurator" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ru.pcconfigurator.Tests in Backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="TestClassPcConfiguration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -294,7 +255,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="METHOD_NAME" value="addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="METHOD_NAME" value="addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.pcconfigurator.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.pcconfigurator.Tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+      <option name="METHOD_NAME" value="deleteAccessoryToConfigurationWithRightData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -677,21 +687,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AccessoriesControllerTest.checkEndPointAccessoriesWithParams" />
-      <item itemvalue="JUnit.ru.pcconfigurator.Tests in Backend" />
-      <item itemvalue="JUnit.AccessoriesControllerTest.checkEndPointAccessoriesWithEmptyParams" />
-      <item itemvalue="JUnit.PcConfiguratorsControllerTestClass.checkEndPointAddPcConfigurator" />
+      <item itemvalue="JUnit.TestClassPcConfiguration" />
+      <item itemvalue="JUnit.TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" />
+      <item itemvalue="JUnit.TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+      <item itemvalue="JUnit.TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.2" />
       <item itemvalue="TomEE Server.TomEE 10.0.2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PcConfiguratorsControllerTestClass.checkEndPointAddPcConfigurator" />
-        <item itemvalue="JUnit.ru.pcconfigurator.Tests in Backend" />
         <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="JUnit.AccessoriesControllerTest.checkEndPointAccessoriesWithEmptyParams" />
-        <item itemvalue="JUnit.AccessoriesControllerTest.checkEndPointAccessoriesWithParams" />
+        <item itemvalue="JUnit.TestClassPcConfiguration" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount" />
+        <item itemvalue="JUnit.TestClassPcConfiguration.deleteAccessoryToConfigurationWithRightData" />
       </list>
     </recent_temporary>
   </component>
@@ -735,6 +745,18 @@
       <workItem from="1613725911494" duration="4452000" />
       <workItem from="1613809295624" duration="5655000" />
       <workItem from="1613815081487" duration="12000" />
+      <workItem from="1613981334332" duration="12935000" />
+      <workItem from="1614006475679" duration="1640000" />
+      <workItem from="1614008928067" duration="1415000" />
+      <workItem from="1614083276381" duration="5261000" />
+      <workItem from="1614150789219" duration="8832000" />
+      <workItem from="1614334358687" duration="123000" />
+      <workItem from="1614409022534" duration="400000" />
+      <workItem from="1614410531209" duration="3486000" />
+      <workItem from="1614506816847" duration="1526000" />
+      <workItem from="1615449171257" duration="3890000" />
+      <workItem from="1615719083735" duration="3378000" />
+      <workItem from="1615798878553" duration="1855000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -825,22 +847,18 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassDisk.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassGpu.java</url>
           <line>46</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/Controllers/PcConfiguratorsControllerTestClass.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((TestClassPcConfiguration)this).computerCase" custom="ru.pcconfigurator.Tests.TestClassPcConfiguration" />
+        <watch expression="((Ram)((TestClassPcConfiguration)this).ram).id" custom="ru.pcconfigurator.Tests.TestClassPcConfiguration,ru.pcconfigurator.MainLogic.Entities.Ram" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

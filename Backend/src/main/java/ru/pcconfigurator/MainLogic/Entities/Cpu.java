@@ -2,6 +2,8 @@ package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 import ru.pcconfigurator.MainLogic.Entities.Enums.Socket;
 import java.util.Objects;
 import java.util.UUID;
@@ -48,6 +50,13 @@ public class Cpu extends Accessory {
             return this.socket.equals(((MotherBoard) accessory).getSocket());
         }
         return true;
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.Cpu);
+        return accessoryDao;
     }
 
     public @NotNull Socket getSocket() {

@@ -2,6 +2,8 @@ package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 import ru.pcconfigurator.MainLogic.Entities.Enums.*;
 
 import java.util.Objects;
@@ -66,6 +68,13 @@ public class MotherBoard extends Accessory {
                 return hasSlotForM2;
         }
         return true;
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.MotherBoard);
+        return accessoryDao;
     }
 
     public @NotNull Socket getSocket() {

@@ -59,14 +59,15 @@ public class TestClassPcConfiguration {
 
     @Test
     void addAccessoryToConfigurationWithCorrectDataThereIsNotThisAccessory() {
-        pcConfiguration.addAccessory(computerCase);
-        Assertions.assertTrue(pcConfiguration.addAccessory(computerCaseCooler));
+        PcConfiguration newConfiguration = pcConfiguration.addAccessory(computerCase);
+
+        Assertions.assertEquals(pcConfiguration.getAccessories().size()+1,newConfiguration.getAccessories().size());
 
     }
 
     @Test
     void addAccessoryFirstAccessoryWhichIndependent() {
-        Assertions.assertTrue(pcConfiguration.addAccessory(cooler));
+        Assertions.assertEquals(1,pcConfiguration.addAccessory(cooler).getAccessories().size());
 
     }
 
@@ -74,42 +75,46 @@ public class TestClassPcConfiguration {
     //Поправить Fake классы
     @Test
     void addAccessoryToConfigurationWithCorrectDataSomeOfTheseAccessoriesHaveAlreadyBeenButCanBeMore() {
-        pcConfiguration.addAccessory(computerCase);
-        pcConfiguration.addAccessory(computerCaseCooler);
-        Assertions.assertTrue(pcConfiguration.addAccessory(computerCaseCooler2));
+        PcConfiguration newConfiguration = pcConfiguration.addAccessory(computerCase);
+        PcConfiguration newConfiguration2 = newConfiguration.addAccessory(computerCaseCooler);
+        newConfiguration = newConfiguration2.addAccessory(computerCaseCooler2);
+        Assertions.assertEquals(newConfiguration2.getAccessories().size()+1,newConfiguration.getAccessories().size());
 
     }
 
     @Test
     void addComputerCaseCoolerButComputerCaseHasNotChosenYet() {
-
-        Assertions.assertFalse(pcConfiguration.addAccessory(computerCaseCooler));
+        PcConfiguration newConfiguration = pcConfiguration.addAccessory(computerCaseCooler);
+        Assertions.assertEquals(pcConfiguration.getAccessories().size(),newConfiguration.getAccessories().size());
 
     }
 
     @Test
     void addRamButMotherBoardHasNotChosenYet() {
-        Assertions.assertFalse(pcConfiguration.addAccessory(ram));
+        PcConfiguration newConfiguration = pcConfiguration.addAccessory(ram);
+        Assertions.assertEquals(pcConfiguration.getAccessories().size(),newConfiguration.getAccessories().size());
 
     }
 
     @Test
     void addRamToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount() {
-
-        Assertions.assertFalse(fullPcConfiguration.addAccessory(ram));
+        PcConfiguration newConfiguration = fullPcConfiguration.addAccessory(ram);
+        Assertions.assertEquals(fullPcConfiguration.getAccessories().size(),newConfiguration.getAccessories().size());
 
     }
 
     @Test
     void addComputerToConfigurationWithCorrectDataButHasAlreadyBeenMaxCount() {
-        fullPcConfiguration.addAccessory(cooler);
-        Assertions.assertFalse(fullPcConfiguration.addAccessory(cooler));
+        PcConfiguration newConfiguration = fullPcConfiguration.addAccessory(cooler);
+        PcConfiguration newConfiguration2 = fullPcConfiguration.addAccessory(cooler);
+        Assertions.assertEquals(newConfiguration.getAccessories().size(),newConfiguration2.getAccessories().size());
 
     }
 
     @Test
     void addAccessoryToConfigurationWithCorrectDataButThisAccessoryHasAlreadyBeen() {
-        Assertions.assertFalse(fullPcConfiguration.addAccessory(gpu));
+        PcConfiguration configuration = fullPcConfiguration.addAccessory(gpu);
+        Assertions.assertEquals(fullPcConfiguration.getAccessories().size(),configuration.getAccessories().size());
     }
 
     @Test
@@ -125,7 +130,8 @@ public class TestClassPcConfiguration {
 
     @Test
     void deleteAccessoryToConfigurationWithRightData() {
-        Assertions.assertTrue(fullPcConfiguration.deleteAccessory(ram));
+        PcConfiguration configuration = fullPcConfiguration.deleteAccessory(ram.getId());
+        Assertions.assertEquals(fullPcConfiguration.getAccessories().size()-1,configuration.getAccessories().size());
     }
 
 

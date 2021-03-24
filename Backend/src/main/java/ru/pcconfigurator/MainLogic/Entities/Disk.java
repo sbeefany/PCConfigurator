@@ -2,6 +2,8 @@ package ru.pcconfigurator.MainLogic.Entities;
 
 import org.jetbrains.annotations.NotNull;
 
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryDao;
+import ru.pcconfigurator.MainLogic.Entities.Dao.AccessoryType;
 import ru.pcconfigurator.MainLogic.Entities.Enums.DiskType;
 
 import java.util.Objects;
@@ -39,6 +41,13 @@ public class Disk extends Accessory {
             return ((MotherBoard) accessory).hasSlotForM2();
         }
         return true;
+    }
+
+    @Override
+    public AccessoryDao convertToAccessoryDao() {
+        AccessoryDao accessoryDao = createAccessoryDao();
+        accessoryDao.setAccessoryType(AccessoryType.Disk);
+        return accessoryDao;
     }
 
     public int getDiskSizeGB() {
