@@ -4,5 +4,7 @@ import androidx.fragment.app.Fragment
 
 interface IMainActivity {
 
-    fun changeFragment(fragment:Fragment,data: Int)
+    fun changeFragment(fragment:Fragment)
+
+
 }
