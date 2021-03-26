@@ -1,4 +1,4 @@
-package com.example.pcconfigurator.Presentation
+package com.example.pcconfigurator.Presentation.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,12 +10,13 @@ import androidx.fragment.app.commit
 
 
 import com.example.pcconfigurator.Presentation.Activities.IMainActivity
+import com.example.pcconfigurator.Presentation.Fragments.MyFragmentFactory
 import com.example.pcconfigurator.Presentation.Fragments.PcConfiguratorStartPageFragment
 import com.example.pcconfigurator.R
 
 class MainActivity : AppCompatActivity(), IMainActivity {
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        supportFragmentManager.fragmentFactory = MyFragmentFactory()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initFragment()
@@ -24,7 +25,6 @@ class MainActivity : AppCompatActivity(), IMainActivity {
     }
 
     private fun initFragment() {
-
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             add<PcConfiguratorStartPageFragment>(R.id.main_activity_container_view)
@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity(), IMainActivity {
     }
 
     override fun changeFragment(fragment: Fragment) {
-        TODO("Not yet implemented")
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace(R.id.main_activity_container_view,fragment)
+            addToBackStack(null)
+        }
     }
 }

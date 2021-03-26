@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/ITestDataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/IConfigurationsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/TestRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/ConfigurationsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/IMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/IMainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/FragmentsFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/FragmentsFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/PcConfiguratorStartPageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/PcConfiguratorStartPageFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_pc_configurator_start_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_pc_configurator_start_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -744,7 +734,7 @@
       <workItem from="1615449171257" duration="3890000" />
       <workItem from="1615719083735" duration="3378000" />
       <workItem from="1615798878553" duration="1855000" />
-      <workItem from="1616658434309" duration="3350000" />
+      <workItem from="1616658434309" duration="3351000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>

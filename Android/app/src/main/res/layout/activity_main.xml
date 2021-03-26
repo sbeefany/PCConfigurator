@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Presentation.MainActivity"
+    tools:context=".Presentation.Activities.MainActivity"
     android:id="@+id/main_activity_frame_layout">
 <androidx.fragment.app.FragmentContainerView
     android:layout_width="match_parent"

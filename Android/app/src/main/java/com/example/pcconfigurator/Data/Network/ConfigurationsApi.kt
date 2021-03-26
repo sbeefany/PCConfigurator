@@ -1,7 +1,7 @@
 package com.example.pcconfigurator.Data.Network
 
-import com.example.pcconfigurator.Data.Network.NetworkDTO.AccessoryDTO
-import com.example.pcconfigurator.Data.Network.NetworkDTO.ConfigurationDTO
+import Accessory
+import com.example.pcconfigurator.Data.Models.Configuration
 import retrofit2.http.*
 import java.util.*
 
@@ -17,12 +17,12 @@ interface ConfigurationsApi {
     fun updateAccessory(@Path("configurationId") configurationId: UUID,@Path("accessoryId") accessoryId: UUID, @Body newAccessoryId: UUID)
 
     @GET("/pcconfigurations/{configurationId}")
-    fun findConfigurationById(@Path("configurationId") configurationId: UUID) : ConfigurationDTO
+    fun findConfigurationById(@Path("configurationId") configurationId: UUID) : Configuration
 
     @POST("/pcconfigurations")
-    fun createConfiguration(@Body accessoriesDTO: List<AccessoryDTO>): UUID
+    fun createConfiguration(@Body accessoriesDTO: List<Accessory>): UUID
 
     @GET("/pcconfigurations")
-    fun findAllConfigurations():List<ConfigurationDTO>
+    fun findAllConfigurations():List<Configuration>
 
 }

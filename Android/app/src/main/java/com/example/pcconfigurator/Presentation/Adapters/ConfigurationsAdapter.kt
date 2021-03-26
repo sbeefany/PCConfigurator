@@ -8,14 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pcconfigurator.Data.Models.Configuration
 import com.example.pcconfigurator.Presentation.Adapters.DiffUtils.DiffUtilsConfigurationsCallBack
 import com.example.pcconfigurator.Presentation.Adapters.ViewHolders.ConfigurationsViewHolder
+import com.example.pcconfigurator.Presentation.Fragments.IClickListenerCallBack
 import com.example.pcconfigurator.R
 
-class ConfigurationsAdapter(private var configurations: List<Configuration>) : RecyclerView.Adapter<ConfigurationsViewHolder>() {
+class ConfigurationsAdapter(var configurations: List<Configuration>,private val callBack: IClickListenerCallBack) : RecyclerView.Adapter<ConfigurationsViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ConfigurationsViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_confuration,parent,false)
-        return ConfigurationsViewHolder(view)
+        return ConfigurationsViewHolder(view,callBack)
     }
 
     override fun onBindViewHolder(holder: ConfigurationsViewHolder, position: Int) {

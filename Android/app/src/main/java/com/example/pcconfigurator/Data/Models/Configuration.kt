@@ -1,10 +1,9 @@
 package com.example.pcconfigurator.Data.Models
 
 import Accessory
-import com.example.pcconfigurator.Data.Network.NetworkDTO.ConfigurationDTO
 import java.util.*
 
-class Configuration(val id: UUID, val accessories: List<Accessory>) {
+class Configuration(var id: UUID, var accessories: List<Accessory>) {
 
 
 

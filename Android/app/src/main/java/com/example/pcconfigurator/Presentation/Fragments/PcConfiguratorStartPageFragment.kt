@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,14 +16,14 @@ import com.example.pcconfigurator.Presentation.Adapters.ConfigurationsAdapter
 import com.example.pcconfigurator.Presentation.Presenters.ConfigurationsPresenter
 import com.example.pcconfigurator.R
 
-class PcConfiguratorStartPageFragment: Fragment(),
-    IConfigurationsView {
+class PcConfiguratorStartPageFragment : Fragment(),
+    IConfigurationsView, IClickListenerCallBack {
 
     private lateinit var activity: IMainActivity
     private lateinit var recyclerView: RecyclerView
     private lateinit var imageView: ImageView
     private lateinit var configurationsAdapter: ConfigurationsAdapter
-    private val presenter:ConfigurationsPresenter = ConfigurationsPresenter()
+    private val presenter: ConfigurationsPresenter = ConfigurationsPresenter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +33,7 @@ class PcConfiguratorStartPageFragment: Fragment(),
         val view: View =
             inflater.inflate(R.layout.fragment_pc_configurator_start_page, container, false)
         initViews(view)
-        presenter.view=this
+        presenter.view = this
         presenter.getConfigurations()
 
         return view
@@ -56,14 +57,39 @@ class PcConfiguratorStartPageFragment: Fragment(),
     }
 
     override fun showError(message: String) {
-        TODO("Not yet implemented")
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        recyclerView.visibility = View.GONE
+        imageView.visibility = View.GONE
     }
 
     private fun initViews(view: View) {
         recyclerView = view.findViewById(R.id.recycler_view_configurations)
-        configurationsAdapter = ConfigurationsAdapter(emptyList())
+        configurationsAdapter = ConfigurationsAdapter(emptyList(), this)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = configurationsAdapter
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.view = null
+    }
+
+    override fun itemClick(position: Int) {
+        val adapter = recyclerView.adapter as ConfigurationsAdapter
+
+        getActivity()?.let {
+            val fragmentFactory =
+                it.supportFragmentManager.fragmentFactory as MyFragmentFactory
+
+            fragmentFactory.configuration = adapter.configurations.get(position)
+
+            val fragment = fragmentFactory.instantiate(
+                it.classLoader,
+                ConfigurationDetailsPageFragment::class.java.name
+            )
+            activity.changeFragment(fragment)
+        }
 
     }
 }
