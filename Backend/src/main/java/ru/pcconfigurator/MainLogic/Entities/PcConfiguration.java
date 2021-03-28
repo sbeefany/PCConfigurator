@@ -1,7 +1,5 @@
 package ru.pcconfigurator.MainLogic.Entities;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jetbrains.annotations.NotNull;
 import ru.pcconfigurator.MainLogic.Cases.WorkWithData.IAccessoriesRepository;
 import ru.pcconfigurator.MainLogic.Entities.Dao.PcConfigurationDao;
