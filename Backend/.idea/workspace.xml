@@ -11,7 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +149,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="java.ru.pccconfigurator.MainLogic.Entities" />
       <recent name="Entities" />
+      <recent name="java.ru.pccconfigurator.MainLogic.Entities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Gits\Diploma\PCConfigurator\Backend\src\main" />
@@ -226,13 +231,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -751,6 +758,9 @@
       <workItem from="1616658434309" duration="3351000" />
       <workItem from="1616857237404" duration="31000" />
       <workItem from="1616908770318" duration="1033000" />
+      <workItem from="1617092736665" duration="3501000" />
+      <workItem from="1617179658062" duration="3882000" />
+      <workItem from="1617522558987" duration="7721000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -844,6 +854,37 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/Tests/TestClassGpu.java</url>
           <line>46</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeUserRepository.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeUserRepository.java</url>
+          <line>23</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java</url>
+          <line>110</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
