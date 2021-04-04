@@ -35,8 +35,8 @@ public class PcConfigurationsController {
 
     @PostMapping("/{configurationId}/accessories")
     public void addAccessory(@PathVariable("configurationId") @NotNull UUID configurationId,
-                             @NotNull @RequestBody UUID accessoryId, @RequestParam("userId") UUID userId) {
-        User user = userRepository.findUserById(userId);
+                             @NotNull @RequestBody UUID accessoryId, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
         checkUserAndConfiguration(user, configurationId);
         PcConfiguration configuration = configurationRepository.getPcConfiguration(configurationId);
@@ -57,8 +57,8 @@ public class PcConfigurationsController {
 
     @DeleteMapping("/{configurationId}/accessories/{accessoryId}")
     public void deleteAccessory(@PathVariable("accessoryId") @NotNull UUID accessoryId,
-                                @PathVariable("configurationId") @NotNull UUID configurationId, @RequestParam("userId") UUID userId) {
-        User user = userRepository.findUserById(userId);
+                                @PathVariable("configurationId") @NotNull UUID configurationId, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
         checkUserAndConfiguration(user, configurationId);
         PcConfiguration configuration = configurationRepository.getPcConfiguration(configurationId);
@@ -74,8 +74,8 @@ public class PcConfigurationsController {
 
     @PutMapping("/{configurationId}/accessories/{accessoryId}")
     public void updateAccessory(@PathVariable("accessoryId") @NotNull UUID oldAccessory, @PathVariable("configurationId") @NotNull UUID configurationId,
-                                @RequestBody @NotNull UUID accessoryId, @RequestParam("userId") UUID userId) {
-        User user = userRepository.findUserById(userId);
+                                @RequestBody @NotNull UUID accessoryId, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
         checkUserAndConfiguration(user, configurationId);
         PcConfiguration configuration = configurationRepository.getPcConfiguration(configurationId);
@@ -97,8 +97,8 @@ public class PcConfigurationsController {
     }
 
     @GetMapping("/{configurationId}")
-    public PcConfigurationDao findPcConfigurationById(@PathVariable("configurationId") @NotNull UUID configurationId, @RequestParam("userId") UUID userId) {
-        User user = userRepository.findUserById(userId);
+    public PcConfigurationDao findPcConfigurationById(@PathVariable("configurationId") @NotNull UUID configurationId, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
         checkUserAndConfiguration(user, configurationId);
         PcConfiguration pcConfiguration = configurationRepository.getPcConfiguration(configurationId);
@@ -110,14 +110,18 @@ public class PcConfigurationsController {
     }
 
     @PostMapping("")
-    public void createPcConfiguration(@RequestBody @NotNull List<AccessoryDao> accessoryDaos, @RequestParam("userId") UUID userId) {
-        User user = userRepository.findUserById(userId);
+    public void createPcConfiguration(@RequestBody @NotNull List<AccessoryDao> accessoryDaos, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
-        Stream<Accessory> accessoryStream = accessoryDaos.stream()
-                .map(accessoryDao -> accessoriesRepository.findAccessoryById(accessoryDao.getId()));
-        if (accessoryStream.noneMatch(Objects::isNull)) {
-            configurationRepository.saveConfiguration(new PcConfiguration(
-                    accessoryStream.collect(Collectors.toList())));
+        List<Accessory> accessories = accessoryDaos.stream()
+                .map(accessoryDao -> accessoriesRepository.findAccessoryById(accessoryDao.getId())).collect(Collectors.toList());
+
+        if (accessories.stream().noneMatch(Objects::isNull)) {
+            PcConfiguration pcConfiguration = new PcConfiguration(
+                    accessories);
+            configurationRepository.saveConfiguration(pcConfiguration);
+            user = user.addNewConfiguration(pcConfiguration);
+            userRepository.saveUser(user);
         } else {
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST, "There is not accessory with this id");
@@ -126,14 +130,14 @@ public class PcConfigurationsController {
     }
 
     @GetMapping("")
-    public List<PcConfigurationDao> findAllPcConfigurations(@RequestParam("userId") UUID userId) {
-        User user = userRepository.findUserById(userId);
+    public List<PcConfigurationDao> findAllPcConfigurations(@RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
-        if(user.getRole().equals(Role.Administrator))
+        if (user.getRole().equals(Role.Administrator))
             return configurationRepository.getAllPcConfigurations().stream().map(PcConfiguration::convertToDao).collect(Collectors.toList());
-        else{
-            throw new ResponseStatusException(
-                    HttpStatus.FORBIDDEN, "This user is not administrator");
+        else {
+            return configurationRepository.getAllPcConfigurations().stream().filter(pcConfiguration -> user.hasThisConfiguration(pcConfiguration.getId()))
+                    .map(PcConfiguration::convertToDao).collect(Collectors.toList());
         }
     }
 
@@ -145,6 +149,10 @@ public class PcConfigurationsController {
     }
 
     private void checkUserLogin(User user) {
+        if (user == null) {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "User with this id was not found");
+        }
         if (!user.getLogined()) {
             throw new ResponseStatusException(
                     HttpStatus.UNAUTHORIZED, "User is not logined");

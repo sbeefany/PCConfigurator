@@ -9,6 +9,7 @@ import ru.pcconfigurator.MainLogic.Entities.PcConfiguration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 @Component
 public class FakeConfigurationRepository implements IConfigurationRepository {
 
@@ -20,7 +21,7 @@ public class FakeConfigurationRepository implements IConfigurationRepository {
         pcConfigurations.remove(pcConfigurations.stream().filter(
                 pcConfiguration1 -> pcConfiguration1.checkId(pcConfiguration.getId())).findFirst().orElse(null));
         pcConfigurations.add(pcConfiguration);
-        configurations=pcConfigurations;
+        configurations = pcConfigurations;
     }
 
     @Override

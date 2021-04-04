@@ -103,6 +103,10 @@ public class User {
         return role;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
     public Boolean hasThisConfiguration(UUID configurationId) {
         return configurationList.stream().anyMatch(pcConfiguration -> pcConfiguration.checkId(configurationId));
     }

@@ -11,4 +11,6 @@ public interface IUserRepository {
     public User findUserByLogin(String login);
 
     public void signUp(User user);
+
+    public void saveUser(User user);
 }
