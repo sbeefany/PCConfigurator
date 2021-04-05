@@ -1,9 +1,12 @@
 package ru.pcconfigurator.MainLogic.Entities;
 
+import ru.pcconfigurator.MainLogic.Entities.Dao.SessionDTO;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class ComparisonSession {
 
@@ -85,5 +88,13 @@ public class ComparisonSession {
 
     public UUID getSessionId() {
         return sessionId;
+    }
+
+    public SessionDTO convertToSessionDto(){
+        SessionDTO sessionDTO = new SessionDTO();
+        sessionDTO.setSessionId(this.sessionId);
+        sessionDTO.setPcConfigurationDaoList(this.configurations.stream().map(PcConfiguration::convertToDao).collect(Collectors.toList()));
+        sessionDTO.setUsers(this.users.stream().map(User::convertToDto).collect(Collectors.toList()));
+        return sessionDTO;
     }
 }

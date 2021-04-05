@@ -1,11 +1,13 @@
 package ru.pcconfigurator.MainLogic.Entities;
 
+import ru.pcconfigurator.MainLogic.Entities.Dao.UserDTO;
 import ru.pcconfigurator.MainLogic.Entities.Enums.Role;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class User {
 
@@ -109,5 +111,17 @@ public class User {
 
     public Boolean hasThisConfiguration(UUID configurationId) {
         return configurationList.stream().anyMatch(pcConfiguration -> pcConfiguration.checkId(configurationId));
+    }
+
+    public UserDTO convertToDto() {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUserId(this.userId);
+        userDTO.setEmail(this.email);
+        userDTO.setLogin(this.login);
+        userDTO.setLogined(this.isLogined);
+        userDTO.setName(this.name);
+        userDTO.setRole(this.role);
+        userDTO.setPcConfigurationDaoList(this.configurationList.stream().map(PcConfiguration::convertToDao).collect(Collectors.toList()));
+        return userDTO;
     }
 }

@@ -96,6 +96,25 @@ public class PcConfigurationsController {
 
     }
 
+    @GetMapping("/{configurationId}/accessories")
+    public List<AccessoryDao> findAllAccessoriesForConfiguration(@PathVariable("configurationId") @NotNull UUID configurationId, @RequestParam("userId") String userId
+            , @RequestParam(required = false,name = "name") String name) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        checkUserAndConfiguration(user, configurationId);
+        PcConfiguration pcConfiguration = configurationRepository.getPcConfiguration(configurationId);
+        if (pcConfiguration != null)
+            if ((name == null || name.isEmpty()))
+                return accessoriesRepository.findAllAccessories().stream().filter(pcConfiguration::checkNewAccessory).
+                        map(Accessory::convertToAccessoryDao).collect(Collectors.toList());
+            else
+                return accessoriesRepository.findAllAccessoriesByName(name).stream().filter(pcConfiguration::checkNewAccessory).
+                        map(Accessory::convertToAccessoryDao).collect(Collectors.toList());
+        else
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "There is not configuration with this id");
+    }
+
     @GetMapping("/{configurationId}")
     public PcConfigurationDao findPcConfigurationById(@PathVariable("configurationId") @NotNull UUID configurationId, @RequestParam("userId") String userId) {
         User user = userRepository.findUserById(UUID.fromString(userId));
@@ -127,6 +146,20 @@ public class PcConfigurationsController {
                     HttpStatus.BAD_REQUEST, "There is not accessory with this id");
         }
 
+    }
+
+    @DeleteMapping("{configurationId}")
+    public void deletePcConfiguration(@PathVariable("configurationId") UUID configurationId, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        PcConfiguration pcConfiguration = configurationRepository.getPcConfiguration(configurationId);
+        if (pcConfiguration != null) {
+            user = user.deleteConfiguration(configurationId);
+            userRepository.saveUser(user);
+            configurationRepository.deleteConfiguration(configurationId);
+        } else
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "There is not configuration with this id");
     }
 
     @GetMapping("")

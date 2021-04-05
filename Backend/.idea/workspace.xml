@@ -11,11 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IConfigurationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/AccessoriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/AccessoriesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComparisonSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/ComparisonSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/PcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -231,15 +232,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -761,6 +760,7 @@
       <workItem from="1617092736665" duration="3501000" />
       <workItem from="1617179658062" duration="3882000" />
       <workItem from="1617522558987" duration="7721000" />
+      <workItem from="1617602937962" duration="6154000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -880,7 +880,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java</url>
-          <line>110</line>
+          <line>112</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
