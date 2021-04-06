@@ -10,6 +10,7 @@ import ru.pcconfigurator.MainLogic.Cases.WorkWithData.IUserRepository;
 import ru.pcconfigurator.MainLogic.Entities.ComparisonSession;
 import ru.pcconfigurator.MainLogic.Entities.Dao.SessionDTO;
 import ru.pcconfigurator.MainLogic.Entities.Enums.Role;
+import ru.pcconfigurator.MainLogic.Entities.PcConfiguration;
 import ru.pcconfigurator.MainLogic.Entities.User;
 
 import java.util.Collections;
@@ -32,19 +33,18 @@ public class SessionsController {
     public void createSession(@RequestParam("userId") String userId) {
         User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
-        ComparisonSession session = new ComparisonSession(Collections.emptyList(),List.of(user));
+        ComparisonSession session = new ComparisonSession(Collections.emptyList(), List.of(user));
         sessionRepository.saveSession(session);
     }
 
     @GetMapping("")
-    public List<SessionDTO> getAllSessions(@RequestParam("userId") String userId){
+    public List<SessionDTO> getAllSessions(@RequestParam("userId") String userId) {
         User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
         if (user.getRole().equals(Role.Administrator))
             return sessionRepository.getAllSessions().stream().map(ComparisonSession::convertToSessionDto).collect(Collectors.toList());
         else
-            throw new ResponseStatusException(
-                    HttpStatus.FORBIDDEN, "This user has not access to this session");
+            return sessionRepository.getAllSessions().stream().filter(session -> session.isThereThisUser(UUID.fromString(userId))).map(ComparisonSession::convertToSessionDto).collect(Collectors.toList());
 
     }
 
@@ -53,38 +53,79 @@ public class SessionsController {
         User user = userRepository.findUserById(UUID.fromString(userId));
         checkUserLogin(user);
         ComparisonSession session = sessionRepository.findSession(sessionId);
-        checkUserAndSession(session,user);
-        session = session.inviteUser(userRepository.findUserById(newUserId));
-        sessionRepository.saveSession(session);
+        checkUserAndSession(session, user);
+        User newUser = userRepository.findUserById(newUserId);
+        if (newUser != null) {
+            session = session.inviteUser(userRepository.findUserById(newUserId));
+            sessionRepository.saveSession(session);
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "User with this id was not found");
+        }
     }
 
     @DeleteMapping("/{sessionId}/users/{userId}")
-    public void deletePerson(@PathVariable("sessionId") UUID sessionId, @PathVariable("userId") UUID newUserId, @RequestParam("userId") String userId) {
-
+    public void deletePerson(@PathVariable("sessionId") UUID sessionId, @PathVariable("userId") UUID oldUserId, @RequestParam("userId") String userId) {
+        if (oldUserId.equals(UUID.fromString(userId)))
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST, "You try delete yourself");
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        ComparisonSession session = sessionRepository.findSession(sessionId);
+        checkUserAndSession(session, user);
+        if (session.isThereThisUser(oldUserId)) {
+            session = session.removeUser(oldUserId);
+            sessionRepository.saveSession(session);
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "User with this id was not found");
+        }
     }
 
     @GetMapping("/{sessionId}")
     public SessionDTO findSession(@PathVariable("sessionId") UUID sessionId, @RequestParam("userId") String userId) {
-
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        ComparisonSession session = sessionRepository.findSession(sessionId);
+        checkUserAndSession(session, user);
+        return session.convertToSessionDto();
     }
 
     @DeleteMapping("/{sessionId}")
     public void deleteSession(@PathVariable("sessionId") UUID sessionId, @RequestParam("userId") String userId) {
-
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        ComparisonSession session = sessionRepository.findSession(sessionId);
+        checkUserAndSession(session, user);
+        sessionRepository.deleteSession(sessionId);
     }
 
-    @PostMapping("/{sessionId}/users/{configurationId}")
+    @PostMapping("/{sessionId}/configurations/{configurationId}")
     public void addConfiguration(@PathVariable("sessionId") UUID sessionId, @PathVariable("configurationId") UUID configurationId, @RequestParam("userId") String userId) {
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        ComparisonSession session = sessionRepository.findSession(sessionId);
+        checkUserAndSession(session, user);
+        checkUserAndConfiguration(user, configurationId);
+        PcConfiguration configuration = configurationRepository.getPcConfiguration(configurationId);
+        session = session.addPcConfiguration(configuration);
+        sessionRepository.saveSession(session);
 
     }
 
-    @DeleteMapping("/{sessionId}/users/{configurationId}")
+    @DeleteMapping("/{sessionId}/configurations/{configurationId}")
     public void deleteConfiguration(@PathVariable("sessionId") UUID sessionId, @PathVariable("configurationId") UUID configurationId, @RequestParam("userId") String userId) {
-
+        User user = userRepository.findUserById(UUID.fromString(userId));
+        checkUserLogin(user);
+        ComparisonSession session = sessionRepository.findSession(sessionId);
+        checkUserAndSession(session, user);
+        checkUserAndConfiguration(user, configurationId);
+        session = session.deletePcConfiguration(configurationId);
+        sessionRepository.saveSession(session);
     }
 
     private void checkUserAndSession(ComparisonSession session, User user) {
-        if(session==null)
+        if (session == null)
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Session with this id was not found");
         if (!session.isThereThisUser(user.getUserId())) {
@@ -104,5 +145,15 @@ public class SessionsController {
         }
     }
 
+    private void checkUserAndConfiguration(User user, UUID configurationId) {
+        if (configurationRepository.getPcConfiguration(configurationId) == null) {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "Configuration with this id was not found");
+        }
+        if (!user.hasThisConfiguration(configurationId)) {
+            throw new ResponseStatusException(
+                    HttpStatus.FORBIDDEN, "This user has not got this configuration");
+        }
+    }
 
 }
