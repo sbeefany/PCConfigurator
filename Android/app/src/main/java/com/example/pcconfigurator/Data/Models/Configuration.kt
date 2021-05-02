@@ -3,7 +3,7 @@ package com.example.pcconfigurator.Data.Models
 import Accessory
 import java.util.*
 
-class Configuration(var id: UUID, var accessories: List<Accessory>) {
+data class Configuration(var id: UUID, var accessories: List<Accessory>, var title:String) {
 
 
 
@@ -12,5 +12,6 @@ class Configuration(var id: UUID, var accessories: List<Accessory>) {
 
     val accessoryQuantity: Int get() = accessories.size
 
-    val requiredQuantity: Int get() = 8
+    val requiredQuantity: Int get() = 8//переделать
+
 }

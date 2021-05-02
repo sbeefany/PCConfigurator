@@ -2,6 +2,8 @@ package com.example.pcconfigurator.Presentation.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.core.view.OneShotPreDrawListener.add
 import androidx.fragment.app.Fragment
@@ -15,11 +17,15 @@ import com.example.pcconfigurator.Presentation.Fragments.PcConfiguratorStartPage
 import com.example.pcconfigurator.R
 
 class MainActivity : AppCompatActivity(), IMainActivity {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         supportFragmentManager.fragmentFactory = MyFragmentFactory()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initFragment()
+        if (savedInstanceState == null) {
+            initFragment()
+        }
 
 
     }
@@ -35,8 +41,12 @@ class MainActivity : AppCompatActivity(), IMainActivity {
     override fun changeFragment(fragment: Fragment) {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace(R.id.main_activity_container_view,fragment)
+            replace(R.id.main_activity_container_view, fragment)
             addToBackStack(null)
         }
+    }
+
+    override fun changeTitle(tittle: String) {
+        supportActionBar?.let {  it.title = tittle }
     }
 }

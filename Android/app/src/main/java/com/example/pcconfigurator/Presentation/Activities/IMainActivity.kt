@@ -6,5 +6,6 @@ interface IMainActivity {
 
     fun changeFragment(fragment:Fragment)
 
+    fun changeTitle(tittle:String)
 
 }

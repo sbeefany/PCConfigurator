@@ -65,7 +65,7 @@ public class PcConfiguration {
     }
 
 
-    private Boolean checkNewAccessory(Accessory accessory) {
+    public Boolean checkNewAccessory(Accessory accessory) {
         boolean checkAccessory;
         boolean checkCount;
         if (accessory instanceof ComputerCaseCooler || accessory instanceof Ram) {
@@ -96,8 +96,6 @@ public class PcConfiguration {
         }
 
         return checkCount && checkAccessory;
-
-
     }
 
     public Boolean checkId(UUID id) {

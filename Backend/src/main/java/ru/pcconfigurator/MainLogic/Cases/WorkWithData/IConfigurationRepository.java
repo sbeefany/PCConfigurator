@@ -14,4 +14,6 @@ public interface IConfigurationRepository {
 
     List<PcConfiguration> getAllPcConfigurations();
 
+    void deleteConfiguration(UUID configurationId);
+
 }

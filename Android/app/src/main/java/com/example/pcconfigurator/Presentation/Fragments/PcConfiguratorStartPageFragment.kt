@@ -67,6 +67,7 @@ class PcConfiguratorStartPageFragment : Fragment(),
         configurationsAdapter = ConfigurationsAdapter(emptyList(), this)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = configurationsAdapter
+        activity.changeTitle("Мои конфигурации")
 
     }
 

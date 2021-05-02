@@ -10,13 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeAccessoriesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/FakeConfigurationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Cases/WorkWithData/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/PcConfigurationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/ConfigurationsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/ConfigurationsRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Accessory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Accessory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/ComparisonSession.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/ComparisonSession.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Configuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Configuration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/IMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/IMainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ConfigurationDetailsAccessoriesAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ConfigurationDetailsPageAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ConfigurationDetailsPageAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ViewHolders/ConfigurationsViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ViewHolders/ConfigurationsViewHolder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsAccessoriesFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsInfoFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsPageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsPageFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/MyFragmentFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/MyFragmentFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/PcConfiguratorStartPageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/PcConfiguratorStartPageFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details_accessoories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details_info.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/item_configuration_details.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -231,19 +246,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestClassPcConfiguration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
@@ -761,6 +763,9 @@
       <workItem from="1617092736665" duration="3501000" />
       <workItem from="1617179658062" duration="3882000" />
       <workItem from="1617522558987" duration="7721000" />
+      <workItem from="1617602937962" duration="6154000" />
+      <workItem from="1617691452602" duration="2961000" />
+      <workItem from="1619616376215" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>
@@ -880,7 +885,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/pcconfigurator/MainLogic/Entities/User.java</url>
-          <line>110</line>
+          <line>112</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>

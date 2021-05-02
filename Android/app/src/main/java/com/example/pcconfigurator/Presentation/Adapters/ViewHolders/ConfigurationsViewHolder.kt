@@ -20,10 +20,10 @@ class ConfigurationsViewHolder(var itemView: View,var callBack: IClickListenerCa
 
     @SuppressLint("SetTextI18n")
     fun initData(configuration: Configuration) {
-        title.text = configuration.id.toString()
+        title.text = configuration.title.toString()
         accessoriesQuantity.text =
             configuration.accessoryQuantity.toString() + "/" + configuration.requiredQuantity.toString()
-        totalprice.text = configuration.totalPrice.toString()
+        totalprice.text = configuration.totalPrice.toString() + "₽"
 
     }
 

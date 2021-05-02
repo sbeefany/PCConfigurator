@@ -22,9 +22,9 @@ public class AccessoriesController {
     private IAccessoriesRepository repository;
 
 
-    @GetMapping("" )
+    @GetMapping("")
     public List<AccessoryDao> findAllAccessories(@RequestParam(required = false, name = "name") String name) {
-        if(name==null||name.isEmpty())
+        if ((name == null || name.isEmpty()))
             return repository.findAllAccessories().stream().map(Accessory::convertToAccessoryDao).collect(Collectors.toList());
         else
             return repository.findAllAccessoriesByName(name).stream().map(Accessory::convertToAccessoryDao).collect(Collectors.toList());
@@ -33,88 +33,88 @@ public class AccessoriesController {
     @GetMapping("/{id}")
     public AccessoryDao findAccessory(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory!=null)
+        if (accessory != null)
             return accessory.convertToAccessoryDao();
         else
             return null;
     }
 
     @GetMapping("/computercase/{id}")
-    public ComputerCase findFullInformationAboutComputerCase(@NotNull @PathVariable("id") UUID uuid){
+    public ComputerCase findFullInformationAboutComputerCase(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof ComputerCase)
+        if (accessory instanceof ComputerCase)
             return (ComputerCase) accessory;
         else
             return null;
     }
 
     @GetMapping("/computercasecooler/{id}")
-    public ComputerCaseCooler findFullInformationAboutComputerCaseCooler(@NotNull @PathVariable("id") UUID uuid){
+    public ComputerCaseCooler findFullInformationAboutComputerCaseCooler(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof ComputerCaseCooler)
+        if (accessory instanceof ComputerCaseCooler)
             return (ComputerCaseCooler) accessory;
         else
             return null;
     }
 
     @GetMapping("/cooler/{id}")
-    public Cooler findFullInformationAboutCooler(@NotNull @PathVariable("id") UUID uuid){
+    public Cooler findFullInformationAboutCooler(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof Cooler)
+        if (accessory instanceof Cooler)
             return (Cooler) accessory;
         else
             return null;
     }
 
     @GetMapping("/cpu/{id}")
-    public Cpu findFullInformationAboutCpu(@NotNull @PathVariable("id") UUID uuid){
+    public Cpu findFullInformationAboutCpu(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof ComputerCaseCooler)
+        if (accessory instanceof ComputerCaseCooler)
             return (Cpu) accessory;
         else
             return null;
     }
 
     @GetMapping("/disk/{id}")
-    public Disk findFullInformationAboutDisk(@NotNull @PathVariable("id") UUID uuid){
+    public Disk findFullInformationAboutDisk(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof Disk)
+        if (accessory instanceof Disk)
             return (Disk) accessory;
         else
             return null;
     }
 
     @GetMapping("/gpu/{id}")
-    public Gpu findFullInformationAboutGpu(@NotNull @PathVariable("id") UUID uuid){
+    public Gpu findFullInformationAboutGpu(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof Gpu)
+        if (accessory instanceof Gpu)
             return (Gpu) accessory;
         else
             return null;
     }
 
     @GetMapping("/motherboard/{id}")
-    public MotherBoard findFullInformationAboutMotherBoard(@NotNull @PathVariable("id") UUID uuid){
+    public MotherBoard findFullInformationAboutMotherBoard(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof MotherBoard)
+        if (accessory instanceof MotherBoard)
             return (MotherBoard) accessory;
         else
             return null;
     }
 
     @GetMapping("/powersupply/{id}")
-    public PowerSupply findFullInformationAboutPowerSupply(@NotNull @PathVariable("id") UUID uuid){
+    public PowerSupply findFullInformationAboutPowerSupply(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof PowerSupply)
+        if (accessory instanceof PowerSupply)
             return (PowerSupply) accessory;
         else
             return null;
     }
 
     @GetMapping("/ram/{id}")
-    public Ram findFullInformationAboutRam(@NotNull @PathVariable("id") UUID uuid){
+    public Ram findFullInformationAboutRam(@NotNull @PathVariable("id") UUID uuid) {
         Accessory accessory = repository.findAccessoryById(uuid);
-        if(accessory instanceof Ram)
+        if (accessory instanceof Ram)
             return (Ram) accessory;
         else
             return null;

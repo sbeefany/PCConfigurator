@@ -34,5 +34,10 @@ public class FakeConfigurationRepository implements IConfigurationRepository {
         return List.copyOf(configurations);
     }
 
+    @Override
+    public void deleteConfiguration(UUID configurationId) {
+
+    }
+
 
 }
