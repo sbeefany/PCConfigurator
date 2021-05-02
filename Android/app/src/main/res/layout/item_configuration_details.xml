@@ -1,11 +1,754 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/mother_board_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
 
+            <TextView
+                android:id="@+id/title_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Материнская плата:"
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/chipset_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Чипсет: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/formFactor_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Формфактор: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/socket_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Сокет: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/typeram_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Тип оперативной памяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/ramCount_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:maxWidth="160dp"
+                android:text="Кол-во слотов под оперативную память: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/hasSlotForM2_mother_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Поддержка М2: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cpu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Процессор: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_сpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/coresCount_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Кол-во ядер: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/streamsCount_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Кол-во потоков: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/cash_memory_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Размер cash-памяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/hasGpu_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Наличие графического ядра: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/socket_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:maxWidth="160dp"
+                android:text="Сокет: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gpu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Видеокарта: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/core_frequency_gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Частота: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/memory_size_gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Размер видеопамяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/power_gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Небходимое напряжение: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/video_memory_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Тип видеопямяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ram_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Оперативная память: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/value_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Размер оперативной памяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/frequency_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Частота оперативной памяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/typy_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Тип оперативной памяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cooler_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_cooler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Система охлаждения: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_cooler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_cooler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/noice_cooler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Уровень шума: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/socket_cooler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Сокет: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/material_cooler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Тип: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/powersupply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_powersupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Блок питания: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_powersupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_powersupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/power_powersupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Напряжение: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/formFactor_powersupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Форм-фактор: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/disk_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Диск: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/size_disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Кол-во памяти: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/type_disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Тип: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/computerCase_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="Корпус: "
+                android:textSize="@dimen/standard_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Название: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/vendor_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Производитель: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/form_factors_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Подходящие форм-факторы: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/type_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Тип-размер: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/coolers_count_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="Кол-во кулеров: "
+                android:textSize="@dimen/standard_text" />
+
+            <TextView
+                android:id="@+id/form_factors_powerSupply_computerCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="Доступные формакторы блоков питания: "
+                android:textSize="@dimen/standard_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+    </FrameLayout>
 </androidx.cardview.widget.CardView>

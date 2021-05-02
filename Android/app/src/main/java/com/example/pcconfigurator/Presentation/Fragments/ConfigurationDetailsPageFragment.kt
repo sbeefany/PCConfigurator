@@ -1,26 +1,41 @@
 package com.example.pcconfigurator.Presentation.Fragments
 
+import android.content.AbstractThreadedSyncAdapter
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.viewpager.widget.ViewPager
-import com.example.pcconfigurator.Presentation.Adapters.ConfigurationDetailsPageAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pcconfigurator.Data.Models.*
+import com.example.pcconfigurator.Presentation.Activities.IMainActivity
+import com.example.pcconfigurator.Presentation.Adapters.ConfigurationDetailsAdapter
 import com.example.pcconfigurator.R
-import com.google.android.material.tabs.TabLayout
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigurator.Data.Models.Configuration) : Fragment() {
+class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigurator.Data.Models.Configuration) :
+    Fragment() {
 
-    private lateinit var tabLayout: TabLayout
-    private lateinit var viewPager: ViewPager
-    private lateinit var myFragmentManager: FragmentManager
+    private lateinit var activity: IMainActivity
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: ConfigurationDetailsAdapter
+    private lateinit var emptyList: ImageView
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        myFragmentManager = requireActivity().supportFragmentManager
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val parentActivity = getActivity()
+        if (parentActivity is IMainActivity) {
+            activity = parentActivity
+        }
     }
 
     override fun onCreateView(
@@ -34,24 +49,20 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
     }
 
     private fun initViews(view: View) {
-        viewPager = view.findViewById(R.id.configuration_details_viewpager)
-        viewPager.adapter = ConfigurationDetailsPageAdapter(
-            myFragmentManager,
-            listOf<Fragment>(
-                myFragmentManager.fragmentFactory.instantiate(
-                    requireActivity().classLoader,
-                    ConfigurationDetailsInfoFragment::class.java.name
-                ),
-                myFragmentManager.fragmentFactory.instantiate(
-                    requireActivity().classLoader,
-                    ConfigurationDetailsAccessoriesFragment::class.java.name
-                )
+        activity.changeTitle(configuration.title)
+        recyclerView = view.findViewById(R.id.recycler_view_configurations_details)
+        emptyList = view.findViewById(R.id.image_empty_list)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        adapter = ConfigurationDetailsAdapter(configuration.accessories)
+        recyclerView.adapter = adapter
+        if (configuration.accessories.isEmpty()) {
+            emptyList.visibility = View.VISIBLE
+            recyclerView.visibility = View.GONE
+        } else {
+            emptyList.visibility = View.GONE
+            recyclerView.visibility = View.VISIBLE
+        }
 
-            )
-        )
-
-        tabLayout = view.findViewById(R.id.configuration_details_tab_layout)
-        tabLayout.setupWithViewPager(viewPager)
     }
 
 
