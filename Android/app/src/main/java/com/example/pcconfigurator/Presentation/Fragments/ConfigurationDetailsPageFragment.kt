@@ -24,6 +24,7 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ConfigurationDetailsAdapter
     private lateinit var emptyList: ImageView
+    private lateinit var floatingActionButton: FloatingActionButton
 
 
     override fun onAttach(context: Context) {
@@ -62,7 +63,11 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
             emptyList.visibility = View.GONE
             recyclerView.visibility = View.VISIBLE
         }
-
+        floatingActionButton =
+            view.findViewById(R.id.configuration_details_accessories_floating_action_button)
+        floatingActionButton.setOnClickListener {
+            activity.changeFragment(SearchAccessoryFragment())
+        }
     }
 
 

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PcConfigurator</string>
+
+    <string-array name="accessory_types">
+        <item>Категории</item>
+        <item>Материнская плата</item>
+        <item>Процессор</item>
+        <item>Видеокарта</item>
+        <item>Оперативная память</item>
+        <item>Устройство хранения</item>
+        <item>Устройство охлаждения</item>
+        <item>Корпус</item>
+        <item>Блок питания</item>
+    </string-array>
 </resources>

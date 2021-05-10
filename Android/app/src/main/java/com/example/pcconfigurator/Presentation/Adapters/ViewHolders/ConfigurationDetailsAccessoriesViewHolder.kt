@@ -95,8 +95,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
     fun initData(accessory: Accessory) {
         when (accessory) {
             is MotherBoard -> {
-                motherBoardLayout = itemView.findViewById(R.id.mother_board_layout)
-                motherBoardLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleMotherBoard = itemView.findViewById(R.id.title_mother_board)
                 nameMotherBoard = itemView.findViewById(R.id.name_mother_board)
                 nameMotherBoard.text = nameMotherBoard.text.toString() + accessory.name
@@ -120,8 +119,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                     m2MotherBoard.text = m2MotherBoard.text.toString() + "нет"
             }
             is Cpu -> {
-                cpuLayout = itemView.findViewById(R.id.cpu_layout)
-                cpuLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleCpu = itemView.findViewById(R.id.title_cpu)
                 nameCpu = itemView.findViewById(R.id.name_сpu)
                 nameCpu.text = nameCpu.text.toString() + accessory.name
@@ -143,8 +141,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                 socketCpu.text = socketCpu.text.toString() + accessory.socket
             }
             is Gpu -> {
-                gpuLayout = itemView.findViewById(R.id.gpu_layout)
-                gpuLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleGpu = itemView.findViewById(R.id.title_gpu)
                 nameGpu = itemView.findViewById(R.id.name_gpu)
                 nameGpu.text = nameGpu.text.toString() + accessory.name
@@ -160,8 +157,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                 typeMemoryGpu.text = typeMemoryGpu.text.toString() + accessory.videoMemoryType
             }
             is Ram -> {
-                cpuLayout = itemView.findViewById(R.id.ram_layout)
-                cpuLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleRam = itemView.findViewById(R.id.title_ram)
                 nameRam = itemView.findViewById(R.id.name_ram)
                 nameRam.text = nameRam.text.toString() + accessory.name
@@ -175,8 +171,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                 typeRam.text = typeRam.text.toString() + accessory.typeRam
             }
             is Cooler -> {
-                coolerLayout = itemView.findViewById(R.id.cooler_layout)
-                coolerLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleCooler = itemView.findViewById(R.id.title_cooler)
                 nameCooler = itemView.findViewById(R.id.name_cooler)
                 nameCooler.text = nameCooler.text.toString() + accessory.name
@@ -190,8 +185,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                 typeCooler.text = typeCooler.text.toString() + accessory.material
             }
             is PowerSupply -> {
-                powerSupplyLayout = itemView.findViewById(R.id.powersupply_layout)
-                powerSupplyLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titlePowerSupply = itemView.findViewById(R.id.title_powersupply)
                 namePowerSupply = itemView.findViewById(R.id.name_powersupply)
                 namePowerSupply.text = namePowerSupply.text.toString() + accessory.name
@@ -204,8 +198,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                     formFactorPowerSupply.text.toString() + accessory.formFactorPowerSupply
             }
             is Disk -> {
-                diskLayout = itemView.findViewById(R.id.disk_layout)
-                diskLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleDisk = itemView.findViewById(R.id.title_disk)
                 nameDisk = itemView.findViewById(R.id.name_disk)
                 nameDisk.text = nameDisk.text.toString() + accessory.name
@@ -217,11 +210,10 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                 typeDisk.text = typeDisk.text.toString() + accessory.diskType
             }
             is ComputerCase -> {
-                computerCaseLayout = itemView.findViewById(R.id.computerCase_layout)
-                computerCaseLayout.visibility = View.VISIBLE
+                initLayouts(accessory)
                 titleComputerCase = itemView.findViewById(R.id.title_computerCase)
                 nameComputerCase = itemView.findViewById(R.id.name_computerCase)
-                nameComputerCase.text = nameCpu.text.toString() + accessory.name
+                nameComputerCase.text = nameComputerCase.text.toString() + accessory.name
                 vendorComputerCase = itemView.findViewById(R.id.vendor_computerCase)
                 vendorComputerCase.text = vendorComputerCase.text.toString() + accessory.vendor
                 formFactorsComputerCase = itemView.findViewById(R.id.form_factors_computerCase)
@@ -239,5 +231,35 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View) :
                     formFactorsPowerSupplyComputerCase.text.toString() + accessory.formFactorPowerSupply
             }
         }
+    }
+
+    private fun initLayouts(accessory: Accessory) {
+        motherBoardLayout = itemView.findViewById(R.id.mother_board_layout)
+        cpuLayout = itemView.findViewById(R.id.cpu_layout)
+        computerCaseLayout = itemView.findViewById(R.id.computerCase_layout)
+        diskLayout = itemView.findViewById(R.id.disk_layout)
+        powerSupplyLayout = itemView.findViewById(R.id.powersupply_layout)
+        coolerLayout = itemView.findViewById(R.id.cooler_layout)
+        ramLayout = itemView.findViewById(R.id.ram_layout)
+        gpuLayout = itemView.findViewById(R.id.gpu_layout)
+        computerCaseLayout.visibility = View.GONE
+        diskLayout.visibility = View.GONE
+        powerSupplyLayout.visibility = View.GONE
+        coolerLayout.visibility = View.GONE
+        ramLayout.visibility = View.GONE
+        gpuLayout.visibility = View.GONE
+        cpuLayout.visibility = View.GONE
+        motherBoardLayout.visibility = View.GONE
+        when (accessory) {
+            is MotherBoard -> motherBoardLayout.visibility = View.VISIBLE
+            is Cpu -> cpuLayout.visibility = View.VISIBLE
+            is Gpu -> gpuLayout.visibility = View.VISIBLE
+            is Ram -> ramLayout.visibility = View.VISIBLE
+            is Cooler -> coolerLayout.visibility = View.VISIBLE
+            is PowerSupply -> powerSupplyLayout.visibility = View.VISIBLE
+            is Disk -> diskLayout.visibility = View.VISIBLE
+            is ComputerCase -> computerCaseLayout.visibility = View.VISIBLE
+        }
+
     }
 }

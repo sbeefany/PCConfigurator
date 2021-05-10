@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.DiffUtil
 import com.example.pcconfigurator.Data.Models.Configuration
 
 class DiffUtilsConfigurationDetailsAccessories (
-    val newList: List<Accessory>,
-    val oldList: List<Accessory>
+    private val newList: List<Accessory>,
+    private val oldList: List<Accessory>
 ) : DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return oldList.size
@@ -17,10 +17,10 @@ class DiffUtilsConfigurationDetailsAccessories (
     }
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return newList.get(newItemPosition) == oldList.get(oldItemPosition)
+        return newList[newItemPosition] == oldList[oldItemPosition]
     }
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return newList.get(newItemPosition).equals(oldList.get(oldItemPosition))
+        return newList[newItemPosition] == oldList[oldItemPosition]
     }
 }

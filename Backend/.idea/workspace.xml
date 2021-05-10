@@ -9,30 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/ConfigurationsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/ConfigurationsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Accessory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Accessory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/ComparisonSession.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/ComparisonSession.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Configuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Data/Models/Configuration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/IMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/IMainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ConfigurationDetailsAccessoriesAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ConfigurationDetailsPageAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ConfigurationDetailsPageAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ViewHolders/ConfigurationsViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Adapters/ViewHolders/ConfigurationsViewHolder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsAccessoriesFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsInfoFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsPageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/ConfigurationDetailsPageFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/MyFragmentFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/MyFragmentFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/PcConfiguratorStartPageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/java/com/example/pcconfigurator/Presentation/Fragments/PcConfiguratorStartPageFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details_accessoories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/fragment_configuration_details_info.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/layout/item_configuration_details.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Android/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/app/src/main/res/values/themes.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3bf174ad-fff8-40c9-ab45-848950dd1078" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -766,6 +743,7 @@
       <workItem from="1617602937962" duration="6154000" />
       <workItem from="1617691452602" duration="2961000" />
       <workItem from="1619616376215" duration="3000" />
+      <workItem from="1620218594065" duration="74000" />
     </task>
     <task id="LOCAL-00001" summary="AddedALotOfTasks">
       <created>1611831733352</created>

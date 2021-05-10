@@ -176,4 +176,38 @@ object AccessoriesRepository {
     )
 
     fun findAccessoryById(id: UUID) = allAccessories.find { it.id == id }
+
+    fun getAccessoriesByType(type: String): List<Accessory> {
+        when (type) {
+            "Материнская плата" -> {
+                return allAccessories.filterIsInstance<Accessory.MotherBoard>()
+            }
+            "Процессор" -> {
+                return allAccessories.filterIsInstance<Accessory.Cpu>()
+            }
+            "Видеокарта" -> {
+                return allAccessories.filterIsInstance<Accessory.Gpu>()
+            }
+            "Оперативная память" -> {
+                return allAccessories.filterIsInstance<Accessory.Ram>()
+            }
+            "Устройство хранения" -> {
+                return allAccessories.filterIsInstance<Accessory.Disk>()
+            }
+            "Устройство охлаждения" -> {
+                return allAccessories.filterIsInstance<Accessory.Cooler>()
+            }
+            "Корпус" -> {
+                return allAccessories.filterIsInstance<Accessory.ComputerCase>()
+            }
+            "Блок питания" -> {
+                return allAccessories.filterIsInstance<Accessory.PowerSupply>()
+            }
+            else -> {
+                return allAccessories
+            }
+        }
+    }
+
+
 }
