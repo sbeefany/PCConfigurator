@@ -14,12 +14,13 @@ import com.example.pcconfigurator.Presentation.Adapters.SearchAccessoriesAdapter
 import com.example.pcconfigurator.Presentation.Presenters.SearchAccessoriesPresenter
 import com.example.pcconfigurator.R
 
-class SearchAccessoryFragment : Fragment(), ISearchAccessories {
+class SearchAccessoryFragment : Fragment(), ISearchAccessories, IClickListenerCallBack {
 
     private lateinit var activity: IMainActivity
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SearchAccessoriesAdapter
     private val searchAccessoriesPresenter = SearchAccessoriesPresenter(this)
+    private var accessories:List<Accessory> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,18 +38,22 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories {
         val view: View = inflater.inflate(R.layout.fragment_search_accessories, container, false)
         initViews(view)
         activity.visibilitySpinner(true, searchAccessoriesPresenter)
+        searchAccessoriesPresenter.getLastResult()
         return view
     }
+
+
 
     private fun initViews(view: View) {
         recyclerView = view.findViewById(R.id.search_accessories_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = SearchAccessoriesAdapter(listOf())
+        adapter = SearchAccessoriesAdapter(accessories,this, context)
         recyclerView.adapter = adapter
-        activity.changeTitle("Поиск комплектующих")
+        activity.changeTitle("Поиск")
     }
 
     override fun showAccessories(accessories: List<Accessory>) {
+        this.accessories = accessories
         adapter.updateList(accessories)
     }
 
@@ -61,4 +66,20 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories {
         super.onDestroy()
         searchAccessoriesPresenter.view = null
     }
+
+    override fun itemClick(position: Int) {
+        getActivity()?.let {
+            val fragmentFactory =
+                it.supportFragmentManager.fragmentFactory as MyFragmentFactory
+
+            fragmentFactory.accessory = adapter.accessories.get(position)
+
+            val fragment = fragmentFactory.instantiate(
+                it.classLoader,
+                AccessoryDetailsFragment::class.java.name
+            )
+            activity.changeFragment(fragment)
+        }
+    }
+
 }

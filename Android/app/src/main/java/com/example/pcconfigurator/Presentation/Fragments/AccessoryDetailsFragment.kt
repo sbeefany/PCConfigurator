@@ -1,33 +1,31 @@
-package com.example.pcconfigurator.Presentation.Adapters.ViewHolders
+package com.example.pcconfigurator.Presentation.Fragments
 
 import Accessory
 import Accessory.*
 import android.annotation.SuppressLint
-import android.opengl.Visibility
+import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.example.pcconfigurator.Data.Models.Configuration
-import com.example.pcconfigurator.Presentation.Fragments.IClickListenerCallBack
+import androidx.fragment.app.Fragment
+import com.example.pcconfigurator.Presentation.Activities.IMainActivity
 import com.example.pcconfigurator.R
-import javax.security.auth.callback.Callback
-import kotlin.math.acos
 
-class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClickListenerCallBack) :
-    RecyclerView.ViewHolder(itemView) {
+class AccessoryDetailsFragment(val accessory: Accessory) : Fragment() {
 
-    init {
-        itemView.setOnClickListener {
+    private lateinit var activity: IMainActivity
 
-        }
-    }
+    private lateinit var imageView: ImageView
+    private lateinit var id: TextView
+    private lateinit var price: TextView
+    private lateinit var name: TextView
+    private lateinit var vendor: TextView
 
     //MotherBoardViews
     private lateinit var motherBoardLayout: LinearLayout
-    private lateinit var titleMotherBoard: TextView
-    private lateinit var nameMotherBoard: TextView
-    private lateinit var vendorMotherBoard: TextView
     private lateinit var chipsetMotherBoard: TextView
     private lateinit var formFactorMotherBoard: TextView
     private lateinit var socketMotherBoard: TextView
@@ -37,9 +35,6 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
 
     //CpuViews
     private lateinit var cpuLayout: LinearLayout
-    private lateinit var titleCpu: TextView
-    private lateinit var nameCpu: TextView
-    private lateinit var vendorCpu: TextView
     private lateinit var coresCountCpu: TextView
     private lateinit var streamsCountCpu: TextView
     private lateinit var cashCpu: TextView
@@ -48,9 +43,6 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
 
     //GpuViews
     private lateinit var gpuLayout: LinearLayout
-    private lateinit var titleGpu: TextView
-    private lateinit var nameGpu: TextView
-    private lateinit var vendorGpu: TextView
     private lateinit var frequencyGpu: TextView
     private lateinit var memorySizeGpu: TextView
     private lateinit var powerGpu: TextView
@@ -58,58 +50,67 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
 
     //RamViews
     private lateinit var ramLayout: LinearLayout
-    private lateinit var titleRam: TextView
-    private lateinit var nameRam: TextView
-    private lateinit var vendorRam: TextView
     private lateinit var frequencyRam: TextView
     private lateinit var sizeRam: TextView
     private lateinit var typeRam: TextView
 
     //CoolerViews
     private lateinit var coolerLayout: LinearLayout
-    private lateinit var titleCooler: TextView
-    private lateinit var nameCooler: TextView
-    private lateinit var vendorCooler: TextView
     private lateinit var noiceCooler: TextView
     private lateinit var socketCooler: TextView
     private lateinit var typeCooler: TextView
 
     //PowerSupplyViews
     private lateinit var powerSupplyLayout: LinearLayout
-    private lateinit var titlePowerSupply: TextView
-    private lateinit var namePowerSupply: TextView
-    private lateinit var vendorPowerSupply: TextView
     private lateinit var powerPowerSupply: TextView
     private lateinit var formFactorPowerSupply: TextView
 
     //DiskViews
     private lateinit var diskLayout: LinearLayout
-    private lateinit var titleDisk: TextView
-    private lateinit var nameDisk: TextView
-    private lateinit var vendorDisk: TextView
     private lateinit var sizeDisk: TextView
     private lateinit var typeDisk: TextView
 
     //ComputerCaseViews
     private lateinit var computerCaseLayout: LinearLayout
-    private lateinit var titleComputerCase: TextView
-    private lateinit var nameComputerCase: TextView
-    private lateinit var vendorComputerCase: TextView
     private lateinit var formFactorsComputerCase: TextView
     private lateinit var typeSizeComputerCase: TextView
     private lateinit var coolersCountComputerCase: TextView
     private lateinit var formFactorsPowerSupplyComputerCase: TextView
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val parentActivity = getActivity()
+        if (parentActivity is IMainActivity) {
+            activity = parentActivity
+        }
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_accessory_details, container, false)
+
+        initData(accessory, view)
+        return view
+    }
+
     @SuppressLint("SetTextI18n")
-    fun initData(accessory: Accessory) {
+    fun initData(accessory: Accessory, itemView: View) {
+        activity.changeTitle("Детальная информация")
+        imageView = itemView.findViewById(R.id.image_accessory_details)
+        id = itemView.findViewById(R.id.accessory_id)
+        id.text = accessory.id.toString().dropLast(28)
+        price = itemView.findViewById(R.id.price_accessory)
+        price.text = price.text.toString() + accessory.price.toString()
+        vendor = itemView.findViewById(R.id.vendor_accessory)
+        vendor.text = vendor.text.toString() + accessory.vendor
+        name = itemView.findViewById(R.id.name_accessory)
+        name.text = name.text.toString() + accessory.name
+        initLayouts(accessory, itemView)
         when (accessory) {
             is MotherBoard -> {
-                initLayouts(accessory)
-                titleMotherBoard = itemView.findViewById(R.id.title_mother_board)
-                nameMotherBoard = itemView.findViewById(R.id.name_mother_board)
-                nameMotherBoard.text = nameMotherBoard.text.toString() + accessory.name
-                vendorMotherBoard = itemView.findViewById(R.id.vendor_mother_board)
-                vendorMotherBoard.text = vendorMotherBoard.text.toString() + accessory.vendor
                 chipsetMotherBoard = itemView.findViewById(R.id.chipset_mother_board)
                 chipsetMotherBoard.text = chipsetMotherBoard.text.toString() + accessory.chipset
                 formFactorMotherBoard = itemView.findViewById(R.id.formFactor_mother_board)
@@ -122,18 +123,14 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
                 countRamMotherBoard = itemView.findViewById(R.id.ramCount_mother_board)
                 countRamMotherBoard.text = countRamMotherBoard.text.toString() + accessory.ramCount
                 m2MotherBoard = itemView.findViewById(R.id.hasSlotForM2_mother_board)
+
                 if (accessory.hasSlotForM2)
                     m2MotherBoard.text = m2MotherBoard.text.toString() + "есть"
                 else
                     m2MotherBoard.text = m2MotherBoard.text.toString() + "нет"
             }
             is Cpu -> {
-                initLayouts(accessory)
-                titleCpu = itemView.findViewById(R.id.title_cpu)
-                nameCpu = itemView.findViewById(R.id.name_сpu)
-                nameCpu.text = nameCpu.text.toString() + accessory.name
-                vendorCpu = itemView.findViewById(R.id.vendor_cpu)
-                vendorCpu.text = vendorCpu.text.toString() + accessory.vendor
+
                 coresCountCpu = itemView.findViewById(R.id.coresCount_cpu)
                 coresCountCpu.text = coresCountCpu.text.toString() + accessory.coresCount
                 streamsCountCpu = itemView.findViewById(R.id.streamsCount_cpu)
@@ -150,12 +147,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
                 socketCpu.text = socketCpu.text.toString() + accessory.socket
             }
             is Gpu -> {
-                initLayouts(accessory)
-                titleGpu = itemView.findViewById(R.id.title_gpu)
-                nameGpu = itemView.findViewById(R.id.name_gpu)
-                nameGpu.text = nameGpu.text.toString() + accessory.name
-                vendorGpu = itemView.findViewById(R.id.vendor_gpu)
-                vendorGpu.text = vendorGpu.text.toString() + accessory.vendor
+
                 frequencyGpu = itemView.findViewById(R.id.core_frequency_gpu)
                 frequencyGpu.text = frequencyGpu.text.toString() + accessory.coreFrequency
                 memorySizeGpu = itemView.findViewById(R.id.memory_size_gpu)
@@ -166,12 +158,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
                 typeMemoryGpu.text = typeMemoryGpu.text.toString() + accessory.videoMemoryType
             }
             is Ram -> {
-                initLayouts(accessory)
-                titleRam = itemView.findViewById(R.id.title_ram)
-                nameRam = itemView.findViewById(R.id.name_ram)
-                nameRam.text = nameRam.text.toString() + accessory.name
-                vendorRam = itemView.findViewById(R.id.vendor_ram)
-                vendorRam.text = vendorRam.text.toString() + accessory.vendor
+
                 frequencyRam = itemView.findViewById(R.id.frequency_ram)
                 frequencyRam.text = frequencyRam.text.toString() + accessory.frequency
                 sizeRam = itemView.findViewById(R.id.value_ram)
@@ -180,12 +167,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
                 typeRam.text = typeRam.text.toString() + accessory.typeRam
             }
             is Cooler -> {
-                initLayouts(accessory)
-                titleCooler = itemView.findViewById(R.id.title_cooler)
-                nameCooler = itemView.findViewById(R.id.name_cooler)
-                nameCooler.text = nameCooler.text.toString() + accessory.name
-                vendorCooler = itemView.findViewById(R.id.vendor_cooler)
-                vendorCooler.text = vendorCooler.text.toString() + accessory.vendor
+
                 noiceCooler = itemView.findViewById(R.id.noice_cooler)
                 noiceCooler.text = noiceCooler.text.toString() + accessory.noiceLvl
                 socketCooler = itemView.findViewById(R.id.socket_cooler)
@@ -194,12 +176,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
                 typeCooler.text = typeCooler.text.toString() + accessory.material
             }
             is PowerSupply -> {
-                initLayouts(accessory)
-                titlePowerSupply = itemView.findViewById(R.id.title_powersupply)
-                namePowerSupply = itemView.findViewById(R.id.name_powersupply)
-                namePowerSupply.text = namePowerSupply.text.toString() + accessory.name
-                vendorPowerSupply = itemView.findViewById(R.id.vendor_powersupply)
-                vendorPowerSupply.text = vendorPowerSupply.text.toString() + accessory.vendor
+
                 powerPowerSupply = itemView.findViewById(R.id.power_powersupply)
                 powerPowerSupply.text = powerPowerSupply.text.toString() + accessory.powerCount
                 formFactorPowerSupply = itemView.findViewById(R.id.formFactor_powersupply)
@@ -207,24 +184,14 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
                     formFactorPowerSupply.text.toString() + accessory.formFactorPowerSupply
             }
             is Disk -> {
-                initLayouts(accessory)
-                titleDisk = itemView.findViewById(R.id.title_disk)
-                nameDisk = itemView.findViewById(R.id.name_disk)
-                nameDisk.text = nameDisk.text.toString() + accessory.name
-                vendorDisk = itemView.findViewById(R.id.vendor_disk)
-                vendorDisk.text = vendorDisk.text.toString() + accessory.vendor
+
                 sizeDisk = itemView.findViewById(R.id.size_disk)
                 sizeDisk.text = sizeDisk.text.toString() + accessory.diskSizeGB
                 typeDisk = itemView.findViewById(R.id.type_disk)
                 typeDisk.text = typeDisk.text.toString() + accessory.diskType
             }
             is ComputerCase -> {
-                initLayouts(accessory)
-                titleComputerCase = itemView.findViewById(R.id.title_computerCase)
-                nameComputerCase = itemView.findViewById(R.id.name_computerCase)
-                nameComputerCase.text = nameComputerCase.text.toString() + accessory.name
-                vendorComputerCase = itemView.findViewById(R.id.vendor_computerCase)
-                vendorComputerCase.text = vendorComputerCase.text.toString() + accessory.vendor
+
                 formFactorsComputerCase = itemView.findViewById(R.id.form_factors_computerCase)
                 formFactorsComputerCase.text =
                     formFactorsComputerCase.text.toString() + accessory.formFactors
@@ -242,7 +209,7 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
         }
     }
 
-    private fun initLayouts(accessory: Accessory) {
+    private fun initLayouts(accessory: Accessory, itemView: View) {
         motherBoardLayout = itemView.findViewById(R.id.mother_board_layout)
         cpuLayout = itemView.findViewById(R.id.cpu_layout)
         computerCaseLayout = itemView.findViewById(R.id.computerCase_layout)

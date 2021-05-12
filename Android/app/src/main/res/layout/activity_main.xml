@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/small_margin"
-                android:maxWidth="180dp"
+                android:layout_weight="50"
                 android:maxLines="2"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -40,13 +40,17 @@
                 android:layout_marginLeft="@dimen/standard_margin"
                 android:scaleType="center"
                 android:src="@drawable/ic_loupe__1_"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <Spinner
                 android:id="@+id/action_bar_spinner"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_weight="20"
                 android:visibility="gone"
                 tools:visibility="visible" />
         </LinearLayout>

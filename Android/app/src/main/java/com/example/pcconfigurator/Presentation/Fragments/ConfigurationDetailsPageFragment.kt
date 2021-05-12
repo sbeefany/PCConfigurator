@@ -18,7 +18,7 @@ import com.example.pcconfigurator.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigurator.Data.Models.Configuration) :
-    Fragment() {
+    Fragment(), IClickListenerCallBack {
 
     private lateinit var activity: IMainActivity
     private lateinit var recyclerView: RecyclerView
@@ -42,7 +42,7 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_configuration_details, container, false)
         initViews(view)
@@ -54,7 +54,7 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
         recyclerView = view.findViewById(R.id.recycler_view_configurations_details)
         emptyList = view.findViewById(R.id.image_empty_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = ConfigurationDetailsAdapter(configuration.accessories)
+        adapter = ConfigurationDetailsAdapter(configuration.accessories, this)
         recyclerView.adapter = adapter
         if (configuration.accessories.isEmpty()) {
             emptyList.visibility = View.VISIBLE
@@ -67,6 +67,21 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
             view.findViewById(R.id.configuration_details_accessories_floating_action_button)
         floatingActionButton.setOnClickListener {
             activity.changeFragment(SearchAccessoryFragment())
+        }
+    }
+
+    override fun itemClick(position: Int) {
+        getActivity()?.let {
+            val fragmentFactory =
+                it.supportFragmentManager.fragmentFactory as MyFragmentFactory
+
+            fragmentFactory.accessory = adapter.accessories.get(position)
+
+            val fragment = fragmentFactory.instantiate(
+                it.classLoader,
+                AccessoryDetailsFragment::class.java.name
+            )
+            activity.changeFragment(fragment)
         }
     }
 

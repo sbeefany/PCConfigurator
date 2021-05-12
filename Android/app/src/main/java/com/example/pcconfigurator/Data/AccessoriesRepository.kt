@@ -175,18 +175,22 @@ object AccessoriesRepository {
         )
     )
 
+    val lastResult: MutableList<Accessory> = mutableListOf()
+
     fun findAccessoryById(id: UUID) = allAccessories.find { it.id == id }
 
     fun getAccessoriesByType(type: String): List<Accessory> {
         when (type) {
             "Материнская плата" -> {
-                return allAccessories.filterIsInstance<Accessory.MotherBoard>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.MotherBoard>())
+                return lastResult
             }
             "Процессор" -> {
                 return allAccessories.filterIsInstance<Accessory.Cpu>()
             }
             "Видеокарта" -> {
-                return allAccessories.filterIsInstance<Accessory.Gpu>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.Gpu>())
+                return lastResult
             }
             "Оперативная память" -> {
                 return allAccessories.filterIsInstance<Accessory.Ram>()

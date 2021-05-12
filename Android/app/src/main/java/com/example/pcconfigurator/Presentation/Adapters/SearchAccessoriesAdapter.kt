@@ -1,6 +1,7 @@
 package com.example.pcconfigurator.Presentation.Adapters
 
 import Accessory
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,24 +11,32 @@ import com.example.pcconfigurator.Data.Models.Configuration
 import com.example.pcconfigurator.Presentation.Adapters.DiffUtils.DiffUtilsConfigurationDetailsAccessories
 import com.example.pcconfigurator.Presentation.Adapters.DiffUtils.DiffUtilsConfigurationsCallBack
 import com.example.pcconfigurator.Presentation.Adapters.ViewHolders.ConfigurationDetailsAccessoriesViewHolder
+import com.example.pcconfigurator.Presentation.Adapters.ViewHolders.SearchAccessoriesViewHolder
+import com.example.pcconfigurator.Presentation.Fragments.IClickListenerCallBack
 import com.example.pcconfigurator.R
 
-class SearchAccessoriesAdapter(var accessories: List<Accessory>) :
-    RecyclerView.Adapter<ConfigurationDetailsAccessoriesViewHolder>() {
+class SearchAccessoriesAdapter(
+    var accessories: List<Accessory>,
+    val callBack: IClickListenerCallBack,
+    val context: Context?,
+) :
+    RecyclerView.Adapter<SearchAccessoriesViewHolder>() {
+
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
-    ): ConfigurationDetailsAccessoriesViewHolder {
+        viewType: Int,
+    ): SearchAccessoriesViewHolder {
         val view: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_configuration_details, parent, false)
-        return ConfigurationDetailsAccessoriesViewHolder(view)
+            .inflate(R.layout.item_search_accessories, parent, false)
+        return SearchAccessoriesViewHolder(view, callBack,context)
     }
 
     override fun onBindViewHolder(
-        holder: ConfigurationDetailsAccessoriesViewHolder,
-        position: Int
+        holder: SearchAccessoriesViewHolder,
+        position: Int,
     ) {
-        holder.initData(accessories[position])
+        holder.initViews(accessories[position])
     }
 
     override fun getItemCount() = accessories.size
