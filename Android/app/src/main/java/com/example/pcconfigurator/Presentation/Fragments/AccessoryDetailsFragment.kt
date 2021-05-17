@@ -7,22 +7,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.pcconfigurator.Data.Models.Configuration
 import com.example.pcconfigurator.Presentation.Activities.IMainActivity
+import com.example.pcconfigurator.Presentation.Presenters.ConfigurationDetailsPresenter
 import com.example.pcconfigurator.R
 
-class AccessoryDetailsFragment(val accessory: Accessory) : Fragment() {
+class AccessoryDetailsFragment(val accessory: Accessory) : Fragment(), ConfigurationDetailsView {
 
     private lateinit var activity: IMainActivity
+    private lateinit var presenter: ConfigurationDetailsPresenter
 
     private lateinit var imageView: ImageView
     private lateinit var id: TextView
     private lateinit var price: TextView
     private lateinit var name: TextView
     private lateinit var vendor: TextView
+    private lateinit var addButton: Button
 
     //MotherBoardViews
     private lateinit var motherBoardLayout: LinearLayout
@@ -91,8 +96,8 @@ class AccessoryDetailsFragment(val accessory: Accessory) : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_accessory_details, container, false)
-
         initData(accessory, view)
+        presenter = ConfigurationDetailsPresenter(this)
         return view
     }
 
@@ -109,6 +114,12 @@ class AccessoryDetailsFragment(val accessory: Accessory) : Fragment() {
         name = itemView.findViewById(R.id.name_accessory)
         name.text = name.text.toString() + accessory.name
         initLayouts(accessory, itemView)
+
+        addButton = itemView.findViewById(R.id.button_add_to_configuration)
+        addButton.setOnClickListener {
+            presenter.addAccessory(accessory)
+        }
+
         when (accessory) {
             is MotherBoard -> {
                 chipsetMotherBoard = itemView.findViewById(R.id.chipset_mother_board)
@@ -237,5 +248,20 @@ class AccessoryDetailsFragment(val accessory: Accessory) : Fragment() {
             is ComputerCase -> computerCaseLayout.visibility = View.VISIBLE
         }
 
+    }
+
+    override fun showConfiguration(configuration: Configuration) {
+        getActivity()?.let {
+            val fragmentFactory =
+                it.supportFragmentManager.fragmentFactory as MyFragmentFactory
+
+            fragmentFactory.configuration = configuration
+
+            val fragment = fragmentFactory.instantiate(
+                it.classLoader,
+                ConfigurationDetailsPageFragment::class.java.name
+            )
+            activity.changeFragment(fragment)
+        }
     }
 }

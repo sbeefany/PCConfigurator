@@ -4,7 +4,9 @@ import Accessory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pcconfigurator.Presentation.Adapters.DiffUtils.DiffUtilsConfigurationDetailsAccessories
 import com.example.pcconfigurator.Presentation.Adapters.ViewHolders.ConfigurationDetailsAccessoriesViewHolder
 import com.example.pcconfigurator.Presentation.Adapters.ViewHolders.ConfigurationDetailsHeadlineViewHolder
 import com.example.pcconfigurator.Presentation.Adapters.ViewHolders.ConfigurationDetailsImageViewHolder
@@ -13,7 +15,7 @@ import com.example.pcconfigurator.Presentation.Fragments.IClickListenerCallBack
 import com.example.pcconfigurator.R
 
 class ConfigurationDetailsAdapter(
-    val accessories: List<Accessory>,
+    var accessories: List<Accessory>,
     var callBack: IClickListenerCallBack,
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -51,5 +53,15 @@ class ConfigurationDetailsAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return position
+    }
+
+    fun updateList(accessories: List<Accessory>) {
+        val configurationDiffUtil =
+            DiffUtilsConfigurationDetailsAccessories(accessories, this.accessories)
+        val diffResult = DiffUtil.calculateDiff(configurationDiffUtil)
+        val newList = mutableListOf<Accessory>()
+        newList.addAll(accessories)
+        this.accessories = newList
+        diffResult.dispatchUpdatesTo(this)
     }
 }

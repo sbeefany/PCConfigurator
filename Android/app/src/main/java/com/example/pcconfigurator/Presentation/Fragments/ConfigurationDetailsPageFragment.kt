@@ -14,17 +14,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pcconfigurator.Data.Models.*
 import com.example.pcconfigurator.Presentation.Activities.IMainActivity
 import com.example.pcconfigurator.Presentation.Adapters.ConfigurationDetailsAdapter
+import com.example.pcconfigurator.Presentation.Dialogs.DeleteAccessoriesDialogFragment
+import com.example.pcconfigurator.Presentation.Presenters.ConfigurationDetailsPresenter
 import com.example.pcconfigurator.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigurator.Data.Models.Configuration) :
-    Fragment(), IClickListenerCallBack {
+    Fragment(), IClickListenerCallBack, ConfigurationDetailsView {
 
     private lateinit var activity: IMainActivity
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ConfigurationDetailsAdapter
     private lateinit var emptyList: ImageView
     private lateinit var floatingActionButton: FloatingActionButton
+    private lateinit var presenter: ConfigurationDetailsPresenter
 
 
     override fun onAttach(context: Context) {
@@ -46,6 +49,9 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
     ): View? {
         val view = inflater.inflate(R.layout.fragment_configuration_details, container, false)
         initViews(view)
+        presenter = ConfigurationDetailsPresenter(this)
+        presenter.setUpCurrentConfiguration(configuration)
+
         return view
     }
 
@@ -56,13 +62,6 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
         recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = ConfigurationDetailsAdapter(configuration.accessories, this)
         recyclerView.adapter = adapter
-        if (configuration.accessories.isEmpty()) {
-            emptyList.visibility = View.VISIBLE
-            recyclerView.visibility = View.GONE
-        } else {
-            emptyList.visibility = View.GONE
-            recyclerView.visibility = View.VISIBLE
-        }
         floatingActionButton =
             view.findViewById(R.id.configuration_details_accessories_floating_action_button)
         floatingActionButton.setOnClickListener {
@@ -71,17 +70,24 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
     }
 
     override fun itemClick(position: Int) {
-        getActivity()?.let {
-            val fragmentFactory =
-                it.supportFragmentManager.fragmentFactory as MyFragmentFactory
+        val newDialog = DeleteAccessoriesDialogFragment()
+        newDialog.presenter = presenter
+        newDialog.accessory = adapter.accessories[position-2]
+        newDialog.show(requireFragmentManager(),"DeleteDialog")
+    }
 
-            fragmentFactory.accessory = adapter.accessories.get(position)
-
-            val fragment = fragmentFactory.instantiate(
-                it.classLoader,
-                AccessoryDetailsFragment::class.java.name
-            )
-            activity.changeFragment(fragment)
+    override fun showConfiguration(configuration: Configuration) {
+        if (configuration.accessories.size == configuration.requiredQuantity)
+            floatingActionButton.visibility = View.GONE
+        else
+            floatingActionButton.visibility = View.VISIBLE
+        adapter.updateList(configuration.accessories)
+        if (configuration.accessories.isEmpty()) {
+            emptyList.visibility = View.VISIBLE
+            recyclerView.visibility = View.GONE
+        } else {
+            emptyList.visibility = View.GONE
+            recyclerView.visibility = View.VISIBLE
         }
     }
 

@@ -18,9 +18,12 @@ class ConfigurationDetailsAccessoriesViewHolder(itemView: View, callback: IClick
     RecyclerView.ViewHolder(itemView) {
 
     init {
-        itemView.setOnClickListener {
-
+        itemView.setOnLongClickListener {
+            callback.itemClick(adapterPosition)
+            true
         }
+
+
     }
 
     //MotherBoardViews

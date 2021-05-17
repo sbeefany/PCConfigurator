@@ -1,15 +1,16 @@
 package com.example.pcconfigurator.Presentation.Presenters
 
 import com.example.pcconfigurator.Data.ConfigurationsRepository
+import com.example.pcconfigurator.Domain.ConfigurationInteractor
 import com.example.pcconfigurator.Presentation.Fragments.IConfigurationsView
 
-class ConfigurationsPresenter() {
+class ConfigurationsPresenter(var view: IConfigurationsView?) {
 
-    var view: IConfigurationsView?=null
+
 
     fun getConfigurations() {
 
-        val configurations = ConfigurationsRepository.getConfigurations()
+        val configurations = ConfigurationInteractor.getAllConfigurations()
         if(configurations.isNotEmpty()){
             view?.showConfigurations(configurations)
         }else{

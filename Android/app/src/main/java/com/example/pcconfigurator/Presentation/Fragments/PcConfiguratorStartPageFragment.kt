@@ -23,7 +23,7 @@ class PcConfiguratorStartPageFragment : Fragment(),
     private lateinit var recyclerView: RecyclerView
     private lateinit var imageView: ImageView
     private lateinit var configurationsAdapter: ConfigurationsAdapter
-    private val presenter: ConfigurationsPresenter = ConfigurationsPresenter()
+    private lateinit var presenter:ConfigurationsPresenter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,7 +33,7 @@ class PcConfiguratorStartPageFragment : Fragment(),
         val view: View =
             inflater.inflate(R.layout.fragment_pc_configurator_start_page, container, false)
         initViews(view)
-        presenter.view = this
+        presenter= ConfigurationsPresenter(this)
         presenter.getConfigurations()
 
         return view

@@ -12,7 +12,7 @@ object ConfigurationsRepository : IConfigurationsRepository {
     private val api: ConfigurationsApi = Common.retrofitApi
 
 
-    val configurationsList = listOf(
+   private val configurationsList = listOf(
         Configuration(UUID.randomUUID(), listOf(allAccessories[0], allAccessories[10],
             allAccessories[5], allAccessories[15]), "1 конфигурация"),
         Configuration(UUID.randomUUID(), listOf(allAccessories[0], allAccessories[10],

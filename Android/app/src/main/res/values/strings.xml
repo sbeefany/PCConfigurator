@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">PcConfigurator</string>
-
+    <string name="delete_accessory">Вы уверены, что хотите удалить комплектющее из вашей конфигурации?</string>
+    <string name="positive_answer">Да</string>
+    <string name="negative_answer">Нет</string>
     <string-array name="accessory_types">
         <item>Категории</item>
         <item>Материнская плата</item>

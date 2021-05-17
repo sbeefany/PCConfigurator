@@ -12,4 +12,6 @@ interface IMainActivity {
     fun visibilitySpinner(boolean: Boolean, serchPresenter: SearchAccessoriesPresenter)
 
 
+
+
 }

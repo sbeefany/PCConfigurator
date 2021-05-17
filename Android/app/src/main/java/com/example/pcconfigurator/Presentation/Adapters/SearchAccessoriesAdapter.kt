@@ -29,7 +29,7 @@ class SearchAccessoriesAdapter(
     ): SearchAccessoriesViewHolder {
         val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_search_accessories, parent, false)
-        return SearchAccessoriesViewHolder(view, callBack,context)
+        return SearchAccessoriesViewHolder(view, callBack, context)
     }
 
     override fun onBindViewHolder(
@@ -45,7 +45,9 @@ class SearchAccessoriesAdapter(
         val configurationDiffUtil =
             DiffUtilsConfigurationDetailsAccessories(accessories, this.accessories)
         val diffResult = DiffUtil.calculateDiff(configurationDiffUtil)
-        this.accessories = accessories
+        val newList = mutableListOf<Accessory>()
+        newList.addAll(accessories)
+        this.accessories = newList
         diffResult.dispatchUpdatesTo(this)
     }
 }

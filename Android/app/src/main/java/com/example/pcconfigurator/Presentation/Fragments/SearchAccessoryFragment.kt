@@ -20,7 +20,6 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories, IClickListenerCa
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SearchAccessoriesAdapter
     private val searchAccessoriesPresenter = SearchAccessoriesPresenter(this)
-    private var accessories:List<Accessory> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +36,9 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories, IClickListenerCa
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_search_accessories, container, false)
         initViews(view)
-        activity.visibilitySpinner(true, searchAccessoriesPresenter)
         searchAccessoriesPresenter.getLastResult()
+        activity.visibilitySpinner(true, searchAccessoriesPresenter)
+
         return view
     }
 
@@ -47,13 +47,12 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories, IClickListenerCa
     private fun initViews(view: View) {
         recyclerView = view.findViewById(R.id.search_accessories_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = SearchAccessoriesAdapter(accessories,this, context)
+        adapter = SearchAccessoriesAdapter(listOf(),this, context)
         recyclerView.adapter = adapter
         activity.changeTitle("Поиск")
     }
 
     override fun showAccessories(accessories: List<Accessory>) {
-        this.accessories = accessories
         adapter.updateList(accessories)
     }
 

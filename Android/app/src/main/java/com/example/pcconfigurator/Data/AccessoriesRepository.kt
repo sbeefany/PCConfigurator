@@ -180,35 +180,44 @@ object AccessoriesRepository {
     fun findAccessoryById(id: UUID) = allAccessories.find { it.id == id }
 
     fun getAccessoriesByType(type: String): List<Accessory> {
+        lastResult.clear()
         when (type) {
             "Материнская плата" -> {
+
                 lastResult.addAll(allAccessories.filterIsInstance<Accessory.MotherBoard>())
                 return lastResult
             }
             "Процессор" -> {
-                return allAccessories.filterIsInstance<Accessory.Cpu>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.Cpu>())
+                return lastResult
             }
             "Видеокарта" -> {
                 lastResult.addAll(allAccessories.filterIsInstance<Accessory.Gpu>())
                 return lastResult
             }
             "Оперативная память" -> {
-                return allAccessories.filterIsInstance<Accessory.Ram>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.Ram>())
+                return lastResult
             }
             "Устройство хранения" -> {
-                return allAccessories.filterIsInstance<Accessory.Disk>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.Disk>())
+                return lastResult
             }
             "Устройство охлаждения" -> {
-                return allAccessories.filterIsInstance<Accessory.Cooler>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.Cooler>())
+                return lastResult
             }
             "Корпус" -> {
-                return allAccessories.filterIsInstance<Accessory.ComputerCase>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.ComputerCase>())
+                return lastResult
             }
             "Блок питания" -> {
-                return allAccessories.filterIsInstance<Accessory.PowerSupply>()
+                lastResult.addAll(allAccessories.filterIsInstance<Accessory.PowerSupply>())
+                return lastResult
             }
             else -> {
-                return allAccessories
+                lastResult.addAll(allAccessories)
+                return lastResult
             }
         }
     }
