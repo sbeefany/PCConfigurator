@@ -7,6 +7,14 @@ import com.example.pcconfigurator.Presentation.Fragments.IConfigurationsView
 class ConfigurationsPresenter(var view: IConfigurationsView?) {
 
 
+    fun createConfiguration(name:String){
+        val configurations = ConfigurationInteractor.createConfiguration(name)
+        if(configurations.isNotEmpty()){
+            view?.showConfigurations(configurations)
+        }else{
+            view?.showWindowWithoutConfigurations()
+        }
+    }
 
     fun getConfigurations() {
 

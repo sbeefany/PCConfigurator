@@ -12,7 +12,7 @@ object ConfigurationsRepository : IConfigurationsRepository {
     private val api: ConfigurationsApi = Common.retrofitApi
 
 
-   private val configurationsList = listOf(
+   private val configurationsList = mutableListOf<Configuration>(
         Configuration(UUID.randomUUID(), listOf(allAccessories[0], allAccessories[10],
             allAccessories[5], allAccessories[15]), "1 конфигурация"),
         Configuration(UUID.randomUUID(), listOf(allAccessories[0], allAccessories[10],
@@ -34,8 +34,8 @@ object ConfigurationsRepository : IConfigurationsRepository {
         TODO("Not yet implemented")
     }
 
-    override fun saveConfiguration(accessories: List<Accessory>) {
-        TODO("Not yet implemented")
+    override fun saveConfiguration(configuration: Configuration) {
+        configurationsList.add(configuration)
     }
 
 }

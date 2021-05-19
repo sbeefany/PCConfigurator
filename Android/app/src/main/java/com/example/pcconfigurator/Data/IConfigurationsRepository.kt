@@ -9,5 +9,5 @@ interface IConfigurationsRepository {
 
     fun getConfiguration(id:UUID):Configuration
 
-    fun saveConfiguration(accessories:List<Accessory>)
+    fun saveConfiguration(configuration: Configuration)
 }

@@ -65,7 +65,7 @@ class ConfigurationDetailsPageFragment(val configuration: com.example.pcconfigur
         floatingActionButton =
             view.findViewById(R.id.configuration_details_accessories_floating_action_button)
         floatingActionButton.setOnClickListener {
-            activity.changeFragment(SearchAccessoryFragment())
+            activity.changeFragment(SearchAccessoryFragment(),"SearchAccessoryFragment")
         }
     }
 

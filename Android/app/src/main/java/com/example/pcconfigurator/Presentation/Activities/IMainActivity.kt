@@ -5,7 +5,7 @@ import com.example.pcconfigurator.Presentation.Presenters.SearchAccessoriesPrese
 
 interface IMainActivity {
 
-    fun changeFragment(fragment: Fragment)
+    fun changeFragment(fragment: Fragment,tag:String)
 
     fun changeTitle(tittle: String)
 

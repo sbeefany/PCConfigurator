@@ -13,8 +13,10 @@ import com.example.pcconfigurator.Data.IConfigurationsRepository
 import com.example.pcconfigurator.Data.Models.Configuration
 import com.example.pcconfigurator.Presentation.Activities.IMainActivity
 import com.example.pcconfigurator.Presentation.Adapters.ConfigurationsAdapter
+import com.example.pcconfigurator.Presentation.Dialogs.CreateConfigurationDialogFragment
 import com.example.pcconfigurator.Presentation.Presenters.ConfigurationsPresenter
 import com.example.pcconfigurator.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class PcConfiguratorStartPageFragment : Fragment(),
     IConfigurationsView, IClickListenerCallBack {
@@ -25,6 +27,10 @@ class PcConfiguratorStartPageFragment : Fragment(),
     private lateinit var configurationsAdapter: ConfigurationsAdapter
     private lateinit var presenter:ConfigurationsPresenter
 
+    private lateinit var mainFab:FloatingActionButton
+    private lateinit var createConfigurationFab:FloatingActionButton
+    private lateinit var comparisonSessionFab:FloatingActionButton
+    private var flag:Boolean=false
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -63,11 +69,34 @@ class PcConfiguratorStartPageFragment : Fragment(),
     }
 
     private fun initViews(view: View) {
+        mainFab = view.findViewById(R.id.main_fab)
+        createConfigurationFab = view.findViewById(R.id.create_configuration_fab)
+        comparisonSessionFab = view.findViewById(R.id.comparison_session_fab)
         recyclerView = view.findViewById(R.id.recycler_view_configurations)
         configurationsAdapter = ConfigurationsAdapter(emptyList(), this)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = configurationsAdapter
         activity.changeTitle("Мои конфигурации")
+
+        mainFab.setOnClickListener{
+            if(flag){
+                mainFab.setImageDrawable(resources.getDrawable(R.drawable.ic_plus))
+                flag=false
+                createConfigurationFab.visibility=View.GONE
+                comparisonSessionFab.visibility=View.GONE
+            }else{
+                mainFab.setImageDrawable(resources.getDrawable(R.drawable.ic_cancel))
+                flag=true
+                createConfigurationFab.visibility=View.VISIBLE
+                comparisonSessionFab.visibility=View.VISIBLE
+            }
+        }
+
+        createConfigurationFab.setOnClickListener {
+            val createConfigurationDialog = CreateConfigurationDialogFragment()
+            createConfigurationDialog.presenter = presenter
+            createConfigurationDialog.show(requireFragmentManager(),"createConfigurationDialog")
+        }
 
     }
 
@@ -89,8 +118,13 @@ class PcConfiguratorStartPageFragment : Fragment(),
                 it.classLoader,
                 ConfigurationDetailsPageFragment::class.java.name
             )
-            activity.changeFragment(fragment)
+            activity.changeFragment(fragment,"ConfigurationDetailsFragment")
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        flag=false
     }
 }

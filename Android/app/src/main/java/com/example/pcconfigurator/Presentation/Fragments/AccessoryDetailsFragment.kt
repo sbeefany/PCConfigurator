@@ -261,7 +261,7 @@ class AccessoryDetailsFragment(val accessory: Accessory) : Fragment(), Configura
                 it.classLoader,
                 ConfigurationDetailsPageFragment::class.java.name
             )
-            activity.changeFragment(fragment)
+            activity.changeFragment(fragment,"ConfigurationDetailsFragment")
         }
     }
 }

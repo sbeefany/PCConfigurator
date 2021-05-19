@@ -9,6 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 
@@ -50,11 +51,16 @@ class MainActivity : AppCompatActivity(), IMainActivity {
 
     }
 
-    override fun changeFragment(fragment: Fragment) {
+    override fun changeFragment(fragment: Fragment,tag:String) {
+        var oldFragment = supportFragmentManager.findFragmentByTag(tag)
+        if(oldFragment==null)
+            oldFragment=fragment
+        else
+            supportFragmentManager.popBackStack(tag,POP_BACK_STACK_INCLUSIVE)
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace(R.id.main_activity_container_view, fragment)
-            addToBackStack(null)
+            replace(R.id.main_activity_container_view, oldFragment,tag)
+            addToBackStack(tag)
         }
     }
 

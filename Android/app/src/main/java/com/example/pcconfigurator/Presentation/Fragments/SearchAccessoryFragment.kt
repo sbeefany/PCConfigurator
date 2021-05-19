@@ -43,11 +43,10 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories, IClickListenerCa
     }
 
 
-
     private fun initViews(view: View) {
         recyclerView = view.findViewById(R.id.search_accessories_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = SearchAccessoriesAdapter(listOf(),this, context)
+        adapter = SearchAccessoriesAdapter(listOf(), this, context)
         recyclerView.adapter = adapter
         activity.changeTitle("Поиск")
     }
@@ -77,7 +76,7 @@ class SearchAccessoryFragment : Fragment(), ISearchAccessories, IClickListenerCa
                 it.classLoader,
                 AccessoryDetailsFragment::class.java.name
             )
-            activity.changeFragment(fragment)
+            activity.changeFragment(fragment, "AccessoryDetailsFragment")
         }
     }
 

@@ -30,7 +30,9 @@ class ConfigurationsAdapter(var configurations: List<Configuration>,private val 
     fun updateList(configurations:List<Configuration>){
         val configurationDiffUtil:DiffUtilsConfigurationsCallBack = DiffUtilsConfigurationsCallBack(configurations,this.configurations)
         val diffResult = DiffUtil.calculateDiff(configurationDiffUtil)
-        this.configurations = configurations;
+        val newList = mutableListOf<Configuration>()
+        newList.addAll(configurations)
+        this.configurations = newList
         diffResult.dispatchUpdatesTo(this)
     }
 }

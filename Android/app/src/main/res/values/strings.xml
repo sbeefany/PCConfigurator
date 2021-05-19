@@ -3,6 +3,8 @@
     <string name="delete_accessory">Вы уверены, что хотите удалить комплектющее из вашей конфигурации?</string>
     <string name="positive_answer">Да</string>
     <string name="negative_answer">Нет</string>
+    <string name="create_answer">Создать</string>
+    <string name="cansel_answer">Отмена</string>
     <string-array name="accessory_types">
         <item>Категории</item>
         <item>Материнская плата</item>
