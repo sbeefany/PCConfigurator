@@ -42,8 +42,8 @@ object ConfigurationInteractor {
     fun getAllConfigurationsById(id: UUID): Configuration =
         configurationRepository.getConfiguration(id)
 
-    fun createConfiguration(name:String):List<Configuration>{
-        val configuration = Configuration(UUID.randomUUID(), listOf(),name)
+    fun createConfiguration(name:String,userId:UUID):List<Configuration>{
+        val configuration = Configuration(UUID.randomUUID(), listOf(),name,userId)
         configurationRepository.saveConfiguration(configuration)
         return getAllConfigurations()
     }

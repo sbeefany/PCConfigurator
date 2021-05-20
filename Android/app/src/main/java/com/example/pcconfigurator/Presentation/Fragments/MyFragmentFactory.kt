@@ -9,6 +9,7 @@ import java.lang.NullPointerException
 class MyFragmentFactory : FragmentFactory() {
 
     var configuration: Configuration? = null
+    var comparisonSessionConfiguration: Configuration? = null
     var accessory: Accessory? = null
 
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
@@ -26,6 +27,11 @@ class MyFragmentFactory : FragmentFactory() {
                 else
                     throw NullPointerException("SET Accessory!")
             }
+
+            ConfigurationDetailsComparisonSessionFragment::class.java ->
+                return ConfigurationDetailsComparisonSessionFragment(
+                    comparisonSessionConfiguration)
+
             else -> return super.instantiate(classLoader, className)
         }
     }

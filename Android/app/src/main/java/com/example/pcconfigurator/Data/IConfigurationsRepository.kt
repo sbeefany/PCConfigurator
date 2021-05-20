@@ -10,4 +10,6 @@ interface IConfigurationsRepository {
     fun getConfiguration(id:UUID):Configuration
 
     fun saveConfiguration(configuration: Configuration)
+
+    fun getAllConfigurationByUser(userId:UUID)
 }

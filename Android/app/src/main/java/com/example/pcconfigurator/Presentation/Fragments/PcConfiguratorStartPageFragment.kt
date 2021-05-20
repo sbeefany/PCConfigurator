@@ -97,6 +97,9 @@ class PcConfiguratorStartPageFragment : Fragment(),
             createConfigurationDialog.presenter = presenter
             createConfigurationDialog.show(requireFragmentManager(),"createConfigurationDialog")
         }
+        comparisonSessionFab.setOnClickListener {
+            activity.changeFragment(ComparisonSessionFragment(),"ComparisonSessionFragment")
+        }
 
     }
 

@@ -9,19 +9,19 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pcconfigurator.Data.Models.Configuration
 import com.example.pcconfigurator.Presentation.Activities.IMainActivity
 import com.example.pcconfigurator.Presentation.Adapters.ConfigurationDetailsAdapter
 import com.example.pcconfigurator.Presentation.Presenters.ConfigurationDetailsPresenter
 import com.example.pcconfigurator.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ConfigurationDetailsComparisonSessionFragment():Fragment() {
+class ConfigurationDetailsComparisonSessionFragment(val configuration: Configuration?) :
+    Fragment(),IClickListenerCallBack {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ConfigurationDetailsAdapter
-    private lateinit var emptyList: ImageView
-    private lateinit var presenter: ConfigurationDetailsPresenter
-
+    private lateinit var emptyConfiguration: ImageView
 
 
     override fun onCreateView(
@@ -29,21 +29,28 @@ class ConfigurationDetailsComparisonSessionFragment():Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_configuration_details, container, false)
+        val view = inflater.inflate(R.layout.fragment_configuration_details_comparison_sessions, container, false)
         initViews(view)
-        presenter = ConfigurationDetailsPresenter(this)
-        presenter.setUpCurrentConfiguration(configuration)
-
         return view
     }
 
     private fun initViews(view: View) {
+        emptyConfiguration = view.findViewById(R.id.empty_configuration)
+        recyclerView = view.findViewById(R.id.recycler_view_configurations_details_comparison_session)
+        if (configuration != null) {
+            emptyConfiguration.visibility=View.GONE
+            recyclerView.visibility=View.VISIBLE
+            recyclerView.layoutManager = LinearLayoutManager(context)
+            adapter = ConfigurationDetailsAdapter(configuration.accessories,this)
+            recyclerView.adapter = adapter
+        } else {
+            emptyConfiguration.visibility=View.VISIBLE
+            recyclerView.visibility=View.GONE
+        }
 
-        recyclerView = view.findViewById(R.id.recycler_view_configurations_details)
-        emptyList = view.findViewById(R.id.image_empty_list)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = ConfigurationDetailsAdapter(listOf(), )
-        recyclerView.adapter = adapter
+    }
 
+    override fun itemClick(position: Int) {
+        TODO("Not yet implemented")
     }
 }

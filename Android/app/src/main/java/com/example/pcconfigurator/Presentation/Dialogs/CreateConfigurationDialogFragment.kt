@@ -11,6 +11,7 @@ import com.example.pcconfigurator.Presentation.Presenters.ConfigurationDetailsPr
 import com.example.pcconfigurator.Presentation.Presenters.ConfigurationsPresenter
 import com.example.pcconfigurator.R
 import java.lang.IllegalStateException
+import java.util.*
 
 class CreateConfigurationDialogFragment : DialogFragment() {
     var presenter:ConfigurationsPresenter?=null
@@ -24,7 +25,7 @@ class CreateConfigurationDialogFragment : DialogFragment() {
             builder.setView(view)
                 .setPositiveButton(R.string.create_answer,
                     DialogInterface.OnClickListener { dialog, id ->
-                        presenter?.createConfiguration(editText.text.toString())
+                        presenter?.createConfiguration(editText.text.toString(), UUID.fromString("be0b6c37-f50d-4511-9e3b-31cff4de6b11")) // ПЕРЕДЕЛАТЬ ID !!!!
                         dialog.dismiss()
 
                     })
